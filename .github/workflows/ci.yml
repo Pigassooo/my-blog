@@ -9,10 +9,11 @@ jobs:
   deploy:
     runs-on: ubuntu-latest
     steps:
-    - uses: actions/checkout@v2
-    - uses: actions/setup-python@v2
+    - uses: actions/checkout@v3 # Update this line to the latest version if v3 is available
+    - name: Set up Node.js
+      uses: actions/setup-node@v3 # Update this line as well, using the new version
       with:
-        python-version: '3.x'
+        node-version: '20'
     - run: pip install mkdocs-material
     - run: mkdocs build
     - uses: peaceiris/actions-gh-pages@v3
