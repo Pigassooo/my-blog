@@ -8,10 +8,4 @@ theme:
   font:
     text: 'Roboto'
     code: 'Roboto Mono'
-  features:
-    - navigation.tabs       # 启用选项卡式导航
-    - navigation.instant    # 启用即时加载
-    - toc.integrate         # 在页面侧边集成目录
-    - search.suggest        # 启用搜索建议
-    - search.highlight      # 启用搜索结果高亮
 
