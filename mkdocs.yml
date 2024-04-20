@@ -1,4 +1,8 @@
-site_name: My Docs
+site_name: Pigasso's Web
+site_author: 'Pigasso'
+site_url: 'https://pigassooo.github.io/my-blog/'
+repo_url: 'https://pigassooo.github.io/my-blog/'
+
 theme:
   name: material
   language: en
@@ -8,4 +12,88 @@ theme:
   font:
     text: 'Roboto'
     code: 'Roboto Mono'
+  palette:
+    # Palette toggle for light mode
+    - scheme: default
+      toggle:
+        icon: material/brightness-7
+        name: Switch to dark mode
+    # Palette toggle for dark mode
+    - scheme: slate
+      toggle:
+        icon: material/brightness-4
+        name: Switch to light mode
+  favicon: 'images/favicon.png'
+  icon:
+    repo: fontawesome/brands/github
+    logo: fontawesome/solid/p
 
+
+  features:
+    - navigation.instant  # 实现页面的即时加载
+    - navigation.instant.prefetch #即时预取
+    - navigation.instant.progress #进度指示器
+    - navigation.tabs  # 导航选项卡
+    - navigation.tabs.sticky # 粘性导航选项卡
+    - navigation.indexes  # 当部分没有内容时自动创建索引页面
+    - navigation.sections  # 在侧边栏中使用章节
+    - navigation.top  # 在页面顶部显示导航栏
+    - toc.integrate  # 将目录(TOC)整合到文章侧边栏
+    - toc.follow  # 目录随滚动高亮当前节
+    - search.highlight  # 搜索结果高亮显示
+
+  markdown_extensions:
+  - admonition  # 启用警告框
+  - codehilite:  # 高亮代码块
+      guess_lang: false
+  - toc:  # 自动生成目录
+      permalink: true
+  - footnotes  # 脚注支持
+  - attr_list  # 允许在Markdown中设置HTML属性
+  - pymdownx.superfences  # 扩展围栏代码块
+  - pymdownx.details  # 允许创建可折叠的内容块
+  - pymdownx.highlight  # 用Pygments高亮显示代码
+  - pymdownx.inlinehilite  # 允许内联高亮代码
+  - pymdownx.magiclink  # 自动将URL转换为链接
+  - pymdownx.tilde  # 使删除线语法更容易使用
+
+
+plugins:
+  - search
+  - minify:
+      minify_html: true
+      minify_js: true
+      minify_css: true
+  - git-revision-date-localized:
+      enable_creation_date: true
+  - blog
+  - blog:
+      blog_dir: blog
+
+
+extra:
+  #语言栏
+  alternate:
+    - name: English
+      link: /en/
+      lang: en
+    - name: 中文
+      link: /zh/
+      lang: zh
+  #底侧连接
+  social:
+    - icon: material/email
+      link: mailto:<1219632665@qq.com>
+    - icon: fontawesome/brands/youtube
+      link: https://www.youtube.com/channel/UCKX_MGD-u_ceV2XtNA6re3Q
+    - icon: simple/reddit
+      link: https://www.reddit.com/user/Pigasso_4ever/
+    - icon: simple/bilibili
+      link: https://space.bilibili.com/493000186?spm_id_from=333.1007.0.0
+
+# 导航结构
+nav:
+  - Home: index.md
+  - About: about.md
+  - Blog:
+    - blog/index.md
