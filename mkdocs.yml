@@ -60,7 +60,6 @@ theme:
 
 plugins:
   - search
-  - simple
   - minify:
       minify_html: true
       minify_js: true
