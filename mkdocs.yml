@@ -6,9 +6,6 @@ repo_url: 'https://github.com/Pigassooo'
 theme:
   name: material
   language: en
-  palette:
-    primary: 'indigo'
-    accent: 'indigo'
   font:
     text: 'Roboto'
     code: 'Roboto Mono'
@@ -30,6 +27,9 @@ theme:
 
 
   features:
+
+    # - codehilite:  # 高亮代码块
+    #     guess_lang: false
     - navigation.instant  # 实现页面的即时加载
     - navigation.instant.prefetch #即时预取
     - navigation.instant.progress #进度指示器
@@ -42,20 +42,47 @@ theme:
     - toc.follow  # 目录随滚动高亮当前节
     - search.highlight  # 搜索结果高亮显示
 
-  markdown_extensions:
-  - admonition  # 启用警告框
-  - codehilite:  # 高亮代码块
-      guess_lang: false
-  - toc:  # 自动生成目录
-      permalink: true
-  - footnotes  # 脚注支持
-  - attr_list  # 允许在Markdown中设置HTML属性
-  - pymdownx.superfences  # 扩展围栏代码块
-  - pymdownx.details  # 允许创建可折叠的内容块
-  - pymdownx.highlight  # 用Pygments高亮显示代码
-  - pymdownx.inlinehilite  # 允许内联高亮代码
-  - pymdownx.magiclink  # 自动将URL转换为链接
-  - pymdownx.tilde  # 使删除线语法更容易使用
+markdown_extensions:
+  - abbr
+  - attr_list
+  - admonition
+  - def_list
+  - footnotes
+  - md_in_html
+  - meta # 支持Markdown文件上方自定义标题标签等
+  - pymdownx.caret
+  - pymdownx.betterem
+  - pymdownx.critic
+  - pymdownx.details
+  - pymdownx.inlinehilite
+  - pymdownx.keys
+  - pymdownx.mark
+  - pymdownx.snippets
+  - pymdownx.smartsymbols
+  - pymdownx.tilde
+  - pymdownx.superfences:
+      custom_fences:
+        - name: mermaid
+          class: mermaid
+          format: !!python/name:pymdownx.superfences.fence_code_format # 代码块高亮插件
+  - pymdownx.arithmatex:  # latex支持
+      generic: true
+  - toc:
+      permalink: true # 固定标题位置为当前位置
+  - pymdownx.highlight: # 代码块高亮
+      anchor_linenums: true
+      linenums: true # 显示行号
+      # auto_title: true # 显示编程语言名称
+  - pymdownx.emoji:
+      emoji_index: !!python/name:material.extensions.emoji.twemoji
+      emoji_generator: !!python/name:material.extensions.emoji.to_svg
+  - pymdownx.tabbed:
+      alternate_style: true
+  - pymdownx.tasklist:
+      custom_checkbox: true
+  - markdown.extensions.toc:
+      slugify: !!python/object/apply:pymdownx.slugs.slugify {kwds: {case: lower}}
+      permalink: "\ue157"
 
 
 plugins:
@@ -64,9 +91,8 @@ plugins:
       minify_html: true
       minify_js: true
       minify_css: true
-  - git-revision-date-localized:
-      enable_creation_date: true
-  - blog
+  # - git-revision-date-localized:
+  #     enable_creation_date: true
   - blog:
       blog_dir: blog
       post_dir: blog/posts
@@ -94,19 +120,28 @@ extra:
       link: https://www.reddit.com/user/Pigasso_4ever/
     - icon: simple/bilibili
       link: https://space.bilibili.com/493000186?spm_id_from=333.1007.0.0
+    - icon: simple/wechat
+      link: images/wechat.jpg
 
 # 导航结构
 nav:
   - Home: index.md
-  - About: about.md
-  - Blog: blog/index.md
+  - Notes:
+    - notes/index.md
+    - useful website:
+      - code: notes/website/code.md
+    - youtuber:
+      - coder: notes/youtuber/coder.md
+  - Blog:
+    - blog/index.md
   - Reprint:
-    - reprint/reprint.md
+    - reprint/index.md
     - code: reprint/code/index.md
     - articles: reprint/articles/index.md
     - poetry:
       - reprint/poetry/index.md
       - CH: reprint/poetry/ch/index.md
       - EN: reprint/poetry/en/index.md
-  - Notes:
-    - notes/index.md
+  - LoveStory:
+    - loveStory/index.md
+  - About: about.md
