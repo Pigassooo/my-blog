@@ -1,7 +1,7 @@
 site_name: Pigasso's Web
 site_author: 'Pigasso'
 site_url: 'https://pigassooo.github.io/my-blog/'
-repo_url: 'https://pigassooo.github.io/my-blog/'
+repo_url: 'https://github.com/Pigassooo'
 
 theme:
   name: material
@@ -60,6 +60,7 @@ theme:
 
 plugins:
   - search
+  - simple
   - minify:
       minify_html: true
       minify_js: true
@@ -69,6 +70,10 @@ plugins:
   - blog
   - blog:
       blog_dir: blog
+      post_dir: blog/posts
+      categories: true
+      categories_toc: true
+      post_date_format: medium
 
 
 extra:
@@ -95,5 +100,14 @@ extra:
 nav:
   - Home: index.md
   - About: about.md
-  - Blog:
-    - blog/index.md
+  - Blog: blog/index.md
+  - Reprint:
+    - reprint/reprint.md
+    - code: reprint/code/index.md
+    - articles: reprint/articles/index.md
+    - poetry:
+      - reprint/poetry/index.md
+      - CH: reprint/poetry/ch/index.md
+      - EN: reprint/poetry/en/index.md
+  - Notes:
+    - notes/index.md
