@@ -1,8 +1,5 @@
 # CH & ZF
 
-Here we are ~
-
-
 <div>
 <div id="rcorners2" >
   <div id="rcorners1">
@@ -10,13 +7,13 @@ Here we are ~
     <body>
     <font color="#4351AF">
     <p style="text-align: center; ">
-            <span>我们已经在一起</span>
+            <span>We've been together for </span>
             <span id='box1'></span>
 </p>
   <div id="box1"></div>
   <script>
     function timingTime(){
-      let start = '2023-12-21 00:00:00'
+      let start = '2021-08-29 00:00:00'
       let startTime = new Date(start).getTime()
       let currentTime = new Date().getTime()
       let difference = currentTime - startTime
@@ -27,7 +24,7 @@ Here we are ~
       let s = Math.floor(f/ 60) // 小时
       let ss = s % 24
       let day = Math.floor(s  / 24 ) // 天数
-      return day + "天" + ss + "时" + ff + "分" + mm +'秒'
+      return day + " days " + ss + " h " + ff + " min " + mm +'s'
     }
     setInterval(()=>{
       document.getElementById('box1').innerHTML = timingTime()
