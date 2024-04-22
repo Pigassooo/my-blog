@@ -17,7 +17,7 @@ comments: false
  -->
 
 <div class="red-box">
-  <img src="images/01.JPG" class="flying-image" alt="Flying image">
+  <img src="https://s2.loli.net/2024/04/22/EU9eGydnI4HWzO2.jpg" class="flying-image" alt="Flying image">
 </div>
 
 
@@ -55,7 +55,6 @@ comments: false
             6: "Saturday",
             0: "Sunday",
         };
-        //var week=["日","一","二","三","四","五","六"]
         return (
             y +
             "/" +
@@ -101,11 +100,11 @@ comments: false
 <body>
     <font color="#B9B9B9">
     <p style="text-align: center; ">
-            <span>This site has been running for</span>
-            <span id='box1'></span>
-</p>
-  <div id="box1"></div>
-  <script>
+        <span>This site has been running for</span>
+        <span id='box1'></span>
+    </p>
+    <div id="box1"></div>
+    <script>
     function timingTime(){
       let start = '2024-04-20 00:00:00'
       let startTime = new Date(start).getTime()
@@ -123,7 +122,7 @@ comments: false
     setInterval(()=>{
       document.getElementById('box1').innerHTML = timingTime()
     },1000)
-  </script>
+    </script>
   </font>
 </body>
 
@@ -152,13 +151,3 @@ comments: false
  *                神兽保佑
  *               代码无BUG!
  */ -->
-
-<!--
-____    __    ____  ______   ______   ____    __    ____  __  .__   __.
-\   \  /  \  /   / /      | /  __  \  \   \  /  \  /   / |  | |  \ |  |
- \   \/    \/   / |  ,----'|  |  |  |  \   \/    \/   /  |  | |   \|  |
-  \            /  |  |     |  |  |  |   \            /   |  | |  . `  |
-   \    /\    /   |  `----.|  `--'  |    \    /\    /    |  | |  |\   |
-    \__/  \__/     \______| \______/      \__/  \__/     |__| |__| \__|
-
--->
