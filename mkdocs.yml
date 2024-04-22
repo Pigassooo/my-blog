@@ -131,17 +131,18 @@ nav:
   - Home: index.md
   - Notes:
     - notes/index.md
-    - useful website:
-      - code: notes/website/code.md
-    - youtuber:
-      - coder: notes/youtuber/coder.md
+    - Computer English(processing): notes/computerEnglish.md
+    - Useful Website:
+      - Code: notes/website/code.md
+    - Youtuber:
+      - Coder: notes/youtuber/coder.md
   - Blog:
     - blog/index.md
   - Reprint:
     - reprint/index.md
-    - code: reprint/code/index.md
-    - articles: reprint/articles/index.md
-    - poetry:
+    - Code: reprint/code/index.md
+    - Articles: reprint/articles/index.md
+    - Poetry:
       - reprint/poetry/index.md
       - CH: reprint/poetry/ch/index.md
       - EN: reprint/poetry/en/index.md
