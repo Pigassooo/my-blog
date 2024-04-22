@@ -1,12 +1,16 @@
 # 计算机英语词汇(processing)
+
 ## Sign
+
 **quotes : 引号**<br>
 **parentheses : 圆括号**<br>
 **square bracket : 方括号**<br>
 **exclamation point : 感叹号**<br>
 
 ## Mathematics
+
 #### basic
+
 **addition : 加法**<br>
 **subtraction : 减法**<br>
 **multiplication : 乘法**<br>
@@ -35,6 +39,7 @@
 **triangular : 三角形的**<br>
 
 #### linear algbra
+
 **equation : 方程式**<br>
 **a system of equations : 一系列方程组**<br>
 **pivot : 主元**<br>
@@ -51,9 +56,13 @@
 **back-substitution : 回代法：线性代数中解决已经转化为行阶梯形式的线性系统的方法。**<br>
 
 ## Coding
+
 #### basic
+
 **data visualization : 数据可视化**<br>
 **Cloud deployment models : 云部署模型**<br>
+
+**RAM : Random Access Memory 随机存取存储器**<br>
 
 **syntax : 语法**<br>
 **directory : 目录，文件夹**<br>
@@ -77,7 +86,7 @@
 
 **built-in : 固定的**<br>
 **statement : 语句**<br>
-**if statement : if语句**<br>
+**if statement : if 语句**<br>
 **execute : 执行指令**<br>
 **assign : 赋值**<br>
 
@@ -86,7 +95,9 @@
 **Associate Arrays : 链表**<br>
 **Tuple : 元组 (有序且不可变的集合) heterogeneous**<br>
 
-**RAM : Random Access Memory 随机存取存储器**<br>
+**interpolation : 插值表达式**<br>
+**property : 属性**<br>
 
 #### Machine Learning
+
 **gradient descent : 梯度下降：一种一阶迭代优化算法，用于寻找可微函数的局部最小值。**<br>
