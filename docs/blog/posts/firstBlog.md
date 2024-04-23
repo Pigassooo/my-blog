@@ -1,5 +1,5 @@
 ---
-title: first blog
+title: First Blog
 date: 2024-04-21
 authors:
     - pigasso

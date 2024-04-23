@@ -97,6 +97,9 @@
 
 **interpolation : 插值表达式**<br>
 **property : 属性**<br>
+**computed : 计算属性**<br>
+**enumerable : 可枚举的**<br>
+**prototype ：原型**<br>
 
 #### Machine Learning
 

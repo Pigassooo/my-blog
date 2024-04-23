@@ -103,6 +103,8 @@ plugins:
       categories: true
       categories_toc: true
       post_date_format: medium
+      arrange_by: date
+      arrange_reverse: true
 
 
 extra:
