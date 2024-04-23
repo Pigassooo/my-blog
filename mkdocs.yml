@@ -4,6 +4,7 @@ site_url: 'https://pigassooo.github.io/my-blog/'
 repo_url: 'https://github.com/Pigassooo'
 
 theme:
+  custom_dir: docs/overrides
   name: material
   language: en
   font:
