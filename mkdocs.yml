@@ -133,6 +133,20 @@ nav:
   - Home: index.md
   - Notes:
     - notes/index.md
+    - Notes:
+      - JavaScript:
+        - API:
+          - notes/notes/JavaScript/API/01.API的基本认知.md
+          - notes/notes/JavaScript/API/02.获取DOM元素.md
+          - notes/notes/JavaScript/API/03.操作元素内容.md
+          - notes/notes/JavaScript/API/04.操作元素属性.md
+          - notes/notes/JavaScript/API/05.操作表单元素.md
+          - notes/notes/JavaScript/API/06.自定义属性.md
+          - notes/notes/JavaScript/API/07.定时器间歇函数.md
+          - notes/notes/JavaScript/API/08.事件监听.md
+          - notes/notes/JavaScript/API/09.事件类型.md
+          - notes/notes/JavaScript/API/10.事件对象.md
+          - notes/notes/JavaScript/API/11.回调函数.md
     - Computer English(processing): notes/computerEnglish.md
     - Useful Website:
       - Code: notes/website/code.md
