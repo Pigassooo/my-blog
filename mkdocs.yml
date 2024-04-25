@@ -151,3 +151,8 @@ nav:
   - LoveStory:
     - loveStory/index.md
   - About: about.md
+  - Motivation:
+    - motivation/index.md
+    - Done: motivation/done.md
+    - Processing: motivation/processing.md
+    - Plan: motivation/plan.md
