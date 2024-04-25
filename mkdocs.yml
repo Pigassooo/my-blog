@@ -147,6 +147,7 @@ nav:
           - notes/notes/JavaScript/API/09.事件类型.md
           - notes/notes/JavaScript/API/10.事件对象.md
           - notes/notes/JavaScript/API/11.回调函数.md
+          - notes/notes/JavaScript/API/12.事件流.md
     - Computer English(processing): notes/computerEnglish.md
     - Useful Website:
       - Code: notes/website/code.md
