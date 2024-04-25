@@ -5,7 +5,7 @@ authors:
     - pigasso
 categories:
     - Playlist Pulse
-readtime: 1
+readtime: 5
 ---
 
 # In My Feelings with Drake: From God's Plan to Nonstop
