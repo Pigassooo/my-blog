@@ -162,6 +162,13 @@ nav:
             - notes/notes/JavaScript/API/02.BOM/01.BOM.md
             - notes/notes/JavaScript/API/02.BOM/02.延时函数.md
             - notes/notes/JavaScript/API/02.BOM/03.JS执行机制.md
+            - notes/notes/JavaScript/API/02.BOM/04.location对象.md
+            - notes/notes/JavaScript/API/02.BOM/05.navigator对象.md
+            - notes/notes/JavaScript/API/02.BOM/06.history对象.md
+            - notes/notes/JavaScript/API/02.BOM/07.本地存储.md
+            - notes/notes/JavaScript/API/02.BOM/08.本地存储案例.md
+            - notes/notes/JavaScript/API/02.BOM/09.数组的方法(补充).md
+            - notes/notes/JavaScript/API/02.BOM/10.正则表达式.md
     - Computer English(processing): notes/computerEnglish.md
     - Useful Website:
       - Code: notes/website/code.md
