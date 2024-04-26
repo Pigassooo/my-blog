@@ -58,7 +58,7 @@
 ## Coding
 
 #### basic
-
+**cross-platform : 跨平台的**<br>
 **data visualization : 数据可视化**<br>
 **Cloud deployment models : 云部署模型**<br>
 
@@ -100,6 +100,9 @@
 **computed : 计算属性**<br>
 **enumerable : 可枚举的**<br>
 **prototype ：原型**<br>
+**reactive : 响应式的**<br>
+**observer : 观察者**<br>
+**instance : 实例**<br>
 
 #### Machine Learning
 

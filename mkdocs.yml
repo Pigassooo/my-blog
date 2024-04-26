@@ -136,18 +136,32 @@ nav:
     - Notes:
       - JavaScript:
         - API:
-          - notes/notes/JavaScript/API/01.API的基本认知.md
-          - notes/notes/JavaScript/API/02.获取DOM元素.md
-          - notes/notes/JavaScript/API/03.操作元素内容.md
-          - notes/notes/JavaScript/API/04.操作元素属性.md
-          - notes/notes/JavaScript/API/05.操作表单元素.md
-          - notes/notes/JavaScript/API/06.自定义属性.md
-          - notes/notes/JavaScript/API/07.定时器间歇函数.md
-          - notes/notes/JavaScript/API/08.事件监听.md
-          - notes/notes/JavaScript/API/09.事件类型.md
-          - notes/notes/JavaScript/API/10.事件对象.md
-          - notes/notes/JavaScript/API/11.回调函数.md
-          - notes/notes/JavaScript/API/12.事件流.md
+          - DOM:
+            - notes/notes/JavaScript/API/01.DOM/01.API的基本认知.md
+            - notes/notes/JavaScript/API/01.DOM/02.获取DOM元素.md
+            - notes/notes/JavaScript/API/01.DOM/03.操作元素内容.md
+            - notes/notes/JavaScript/API/01.DOM/04.操作元素属性.md
+            - notes/notes/JavaScript/API/01.DOM/05.操作表单元素.md
+            - notes/notes/JavaScript/API/01.DOM/06.自定义属性.md
+            - notes/notes/JavaScript/API/01.DOM/07.定时器间歇函数.md
+            - notes/notes/JavaScript/API/01.DOM/08.事件监听.md
+            - notes/notes/JavaScript/API/01.DOM/09.事件类型.md
+            - notes/notes/JavaScript/API/01.DOM/10.事件对象.md
+            - notes/notes/JavaScript/API/01.DOM/11.回调函数.md
+            - notes/notes/JavaScript/API/01.DOM/12.事件流.md
+            - notes/notes/JavaScript/API/01.DOM/13.事件委托.md
+            - notes/notes/JavaScript/API/01.DOM/14.页面加载事件.md
+            - notes/notes/JavaScript/API/01.DOM/15.页面滚动事件.md
+            - notes/notes/JavaScript/API/01.DOM/16.页面尺寸事件.md
+            - notes/notes/JavaScript/API/01.DOM/17.元素尺寸与位置.md
+            - notes/notes/JavaScript/API/01.DOM/18.日期对象.md
+            - notes/notes/JavaScript/API/01.DOM/19.节点操作.md
+            - notes/notes/JavaScript/API/01.DOM/20.M端事件.md
+            - notes/notes/JavaScript/API/01.DOM/21.重绘和回流.md
+          - BOM:
+            - notes/notes/JavaScript/API/02.BOM/01.BOM.md
+            - notes/notes/JavaScript/API/02.BOM/02.延时函数.md
+            - notes/notes/JavaScript/API/02.BOM/03.JS执行机制.md
     - Computer English(processing): notes/computerEnglish.md
     - Useful Website:
       - Code: notes/website/code.md
