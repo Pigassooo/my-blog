@@ -169,6 +169,20 @@ nav:
             - notes/notes/JavaScript/API/02.BOM/08.本地存储案例.md
             - notes/notes/JavaScript/API/02.BOM/09.数组的方法(补充).md
             - notes/notes/JavaScript/API/02.BOM/10.正则表达式.md
+      - Vue:
+        - Vue2基础:
+          - notes/notes/Vue2+3/Vue2/01.Vue简介.md
+          - notes/notes/Vue2+3/Vue2/02.数据绑定.md
+          - notes/notes/Vue2+3/Vue2/03.事件处理.md
+          - notes/notes/Vue2+3/Vue2/04.计算属性与监视.md
+          - notes/notes/Vue2+3/Vue2/05.class与style绑定.md
+          - notes/notes/Vue2+3/Vue2/06.条件渲染.md
+          - notes/notes/Vue2+3/Vue2/07.列表渲染.md
+          - notes/notes/Vue2+3/Vue2/08.Vue监测数据的原理.md
+          - notes/notes/Vue2+3/Vue2/09.收集表单数据.md
+          - notes/notes/Vue2+3/Vue2/10.过滤器.md
+          - notes/notes/Vue2+3/Vue2/11.内置指令.md
+          - notes/notes/Vue2+3/Vue2/12.自定义指令.md
       - Axios:
         - notes/notes/Axios/Axios的理解与使用.md
       - JavaSE:
