@@ -183,6 +183,8 @@ nav:
           - notes/notes/Vue2+3/Vue2/10.过滤器.md
           - notes/notes/Vue2+3/Vue2/11.内置指令.md
           - notes/notes/Vue2+3/Vue2/12.自定义指令.md
+          - notes/notes/Vue2+3/Vue2/13.生命周期.md
+          - notes/notes/Vue2+3/Vue2/14.组件简介.md
       - Axios:
         - notes/notes/Axios/Axios的理解与使用.md
       - JavaSE:
