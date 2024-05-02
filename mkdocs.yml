@@ -134,6 +134,8 @@ nav:
   - Notes:
     - notes/index.md
     - Notes:
+      - FrontEnd:
+        - Storage: notes/notes/Frontend/客户端存储.md
       - JavaScript:
         - API:
           - DOM:
