@@ -196,6 +196,7 @@ nav:
         - notes/notes/JavaSE/01.面向对象基础.md
         - notes/notes/JavaSE/02.String类.md
         - notes/notes/JavaSE/03.ArrayList类.md
+        - notes/notes/JavaSE/04.static.md
     - Computer English(processing): notes/computerEnglish.md
     - Useful Website:
       - Code: notes/website/code.md
