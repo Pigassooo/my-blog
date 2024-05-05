@@ -187,6 +187,9 @@ nav:
           - notes/notes/Vue2+3/Vue2/12.自定义指令.md
           - notes/notes/Vue2+3/Vue2/13.生命周期.md
           - notes/notes/Vue2+3/Vue2/14.组件简介.md
+          - notes/notes/Vue2+3/Vue2/15.单文件组件.md
+          - notes/notes/Vue2+3/Vue2/16.Vue脚手架创建与简介.md
+          - notes/notes/Vue2+3/Vue2/17.修改默认配置项.md
       - Axios:
         - notes/notes/Axios/Axios的理解与使用.md
       - JavaSE:
