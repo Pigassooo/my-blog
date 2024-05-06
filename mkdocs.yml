@@ -190,6 +190,8 @@ nav:
           - notes/notes/Vue2+3/Vue2/15.单文件组件.md
           - notes/notes/Vue2+3/Vue2/16.Vue脚手架创建与简介.md
           - notes/notes/Vue2+3/Vue2/17.修改默认配置项.md
+          - notes/notes/Vue2+3/Vue2/18.ref属性.md
+          - notes/notes/Vue2+3/Vue2/19.配置项props.md
       - Axios:
         - notes/notes/Axios/Axios的理解与使用.md
       - JavaSE:
