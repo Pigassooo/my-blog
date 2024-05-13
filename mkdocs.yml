@@ -192,13 +192,19 @@ nav:
           - notes/notes/Vue2+3/Vue2/17.修改默认配置项.md
           - notes/notes/Vue2+3/Vue2/18.ref属性.md
           - notes/notes/Vue2+3/Vue2/19.配置项props.md
+          - notes/notes/Vue2+3/Vue2/20.mixin混入.md
+          - notes/notes/Vue2+3/Vue2/21.plugins.md
+          - notes/notes/Vue2+3/Vue2/22.scope样式.md
+          - notes/notes/Vue2+3/Vue2/23.Todo-List案例.md
       - Axios:
         - notes/notes/Axios/Axios的理解与使用.md
       - JavaSE:
+        - notes/notes/JavaSE/00.JavaRoadMap.md
         - notes/notes/JavaSE/01.面向对象基础.md
         - notes/notes/JavaSE/02.String类.md
         - notes/notes/JavaSE/03.ArrayList类.md
         - notes/notes/JavaSE/04.static.md
+        - notes/notes/JavaSE/05.继承.md
     - Computer English(processing): notes/computerEnglish.md
     - Useful Website:
       - Code: notes/website/code.md
