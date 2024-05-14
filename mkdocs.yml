@@ -205,6 +205,8 @@ nav:
         - notes/notes/JavaSE/03.ArrayList类.md
         - notes/notes/JavaSE/04.static.md
         - notes/notes/JavaSE/05.继承.md
+        - notes/notes/JavaSE/06.多态.md
+        - notes/notes/JavaSE/07.抽象类.md
     - Computer English(processing): notes/computerEnglish.md
     - Useful Website:
       - Code: notes/website/code.md
