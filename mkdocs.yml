@@ -207,6 +207,8 @@ nav:
         - notes/notes/JavaSE/05.继承.md
         - notes/notes/JavaSE/06.多态.md
         - notes/notes/JavaSE/07.抽象类.md
+        - notes/notes/JavaSE/08.接口.md
+        - notes/notes/JavaSE/09.内部类.md
     - Computer English(processing): notes/computerEnglish.md
     - Useful Website:
       - Code: notes/website/code.md
