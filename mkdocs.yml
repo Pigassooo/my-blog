@@ -209,6 +209,12 @@ nav:
         - notes/notes/JavaSE/07.抽象类.md
         - notes/notes/JavaSE/08.接口.md
         - notes/notes/JavaSE/09.内部类.md
+        - notes/notes/JavaSE/10.enum类.md
+        - notes/notes/JavaSE/11.泛型.md
+        - notes/notes/JavaSE/12.lang_Object.md
+        - notes/notes/JavaSE/13.util_Objects.md
+        - notes/notes/JavaSE/14.lang_wrappers.md
+        - notes/notes/JavaSE/15.lang_StringBuilder.md
     - Computer English(processing): notes/computerEnglish.md
     - Useful Website:
       - Code: notes/website/code.md
