@@ -215,6 +215,18 @@ nav:
         - notes/notes/JavaSE/13.util_Objects.md
         - notes/notes/JavaSE/14.lang_wrappers.md
         - notes/notes/JavaSE/15.lang_StringBuilder.md
+        - notes/notes/JavaSE/16.lang_StringBuffer.md
+        - notes/notes/JavaSE/17.lang_StringJoiner.md
+        - notes/notes/JavaSE/18.lang_Math.md
+        - notes/notes/JavaSE/19.lang_System.md
+        - notes/notes/JavaSE/20.lang_Runtime.md
+        - notes/notes/JavaSE/21.lang_BigDecimal.md
+        - notes/notes/JavaSE/22.util_Arrays.md
+        - notes/notes/JavaSE/23.JDK8_LambdaExpression.md
+        - notes/notes/JavaSE/24.JDK8_方法引用.md
+        - notes/notes/JavaSE/25.regularExpression.md
+        - notes/notes/JavaSE/26.Exception.md
+        - notes/notes/JavaSE/27.CollectionFramework.md
     - Computer English(processing): notes/computerEnglish.md
     - Useful Website:
       - Code: notes/website/code.md
