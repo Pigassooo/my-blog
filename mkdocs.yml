@@ -138,7 +138,9 @@ nav:
         - Basic Algorithm 1: notes/notes/Algorithm/01.BasicAlgorithm1.md
       - FrontEnd:
         - Storage: notes/notes/Frontend/客户端存储.md
-        - HTTP: notes/notes/Frontend/HTTP/01.HTTP协议.md
+        - HTTP:
+          - notes/notes/Frontend/HTTP/01.了解Web及网络基础.md
+          - notes/notes/Frontend/HTTP/02.简单的HTTP协议.md
         - Axios: notes/notes/Frontend/Axios/Axios的理解与使用.md
         - JavaScript:
           - API:
