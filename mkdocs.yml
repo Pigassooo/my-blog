@@ -243,6 +243,9 @@ nav:
           - notes/notes/Backend/JavaWeb/02.Maven.md
           - notes/notes/Backend/JavaWeb/03.Web入门.md
           - notes/notes/Backend/JavaWeb/04.请求响应分层解耦.md
+        - Project:
+          - HungryPig:
+            - notes/notes/Backend/Project/HungryPig/01.整体介绍.md
     - Computer English(processing): notes/computerEnglish.md
     - Useful Website:
       - Code: notes/website/code.md
