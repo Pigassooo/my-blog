@@ -239,6 +239,8 @@ nav:
           - notes/notes/Backend/JavaSE/30.specialFileandJournaling.md
         - JavaWeb:
           - notes/notes/Backend/JavaWeb/00.RoadMap.md
+          - notes/notes/Backend/JavaWeb/01.前置知识.md
+          - notes/notes/Backend/JavaWeb/02.Maven.md
     - Computer English(processing): notes/computerEnglish.md
     - Useful Website:
       - Code: notes/website/code.md
