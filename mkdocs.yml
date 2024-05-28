@@ -237,6 +237,7 @@ nav:
           - notes/notes/Backend/JavaSE/28.io_File.md
           - notes/notes/Backend/JavaSE/29.IO.md
           - notes/notes/Backend/JavaSE/30.specialFileandJournaling.md
+          - notes/notes/Backend/JavaSE/31.multithreading.md
         - JavaWeb:
           - notes/notes/Backend/JavaWeb/00.RoadMap.md
           - notes/notes/Backend/JavaWeb/01.前置知识.md
