@@ -151,3 +151,20 @@ npm install [-- legacy-peer-deps] @react-three/fiber @react-three/drei maath rea
 
 ### paste ```components/```
 
+
+## 1. Hero section
+
+## 2. About section
+- in ```about.js```
+    - use ```import Tilt from "react-tilt";``` to tilt the cards that we are displaying
+    - use ```import {motion} from "framer-motion";``` to animate the cards
+
+- use ```<></>``` as regular react fragment to return multiple elements from a component without wrapping them in an extra tag.
+
+
+
+### 2.1 Introduction part
+
+### 2.2 overview part
+
+### 2.3 introduction part
