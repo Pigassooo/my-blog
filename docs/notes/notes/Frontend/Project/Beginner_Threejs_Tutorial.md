@@ -161,10 +161,25 @@ npm install [-- legacy-peer-deps] @react-three/fiber @react-three/drei maath rea
 
 - use ```<></>``` as regular react fragment to return multiple elements from a component without wrapping them in an extra tag.
 
+### 2.1 overview part
+
+- use ```<motion.div>``` to create a motion div that will animate when the page loads.
 
 
-### 2.1 Introduction part
+### 2.2 introduction part
 
-### 2.2 overview part
+- When you use the spread syntax ```{...service}``` to pass props to a component in React,This operator allows you to destructure all enumerable properties of an object and pass them as individual arguments.
+-
 
-### 2.3 introduction part
+
+### 2.3 card part
+
+- ```options={}``` is to com
+
+
+### 2.4 section wrapper for all
+
+- HOC
+- The term ```staggerContainer``` refers to a feature in the ```framer-motion``` library that allows you to control a group of animations in a staggered sequence.
+
+- Typically, creating a ```<span>``` element designated for URL hash purposes in HTML serves to pinpoint a specific location on the page. The aim is to enable users to directly navigate to this precise spot via the URL. ( insert a ```<span>``` element into your HTML document and assign it a unique id attribute. )In this scenario, the ```<span>``` element carries an id attribute with the value of ```my-anchor```. Consequently, you can directly jump to this location through the URL ```http://example.com/#my-anchor```.
