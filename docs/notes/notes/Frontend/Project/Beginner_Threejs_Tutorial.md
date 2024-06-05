@@ -183,3 +183,5 @@ npm install [-- legacy-peer-deps] @react-three/fiber @react-three/drei maath rea
 - The term ```staggerContainer``` refers to a feature in the ```framer-motion``` library that allows you to control a group of animations in a staggered sequence.
 
 - Typically, creating a ```<span>``` element designated for URL hash purposes in HTML serves to pinpoint a specific location on the page. The aim is to enable users to directly navigate to this precise spot via the URL. ( insert a ```<span>``` element into your HTML document and assign it a unique id attribute. )In this scenario, the ```<span>``` element carries an id attribute with the value of ```my-anchor```. Consequently, you can directly jump to this location through the URL ```http://example.com/#my-anchor```.
+
+## 3 technology section
