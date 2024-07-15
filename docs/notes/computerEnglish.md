@@ -2,10 +2,14 @@
 
 ## Sign
 
+**double quotation marks : 双引号**<br>
 **quotes : 引号**<br>
 **parentheses : 圆括号**<br>
 **square bracket : 方括号**<br>
 **exclamation point : 感叹号**<br>
+**semi-colon : 分号**<br>
+**colon : 冒号**<br>
+**comma : 逗号**<br>
 
 ## Mathematics
 
@@ -75,6 +79,14 @@
 **integer : 整数**<br>
 **pointer : 指针**<br>
 **slice : 切片**<br>
+**literal String : 字面字符串**<br>
+**Hard-coded values : 硬编码值（程序执行过程中保持不变的值）**<br>
+**dynamic array : 动态数组**<br>
+**Hashtable : 哈希表**<br>
+**Associate Arrays : 链表**<br>
+**Tuple : 元组 (有序且不可变的集合) heterogeneous**<br>
+**literal suffix : 字面后缀**<br>
+
 
 **decimal : 小数**<br>
 **arithmetic : 算术**<br>
@@ -89,11 +101,7 @@
 **if statement : if 语句**<br>
 **execute : 执行指令**<br>
 **assign : 赋值**<br>
-
-**dynamic array : 动态数组**<br>
-**Hashtable : 哈希表**<br>
-**Associate Arrays : 链表**<br>
-**Tuple : 元组 (有序且不可变的集合) heterogeneous**<br>
+**Declare and initialize : 声明并初始化**<br>
 
 **interpolation : 插值表达式**<br>
 **property : 属性**<br>
