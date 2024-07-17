@@ -28,3 +28,52 @@
 }
 
 
+/* 首页飞行动画开始 */
+/* 定义动画 */
+@keyframes flyInAnimation {
+    from {
+        transform: translateY(100vh);
+        /* 从屏幕下方开始 */
+        opacity: 0;
+        /* 初始透明度为0 */
+    }
+
+    to {
+        transform: translateY(0);
+        /* 移动到最终位置 */
+        opacity: 1;
+        /* 最终透明度为1 */
+    }
+}
+
+/* 应用到 .red-box 中的图片 */
+.red-box {
+    /* 定义红框的样式，根据你的布局调整 */
+    width: 200px;
+    /* 例如设置宽度 */
+    height: 200px;
+    /* 设置高度 */
+    /* border: 2px solid red; */
+    /* 显示红框，可以根据实际情况移除 */
+    overflow: hidden;
+    /* 隐藏飞入动画开始时的部分 */
+    position: relative;
+    /* 为了定位图片 */
+}
+
+.flying-image {
+    /* 设置图片飞入动画 */
+    width: 100%;
+    /* 图片宽度填充容器 */
+    height: auto;
+    /* 高度自动 */
+    animation: flyInAnimation 2s ease-out forwards;
+    /* 应用动画 */
+    position: absolute;
+    /* 绝对定位 */
+    bottom: 0;
+    /* 从底部飞入 */
+    left: 0;
+    /* 从左边开始 */
+}
+/* 首页飞行动画结束 */
