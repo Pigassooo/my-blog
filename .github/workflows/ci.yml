@@ -23,7 +23,7 @@ jobs:
       - name: Install MkDocs with plugins
         run: pip install mkdocs
              pip install mkdocs-material
-            #  pip install mkdocs-git-revision-date-localized-plugin
+             pip install mkdocs-git-revision-date-localized-plugin
       - run: echo "cache_id=$(date --utc '+%V')" >> $GITHUB_ENV
       - uses: actions/cache@v4
         with:
