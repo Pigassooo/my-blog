@@ -90,10 +90,10 @@ markdown_extensions:
 
 plugins:
   - search
-  - minify:
-      minify_html: true
-      minify_js: true
-      minify_css: true
+  # - minify:
+  #     minify_html: true
+  #     minify_js: true
+  #     minify_css: true
   # - git-revision-date-localized:
   # - enable_creation_date: true
   - blog:
