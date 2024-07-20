@@ -28,7 +28,6 @@ theme:
 
 
   features:
-
     # - codehilite:  # 高亮代码块
     # - guess_lang: false
     - navigation.instant  # 实现页面的即时加载
