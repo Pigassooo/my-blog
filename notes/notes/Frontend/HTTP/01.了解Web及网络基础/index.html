@@ -1,7 +1,5280 @@
-<!doctype html><html lang=en class=no-js> <head><meta charset=utf-8><meta name=viewport content="width=device-width,initial-scale=1"><meta name=author content=Pigasso><link href=https://pigassooo.github.io/my-blog/notes/notes/Frontend/HTTP/01.%E4%BA%86%E8%A7%A3Web%E5%8F%8A%E7%BD%91%E7%BB%9C%E5%9F%BA%E7%A1%80/ rel=canonical><link href=../../%E5%AE%A2%E6%88%B7%E7%AB%AF%E5%AD%98%E5%82%A8/ rel=prev><link href=../02.%E7%AE%80%E5%8D%95%E7%9A%84HTTP%E5%8D%8F%E8%AE%AE/ rel=next><link rel=icon href=../../../../../images/favicon.png><meta name=generator content="mkdocs-1.6.0, mkdocs-material-9.5.29"><title>01.了解Web及网络基础 - Pigasso's Web</title><link rel=stylesheet href=../../../../../assets/stylesheets/main.76a95c52.min.css><link rel=stylesheet href=../../../../../assets/stylesheets/palette.06af60db.min.css><link rel=preconnect href=https://fonts.gstatic.com crossorigin><link rel=stylesheet href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback"><style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style><link rel=stylesheet href=../../../../../stylesheets/extra.css><script>__md_scope=new URL("../../../../..",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script></head> <body dir=ltr data-md-color-scheme=default data-md-color-primary=indigo data-md-color-accent=indigo> <input class=md-toggle data-md-toggle=drawer type=checkbox id=__drawer autocomplete=off> <input class=md-toggle data-md-toggle=search type=checkbox id=__search autocomplete=off> <label class=md-overlay for=__drawer></label> <div data-md-component=skip> <a href=#01了解web及网络基础 class=md-skip> Skip to content </a> </div> <div data-md-component=announce> </div> <header class="md-header md-header--shadow md-header--lifted" data-md-component=header> <nav class="md-header__inner md-grid" aria-label=Header> <a href=../../../../.. title="Pigasso's Web" class="md-header__button md-logo" aria-label="Pigasso's Web" data-md-component=logo> <svg xmlns=http://www.w3.org/2000/svg viewbox="0 0 320 512"><!-- Font Awesome Free 6.5.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2024 Fonticons, Inc.--><path d="M0 96c0-35.3 28.7-64 64-64h96c88.4 0 160 71.6 160 160s-71.6 160-160 160H64v96c0 17.7-14.3 32-32 32S0 465.7 0 448V96zm64 192h96c53 0 96-43 96-96s-43-96-96-96H64v192z"/></svg> </a> <label class="md-header__button md-icon" for=__drawer> <svg xmlns=http://www.w3.org/2000/svg viewbox="0 0 24 24"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2Z"/></svg> </label> <div class=md-header__title data-md-component=header-title> <div class=md-header__ellipsis> <div class=md-header__topic> <span class=md-ellipsis> Pigasso's Web </span> </div> <div class=md-header__topic data-md-component=header-topic> <span class=md-ellipsis> 01.了解Web及网络基础 </span> </div> </div> </div> <form class=md-header__option data-md-component=palette> <input class=md-option data-md-color-media data-md-color-scheme=default data-md-color-primary=indigo data-md-color-accent=indigo aria-label="Switch to dark mode" type=radio name=__palette id=__palette_0> <label class="md-header__button md-icon" title="Switch to dark mode" for=__palette_1 hidden> <svg xmlns=http://www.w3.org/2000/svg viewbox="0 0 24 24"><path d="M12 8a4 4 0 0 0-4 4 4 4 0 0 0 4 4 4 4 0 0 0 4-4 4 4 0 0 0-4-4m0 10a6 6 0 0 1-6-6 6 6 0 0 1 6-6 6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12 20 8.69Z"/></svg> </label> <input class=md-option data-md-color-media data-md-color-scheme=slate data-md-color-primary=indigo data-md-color-accent=indigo aria-label="Switch to light mode" type=radio name=__palette id=__palette_1> <label class="md-header__button md-icon" title="Switch to light mode" for=__palette_0 hidden> <svg xmlns=http://www.w3.org/2000/svg viewbox="0 0 24 24"><path d="M12 18c-.89 0-1.74-.2-2.5-.55C11.56 16.5 13 14.42 13 12c0-2.42-1.44-4.5-3.5-5.45C10.26 6.2 11.11 6 12 6a6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12 20 8.69Z"/></svg> </label> </form> <script>var media,input,key,value,palette=__md_get("__palette");if(palette&&palette.color){"(prefers-color-scheme)"===palette.color.media&&(media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']"),palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent"));for([key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script> <div class=md-header__option> <div class=md-select> <button class="md-header__button md-icon" aria-label="Select language"> <svg xmlns=http://www.w3.org/2000/svg viewbox="0 0 24 24"><path d="m12.87 15.07-2.54-2.51.03-.03A17.52 17.52 0 0 0 14.07 6H17V4h-7V2H8v2H1v2h11.17C11.5 7.92 10.44 9.75 9 11.35 8.07 10.32 7.3 9.19 6.69 8h-2c.73 1.63 1.73 3.17 2.98 4.56l-5.09 5.02L4 19l5-5 3.11 3.11.76-2.04M18.5 10h-2L12 22h2l1.12-3h4.75L21 22h2l-4.5-12m-2.62 7 1.62-4.33L19.12 17h-3.24Z"/></svg> </button> <div class=md-select__inner> <ul class=md-select__list> <li class=md-select__item> <a href=/en/ hreflang=en class=md-select__link> English </a> </li> <li class=md-select__item> <a href=/zh/ hreflang=zh class=md-select__link> 中文 </a> </li> </ul> </div> </div> </div> <label class="md-header__button md-icon" for=__search> <svg xmlns=http://www.w3.org/2000/svg viewbox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg> </label> <div class=md-search data-md-component=search role=dialog> <label class=md-search__overlay for=__search></label> <div class=md-search__inner role=search> <form class=md-search__form name=search> <input type=text class=md-search__input name=query aria-label=Search placeholder=Search autocapitalize=off autocorrect=off autocomplete=off spellcheck=false data-md-component=search-query required> <label class="md-search__icon md-icon" for=__search> <svg xmlns=http://www.w3.org/2000/svg viewbox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg> <svg xmlns=http://www.w3.org/2000/svg viewbox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg> </label> <nav class=md-search__options aria-label=Search> <button type=reset class="md-search__icon md-icon" title=Clear aria-label=Clear tabindex=-1> <svg xmlns=http://www.w3.org/2000/svg viewbox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41Z"/></svg> </button> </nav> </form> <div class=md-search__output> <div class=md-search__scrollwrap tabindex=0 data-md-scrollfix> <div class=md-search-result data-md-component=search-result> <div class=md-search-result__meta> Initializing search </div> <ol class=md-search-result__list role=presentation></ol> </div> </div> </div> </div> </div> <div class=md-header__source> <a href=https://github.com/Pigassooo title="Go to repository" class=md-source data-md-component=source> <div class="md-source__icon md-icon"> <svg xmlns=http://www.w3.org/2000/svg viewbox="0 0 496 512"><!-- Font Awesome Free 6.5.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2024 Fonticons, Inc.--><path d="M165.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6zm-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3zm44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9zM244.8 8C106.1 8 0 113.3 0 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C428.2 457.8 496 362.9 496 252 496 113.3 383.5 8 244.8 8zM97.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1zm-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7zm32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1zm-11.4-14.7c-1.6 1-1.6 3.6 0 5.9 1.6 2.3 4.3 3.3 5.6 2.3 1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2z"/></svg> </div> <div class=md-source__repository> GitHub </div> </a> </div> </nav> <nav class=md-tabs aria-label=Tabs data-md-component=tabs> <div class=md-grid> <ul class=md-tabs__list> <li class=md-tabs__item> <a href=../../../../.. class=md-tabs__link> Home </a> </li> <li class="md-tabs__item md-tabs__item--active"> <a href=../../../../ class=md-tabs__link> Notes </a> </li> <li class=md-tabs__item> <a href=../../../../../blog/ class=md-tabs__link> Blog </a> </li> <li class=md-tabs__item> <a href=../../../../../reprint/ class=md-tabs__link> Reprint </a> </li> <li class=md-tabs__item> <a href=../../../../../loveStory/ class=md-tabs__link> LoveStory </a> </li> <li class=md-tabs__item> <a href=../../../../../about/ class=md-tabs__link> About </a> </li> <li class=md-tabs__item> <a href=../../../../../motivation/ class=md-tabs__link> Motivation </a> </li> </ul> </div> </nav> </header> <div class=md-container data-md-component=container> <main class=md-main data-md-component=main> <div class="md-main__inner md-grid"> <div class="md-sidebar md-sidebar--primary" data-md-component=sidebar data-md-type=navigation> <div class=md-sidebar__scrollwrap> <div class=md-sidebar__inner> <nav class="md-nav md-nav--primary md-nav--lifted md-nav--integrated" aria-label=Navigation data-md-level=0> <label class=md-nav__title for=__drawer> <a href=../../../../.. title="Pigasso's Web" class="md-nav__button md-logo" aria-label="Pigasso's Web" data-md-component=logo> <svg xmlns=http://www.w3.org/2000/svg viewbox="0 0 320 512"><!-- Font Awesome Free 6.5.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2024 Fonticons, Inc.--><path d="M0 96c0-35.3 28.7-64 64-64h96c88.4 0 160 71.6 160 160s-71.6 160-160 160H64v96c0 17.7-14.3 32-32 32S0 465.7 0 448V96zm64 192h96c53 0 96-43 96-96s-43-96-96-96H64v192z"/></svg> </a> Pigasso's Web </label> <div class=md-nav__source> <a href=https://github.com/Pigassooo title="Go to repository" class=md-source data-md-component=source> <div class="md-source__icon md-icon"> <svg xmlns=http://www.w3.org/2000/svg viewbox="0 0 496 512"><!-- Font Awesome Free 6.5.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2024 Fonticons, Inc.--><path d="M165.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6zm-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3zm44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9zM244.8 8C106.1 8 0 113.3 0 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C428.2 457.8 496 362.9 496 252 496 113.3 383.5 8 244.8 8zM97.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1zm-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7zm32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1zm-11.4-14.7c-1.6 1-1.6 3.6 0 5.9 1.6 2.3 4.3 3.3 5.6 2.3 1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2z"/></svg> </div> <div class=md-source__repository> GitHub </div> </a> </div> <ul class=md-nav__list data-md-scrollfix> <li class=md-nav__item> <a href=../../../../.. class=md-nav__link> <span class=md-ellipsis> Home </span> </a> </li> <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested"> <input class="md-nav__toggle md-toggle " type=checkbox id=__nav_2 checked> <div class="md-nav__link md-nav__container"> <a href=../../../../ class="md-nav__link "> <span class=md-ellipsis> Notes </span> </a> <label class="md-nav__link " for=__nav_2 id=__nav_2_label tabindex> <span class="md-nav__icon md-icon"></span> </label> </div> <nav class=md-nav data-md-level=1 aria-labelledby=__nav_2_label aria-expanded=true> <label class=md-nav__title for=__nav_2> <span class="md-nav__icon md-icon"></span> Notes </label> <ul class=md-nav__list data-md-scrollfix> <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested"> <input class="md-nav__toggle md-toggle " type=checkbox id=__nav_2_2 checked> <label class=md-nav__link for=__nav_2_2 id=__nav_2_2_label tabindex> <span class=md-ellipsis> Notes </span> <span class="md-nav__icon md-icon"></span> </label> <nav class=md-nav data-md-level=2 aria-labelledby=__nav_2_2_label aria-expanded=true> <label class=md-nav__title for=__nav_2_2> <span class="md-nav__icon md-icon"></span> Notes </label> <ul class=md-nav__list data-md-scrollfix> <li class="md-nav__item md-nav__item--nested"> <input class="md-nav__toggle md-toggle " type=checkbox id=__nav_2_2_1> <label class=md-nav__link for=__nav_2_2_1 id=__nav_2_2_1_label tabindex=0> <span class=md-ellipsis> Algorithm </span> <span class="md-nav__icon md-icon"></span> </label> <nav class=md-nav data-md-level=3 aria-labelledby=__nav_2_2_1_label aria-expanded=false> <label class=md-nav__title for=__nav_2_2_1> <span class="md-nav__icon md-icon"></span> Algorithm </label> <ul class=md-nav__list data-md-scrollfix> <li class=md-nav__item> <a href=../../../Algorithm/01.BasicAlgorithm1/ class=md-nav__link> <span class=md-ellipsis> Basic Algorithm 1 </span> </a> </li> </ul> </nav> </li> <li class="md-nav__item md-nav__item--active md-nav__item--nested"> <input class="md-nav__toggle md-toggle " type=checkbox id=__nav_2_2_2 checked> <label class=md-nav__link for=__nav_2_2_2 id=__nav_2_2_2_label tabindex=0> <span class=md-ellipsis> FrontEnd </span> <span class="md-nav__icon md-icon"></span> </label> <nav class=md-nav data-md-level=3 aria-labelledby=__nav_2_2_2_label aria-expanded=true> <label class=md-nav__title for=__nav_2_2_2> <span class="md-nav__icon md-icon"></span> FrontEnd </label> <ul class=md-nav__list data-md-scrollfix> <li class=md-nav__item> <a href=../../%E5%AE%A2%E6%88%B7%E7%AB%AF%E5%AD%98%E5%82%A8/ class=md-nav__link> <span class=md-ellipsis> Storage </span> </a> </li> <li class="md-nav__item md-nav__item--active md-nav__item--nested"> <input class="md-nav__toggle md-toggle " type=checkbox id=__nav_2_2_2_2 checked> <label class=md-nav__link for=__nav_2_2_2_2 id=__nav_2_2_2_2_label tabindex=0> <span class=md-ellipsis> HTTP </span> <span class="md-nav__icon md-icon"></span> </label> <nav class=md-nav data-md-level=4 aria-labelledby=__nav_2_2_2_2_label aria-expanded=true> <label class=md-nav__title for=__nav_2_2_2_2> <span class="md-nav__icon md-icon"></span> HTTP </label> <ul class=md-nav__list data-md-scrollfix> <li class="md-nav__item md-nav__item--active"> <input class="md-nav__toggle md-toggle" type=checkbox id=__toc> <label class="md-nav__link md-nav__link--active" for=__toc> <span class=md-ellipsis> 01.了解Web及网络基础 </span> <span class="md-nav__icon md-icon"></span> </label> <a href=./ class="md-nav__link md-nav__link--active"> <span class=md-ellipsis> 01.了解Web及网络基础 </span> </a> <nav class="md-nav md-nav--secondary" aria-label="Table of contents"> <label class=md-nav__title for=__toc> <span class="md-nav__icon md-icon"></span> Table of contents </label> <ul class=md-nav__list data-md-component=toc data-md-scrollfix> <li class=md-nav__item> <a href=#11-使用http协议访问web class=md-nav__link> <span class=md-ellipsis> 1.1 使用HTTP协议访问Web </span> </a> </li> <li class=md-nav__item> <a href=#12-网络基础-tcpip class=md-nav__link> <span class=md-ellipsis> 1.2 网络基础 TCP/IP </span> </a> <nav class=md-nav aria-label="1.2 网络基础 TCP/IP"> <ul class=md-nav__list> <li class=md-nav__item> <a href=#121-tcpip-协议族 class=md-nav__link> <span class=md-ellipsis> 1.2.1 TCP/IP 协议族 </span> </a> </li> <li class=md-nav__item> <a href=#122-tcpip-的分层管理 class=md-nav__link> <span class=md-ellipsis> 1.2.2 TCP/IP 的分层管理 </span> </a> </li> <li class=md-nav__item> <a href=#123-tcpip-通信传输流 class=md-nav__link> <span class=md-ellipsis> 1.2.3 TCP/IP 通信传输流 </span> </a> </li> </ul> </nav> </li> <li class=md-nav__item> <a href=#13-与-http-关系密切的协议iptcp-和-dns class=md-nav__link> <span class=md-ellipsis> 1.3 与 HTTP 关系密切的协议：IP、TCP 和 DNS </span> </a> <nav class=md-nav aria-label="1.3 与 HTTP 关系密切的协议：IP、TCP 和 DNS"> <ul class=md-nav__list> <li class=md-nav__item> <a href=#131-负责传输的-ip-协议 class=md-nav__link> <span class=md-ellipsis> 1.3.1 负责传输的 IP 协议 </span> </a> <nav class=md-nav aria-label="1.3.1 负责传输的 IP 协议"> <ul class=md-nav__list> <li class=md-nav__item> <a href=#使用-arp-协议凭借-mac-地址进行通信 class=md-nav__link> <span class=md-ellipsis> 使用 ARP 协议凭借 MAC 地址进行通信 </span> </a> </li> <li class=md-nav__item> <a href=#没有人能够全面掌握互联网中的传输状况 class=md-nav__link> <span class=md-ellipsis> 没有人能够全面掌握互联网中的传输状况 </span> </a> </li> </ul> </nav> </li> <li class=md-nav__item> <a href=#132-确保可靠传输的-tcp-协议 class=md-nav__link> <span class=md-ellipsis> 1.3.2 确保可靠传输的 TCP 协议 </span> </a> <nav class=md-nav aria-label="1.3.2 确保可靠传输的 TCP 协议"> <ul class=md-nav__list> <li class=md-nav__item> <a href=#确保数据能到达目标 class=md-nav__link> <span class=md-ellipsis> 确保数据能到达目标 </span> </a> </li> </ul> </nav> </li> <li class=md-nav__item> <a href=#133-负责域名解析的-dns-服务 class=md-nav__link> <span class=md-ellipsis> 1.3.3 负责域名解析的 DNS 服务 </span> </a> </li> <li class=md-nav__item> <a href=#134-各种协议与-http-协议的关系 class=md-nav__link> <span class=md-ellipsis> 1.3.4 各种协议与 HTTP 协议的关系 </span> </a> </li> </ul> </nav> </li> <li class=md-nav__item> <a href=#14-uri-和-url class=md-nav__link> <span class=md-ellipsis> 1.4 URI 和 URL </span> </a> <nav class=md-nav aria-label="1.4 URI 和 URL"> <ul class=md-nav__list> <li class=md-nav__item> <a href=#141-统一资源标识符 class=md-nav__link> <span class=md-ellipsis> 1.4.1 统一资源标识符 </span> </a> <nav class=md-nav aria-label="1.4.1 统一资源标识符"> <ul class=md-nav__list> <li class=md-nav__item> <a href=#uniform class=md-nav__link> <span class=md-ellipsis> Uniform </span> </a> </li> <li class=md-nav__item> <a href=#resource class=md-nav__link> <span class=md-ellipsis> Resource </span> </a> </li> <li class=md-nav__item> <a href=#identifier class=md-nav__link> <span class=md-ellipsis> Identifier </span> </a> </li> <li class=md-nav__item> <a href=#总结 class=md-nav__link> <span class=md-ellipsis> 总结 </span> </a> </li> </ul> </nav> </li> <li class=md-nav__item> <a href=#142-url-的组成 class=md-nav__link> <span class=md-ellipsis> 1.4.2 URL 的组成 </span> </a> <nav class=md-nav aria-label="1.4.2 URL 的组成"> <ul class=md-nav__list> <li class=md-nav__item> <a href=#登录信息认证 class=md-nav__link> <span class=md-ellipsis> 登录信息（认证） </span> </a> </li> <li class=md-nav__item> <a href=#服务器地址 class=md-nav__link> <span class=md-ellipsis> 服务器地址 </span> </a> </li> <li class=md-nav__item> <a href=#服务器端口号 class=md-nav__link> <span class=md-ellipsis> 服务器端口号 </span> </a> </li> <li class=md-nav__item> <a href=#带层次的文件路径 class=md-nav__link> <span class=md-ellipsis> 带层次的文件路径 </span> </a> </li> <li class=md-nav__item> <a href=#查询字符串 class=md-nav__link> <span class=md-ellipsis> 查询字符串 </span> </a> </li> <li class=md-nav__item> <a href=#片段标识符 class=md-nav__link> <span class=md-ellipsis> 片段标识符 </span> </a> </li> </ul> </nav> </li> </ul> </nav> </li> </ul> </nav> </li> <li class=md-nav__item> <a href=../02.%E7%AE%80%E5%8D%95%E7%9A%84HTTP%E5%8D%8F%E8%AE%AE/ class=md-nav__link> <span class=md-ellipsis> 02.简单的HTTP协议 </span> </a> </li> </ul> </nav> </li> <li class=md-nav__item> <a href=../../Axios/Axios%E7%9A%84%E7%90%86%E8%A7%A3%E4%B8%8E%E4%BD%BF%E7%94%A8/ class=md-nav__link> <span class=md-ellipsis> Axios </span> </a> </li> <li class="md-nav__item md-nav__item--nested"> <input class="md-nav__toggle md-toggle " type=checkbox id=__nav_2_2_2_4> <label class=md-nav__link for=__nav_2_2_2_4 id=__nav_2_2_2_4_label tabindex=0> <span class=md-ellipsis> JavaScript </span> <span class="md-nav__icon md-icon"></span> </label> <nav class=md-nav data-md-level=4 aria-labelledby=__nav_2_2_2_4_label aria-expanded=false> <label class=md-nav__title for=__nav_2_2_2_4> <span class="md-nav__icon md-icon"></span> JavaScript </label> <ul class=md-nav__list data-md-scrollfix> <li class="md-nav__item md-nav__item--nested"> <input class="md-nav__toggle md-toggle " type=checkbox id=__nav_2_2_2_4_1> <label class=md-nav__link for=__nav_2_2_2_4_1 id=__nav_2_2_2_4_1_label tabindex=0> <span class=md-ellipsis> API </span> <span class="md-nav__icon md-icon"></span> </label> <nav class=md-nav data-md-level=5 aria-labelledby=__nav_2_2_2_4_1_label aria-expanded=false> <label class=md-nav__title for=__nav_2_2_2_4_1> <span class="md-nav__icon md-icon"></span> API </label> <ul class=md-nav__list data-md-scrollfix> <li class="md-nav__item md-nav__item--nested"> <input class="md-nav__toggle md-toggle " type=checkbox id=__nav_2_2_2_4_1_1> <label class=md-nav__link for=__nav_2_2_2_4_1_1 id=__nav_2_2_2_4_1_1_label tabindex=0> <span class=md-ellipsis> DOM </span> <span class="md-nav__icon md-icon"></span> </label> <nav class=md-nav data-md-level=6 aria-labelledby=__nav_2_2_2_4_1_1_label aria-expanded=false> <label class=md-nav__title for=__nav_2_2_2_4_1_1> <span class="md-nav__icon md-icon"></span> DOM </label> <ul class=md-nav__list data-md-scrollfix> <li class=md-nav__item> <a href=../../JavaScript/API/01.DOM/01.API%E7%9A%84%E5%9F%BA%E6%9C%AC%E8%AE%A4%E7%9F%A5/ class=md-nav__link> <span class=md-ellipsis> 01.API的基本认知 </span> </a> </li> <li class=md-nav__item> <a href=../../JavaScript/API/01.DOM/02.%E8%8E%B7%E5%8F%96DOM%E5%85%83%E7%B4%A0/ class=md-nav__link> <span class=md-ellipsis> 02.获取DOM元素 </span> </a> </li> <li class=md-nav__item> <a href=../../JavaScript/API/01.DOM/03.%E6%93%8D%E4%BD%9C%E5%85%83%E7%B4%A0%E5%86%85%E5%AE%B9/ class=md-nav__link> <span class=md-ellipsis> 03.操作元素内容 </span> </a> </li> <li class=md-nav__item> <a href=../../JavaScript/API/01.DOM/04.%E6%93%8D%E4%BD%9C%E5%85%83%E7%B4%A0%E5%B1%9E%E6%80%A7/ class=md-nav__link> <span class=md-ellipsis> 04.操作元素属性 </span> </a> </li> <li class=md-nav__item> <a href=../../JavaScript/API/01.DOM/05.%E6%93%8D%E4%BD%9C%E8%A1%A8%E5%8D%95%E5%85%83%E7%B4%A0/ class=md-nav__link> <span class=md-ellipsis> 05.操作表单元素 </span> </a> </li> <li class=md-nav__item> <a href=../../JavaScript/API/01.DOM/06.%E8%87%AA%E5%AE%9A%E4%B9%89%E5%B1%9E%E6%80%A7/ class=md-nav__link> <span class=md-ellipsis> 06.自定义属性 </span> </a> </li> <li class=md-nav__item> <a href=../../JavaScript/API/01.DOM/07.%E5%AE%9A%E6%97%B6%E5%99%A8%E9%97%B4%E6%AD%87%E5%87%BD%E6%95%B0/ class=md-nav__link> <span class=md-ellipsis> 07.定时器间歇函数 </span> </a> </li> <li class=md-nav__item> <a href=../../JavaScript/API/01.DOM/08.%E4%BA%8B%E4%BB%B6%E7%9B%91%E5%90%AC/ class=md-nav__link> <span class=md-ellipsis> 08.事件监听 </span> </a> </li> <li class=md-nav__item> <a href=../../JavaScript/API/01.DOM/09.%E4%BA%8B%E4%BB%B6%E7%B1%BB%E5%9E%8B/ class=md-nav__link> <span class=md-ellipsis> 09.事件类型 </span> </a> </li> <li class=md-nav__item> <a href=../../JavaScript/API/01.DOM/10.%E4%BA%8B%E4%BB%B6%E5%AF%B9%E8%B1%A1/ class=md-nav__link> <span class=md-ellipsis> 10.事件对象 </span> </a> </li> <li class=md-nav__item> <a href=../../JavaScript/API/01.DOM/11.%E5%9B%9E%E8%B0%83%E5%87%BD%E6%95%B0/ class=md-nav__link> <span class=md-ellipsis> 11.回调函数 </span> </a> </li> <li class=md-nav__item> <a href=../../JavaScript/API/01.DOM/12.%E4%BA%8B%E4%BB%B6%E6%B5%81/ class=md-nav__link> <span class=md-ellipsis> 12.事件流 </span> </a> </li> <li class=md-nav__item> <a href=../../JavaScript/API/01.DOM/13.%E4%BA%8B%E4%BB%B6%E5%A7%94%E6%89%98/ class=md-nav__link> <span class=md-ellipsis> 13.事件委托 </span> </a> </li> <li class=md-nav__item> <a href=../../JavaScript/API/01.DOM/14.%E9%A1%B5%E9%9D%A2%E5%8A%A0%E8%BD%BD%E4%BA%8B%E4%BB%B6/ class=md-nav__link> <span class=md-ellipsis> 14.页面加载事件 </span> </a> </li> <li class=md-nav__item> <a href=../../JavaScript/API/01.DOM/15.%E9%A1%B5%E9%9D%A2%E6%BB%9A%E5%8A%A8%E4%BA%8B%E4%BB%B6/ class=md-nav__link> <span class=md-ellipsis> 15.页面滚动事件 </span> </a> </li> <li class=md-nav__item> <a href=../../JavaScript/API/01.DOM/16.%E9%A1%B5%E9%9D%A2%E5%B0%BA%E5%AF%B8%E4%BA%8B%E4%BB%B6/ class=md-nav__link> <span class=md-ellipsis> 16.页面尺寸事件 </span> </a> </li> <li class=md-nav__item> <a href=../../JavaScript/API/01.DOM/17.%E5%85%83%E7%B4%A0%E5%B0%BA%E5%AF%B8%E4%B8%8E%E4%BD%8D%E7%BD%AE/ class=md-nav__link> <span class=md-ellipsis> 17.元素尺寸与位置 </span> </a> </li> <li class=md-nav__item> <a href=../../JavaScript/API/01.DOM/18.%E6%97%A5%E6%9C%9F%E5%AF%B9%E8%B1%A1/ class=md-nav__link> <span class=md-ellipsis> 18.日期对象 </span> </a> </li> <li class=md-nav__item> <a href=../../JavaScript/API/01.DOM/19.%E8%8A%82%E7%82%B9%E6%93%8D%E4%BD%9C/ class=md-nav__link> <span class=md-ellipsis> 19.节点操作 </span> </a> </li> <li class=md-nav__item> <a href=../../JavaScript/API/01.DOM/20.M%E7%AB%AF%E4%BA%8B%E4%BB%B6/ class=md-nav__link> <span class=md-ellipsis> 20.M端事件 </span> </a> </li> <li class=md-nav__item> <a href=../../JavaScript/API/01.DOM/21.%E9%87%8D%E7%BB%98%E5%92%8C%E5%9B%9E%E6%B5%81/ class=md-nav__link> <span class=md-ellipsis> 21.重绘和回流 </span> </a> </li> </ul> </nav> </li> <li class="md-nav__item md-nav__item--nested"> <input class="md-nav__toggle md-toggle " type=checkbox id=__nav_2_2_2_4_1_2> <label class=md-nav__link for=__nav_2_2_2_4_1_2 id=__nav_2_2_2_4_1_2_label tabindex=0> <span class=md-ellipsis> BOM </span> <span class="md-nav__icon md-icon"></span> </label> <nav class=md-nav data-md-level=6 aria-labelledby=__nav_2_2_2_4_1_2_label aria-expanded=false> <label class=md-nav__title for=__nav_2_2_2_4_1_2> <span class="md-nav__icon md-icon"></span> BOM </label> <ul class=md-nav__list data-md-scrollfix> <li class=md-nav__item> <a href=../../JavaScript/API/02.BOM/01.BOM/ class=md-nav__link> <span class=md-ellipsis> 01.BOM </span> </a> </li> <li class=md-nav__item> <a href=../../JavaScript/API/02.BOM/02.%E5%BB%B6%E6%97%B6%E5%87%BD%E6%95%B0/ class=md-nav__link> <span class=md-ellipsis> 02.延时函数 </span> </a> </li> <li class=md-nav__item> <a href=../../JavaScript/API/02.BOM/03.JS%E6%89%A7%E8%A1%8C%E6%9C%BA%E5%88%B6/ class=md-nav__link> <span class=md-ellipsis> 03.JS执行机制 </span> </a> </li> <li class=md-nav__item> <a href=../../JavaScript/API/02.BOM/04.location%E5%AF%B9%E8%B1%A1/ class=md-nav__link> <span class=md-ellipsis> 04.location 对象 </span> </a> </li> <li class=md-nav__item> <a href=../../JavaScript/API/02.BOM/05.navigator%E5%AF%B9%E8%B1%A1/ class=md-nav__link> <span class=md-ellipsis> 05.navigator对象 </span> </a> </li> <li class=md-nav__item> <a href=../../JavaScript/API/02.BOM/06.history%E5%AF%B9%E8%B1%A1/ class=md-nav__link> <span class=md-ellipsis> 06.history对象 </span> </a> </li> <li class=md-nav__item> <a href=../../JavaScript/API/02.BOM/07.%E6%9C%AC%E5%9C%B0%E5%AD%98%E5%82%A8/ class=md-nav__link> <span class=md-ellipsis> 07.本地存储 </span> </a> </li> <li class=md-nav__item> <a href=../../JavaScript/API/02.BOM/08.%E6%9C%AC%E5%9C%B0%E5%AD%98%E5%82%A8%E6%A1%88%E4%BE%8B/ class=md-nav__link> <span class=md-ellipsis> 08.本地存储案例 </span> </a> </li> <li class=md-nav__item> <a href=../../JavaScript/API/02.BOM/09.%E6%95%B0%E7%BB%84%E7%9A%84%E6%96%B9%E6%B3%95%28%E8%A1%A5%E5%85%85%29/ class=md-nav__link> <span class=md-ellipsis> 09.数组的方法(补充) </span> </a> </li> <li class=md-nav__item> <a href=../../JavaScript/API/02.BOM/10.%E6%AD%A3%E5%88%99%E8%A1%A8%E8%BE%BE%E5%BC%8F/ class=md-nav__link> <span class=md-ellipsis> 10.正则表达式 </span> </a> </li> </ul> </nav> </li> </ul> </nav> </li> </ul> </nav> </li> <li class="md-nav__item md-nav__item--nested"> <input class="md-nav__toggle md-toggle " type=checkbox id=__nav_2_2_2_5> <label class=md-nav__link for=__nav_2_2_2_5 id=__nav_2_2_2_5_label tabindex=0> <span class=md-ellipsis> Vue </span> <span class="md-nav__icon md-icon"></span> </label> <nav class=md-nav data-md-level=4 aria-labelledby=__nav_2_2_2_5_label aria-expanded=false> <label class=md-nav__title for=__nav_2_2_2_5> <span class="md-nav__icon md-icon"></span> Vue </label> <ul class=md-nav__list data-md-scrollfix> <li class="md-nav__item md-nav__item--nested"> <input class="md-nav__toggle md-toggle " type=checkbox id=__nav_2_2_2_5_1> <label class=md-nav__link for=__nav_2_2_2_5_1 id=__nav_2_2_2_5_1_label tabindex=0> <span class=md-ellipsis> Vue2基础 </span> <span class="md-nav__icon md-icon"></span> </label> <nav class=md-nav data-md-level=5 aria-labelledby=__nav_2_2_2_5_1_label aria-expanded=false> <label class=md-nav__title for=__nav_2_2_2_5_1> <span class="md-nav__icon md-icon"></span> Vue2基础 </label> <ul class=md-nav__list data-md-scrollfix> <li class=md-nav__item> <a href=../../Vue2%2B3/Vue2/01.Vue%E7%AE%80%E4%BB%8B/ class=md-nav__link> <span class=md-ellipsis> 01. Vue简介 </span> </a> </li> <li class=md-nav__item> <a href=../../Vue2%2B3/Vue2/02.%E6%95%B0%E6%8D%AE%E7%BB%91%E5%AE%9A/ class=md-nav__link> <span class=md-ellipsis> 02.数据绑定 </span> </a> </li> <li class=md-nav__item> <a href=../../Vue2%2B3/Vue2/03.%E4%BA%8B%E4%BB%B6%E5%A4%84%E7%90%86/ class=md-nav__link> <span class=md-ellipsis> 03.事件处理 </span> </a> </li> <li class=md-nav__item> <a href=../../Vue2%2B3/Vue2/04.%E8%AE%A1%E7%AE%97%E5%B1%9E%E6%80%A7%E4%B8%8E%E7%9B%91%E8%A7%86/ class=md-nav__link> <span class=md-ellipsis> 04.计算属性与监视 </span> </a> </li> <li class=md-nav__item> <a href=../../Vue2%2B3/Vue2/05.class%E4%B8%8Estyle%E7%BB%91%E5%AE%9A/ class=md-nav__link> <span class=md-ellipsis> 05.class与style绑定 </span> </a> </li> <li class=md-nav__item> <a href=../../Vue2%2B3/Vue2/06.%E6%9D%A1%E4%BB%B6%E6%B8%B2%E6%9F%93/ class=md-nav__link> <span class=md-ellipsis> 06.条件渲染 </span> </a> </li> <li class=md-nav__item> <a href=../../Vue2%2B3/Vue2/07.%E5%88%97%E8%A1%A8%E6%B8%B2%E6%9F%93/ class=md-nav__link> <span class=md-ellipsis> 07.列表渲染 </span> </a> </li> <li class=md-nav__item> <a href=../../Vue2%2B3/Vue2/08.Vue%E7%9B%91%E6%B5%8B%E6%95%B0%E6%8D%AE%E7%9A%84%E5%8E%9F%E7%90%86/ class=md-nav__link> <span class=md-ellipsis> 08.Vue监测数据的原理 </span> </a> </li> <li class=md-nav__item> <a href=../../Vue2%2B3/Vue2/09.%E6%94%B6%E9%9B%86%E8%A1%A8%E5%8D%95%E6%95%B0%E6%8D%AE/ class=md-nav__link> <span class=md-ellipsis> 09.收集表单数据 </span> </a> </li> <li class=md-nav__item> <a href=../../Vue2%2B3/Vue2/10.%E8%BF%87%E6%BB%A4%E5%99%A8/ class=md-nav__link> <span class=md-ellipsis> 10.过滤器 </span> </a> </li> <li class=md-nav__item> <a href=../../Vue2%2B3/Vue2/11.%E5%86%85%E7%BD%AE%E6%8C%87%E4%BB%A4/ class=md-nav__link> <span class=md-ellipsis> 11. 内置指令 </span> </a> </li> <li class=md-nav__item> <a href=../../Vue2%2B3/Vue2/12.%E8%87%AA%E5%AE%9A%E4%B9%89%E6%8C%87%E4%BB%A4/ class=md-nav__link> <span class=md-ellipsis> 12.自定义指令 </span> </a> </li> <li class=md-nav__item> <a href=../../Vue2%2B3/Vue2/13.%E7%94%9F%E5%91%BD%E5%91%A8%E6%9C%9F/ class=md-nav__link> <span class=md-ellipsis> 13. 生命周期 </span> </a> </li> <li class=md-nav__item> <a href=../../Vue2%2B3/Vue2/14.%E7%BB%84%E4%BB%B6%E7%AE%80%E4%BB%8B/ class=md-nav__link> <span class=md-ellipsis> 14.组件简介 </span> </a> </li> <li class=md-nav__item> <a href=../../Vue2%2B3/Vue2/15.%E5%8D%95%E6%96%87%E4%BB%B6%E7%BB%84%E4%BB%B6/ class=md-nav__link> <span class=md-ellipsis> 15. 单文件组件 </span> </a> </li> <li class=md-nav__item> <a href=../../Vue2%2B3/Vue2/16.Vue%E8%84%9A%E6%89%8B%E6%9E%B6%E5%88%9B%E5%BB%BA%E4%B8%8E%E7%AE%80%E4%BB%8B/ class=md-nav__link> <span class=md-ellipsis> 16.Vue脚手架 </span> </a> </li> <li class=md-nav__item> <a href=../../Vue2%2B3/Vue2/17.%E4%BF%AE%E6%94%B9%E9%BB%98%E8%AE%A4%E9%85%8D%E7%BD%AE%E9%A1%B9/ class=md-nav__link> <span class=md-ellipsis> 17. 修改默认配置项 </span> </a> </li> <li class=md-nav__item> <a href=../../Vue2%2B3/Vue2/18.ref%E5%B1%9E%E6%80%A7/ class=md-nav__link> <span class=md-ellipsis> 18.ref属性 </span> </a> </li> <li class=md-nav__item> <a href=../../Vue2%2B3/Vue2/19.%E9%85%8D%E7%BD%AE%E9%A1%B9props/ class=md-nav__link> <span class=md-ellipsis> 19.配置项props </span> </a> </li> <li class=md-nav__item> <a href=../../Vue2%2B3/Vue2/20.mixin%E6%B7%B7%E5%85%A5/ class=md-nav__link> <span class=md-ellipsis> 20.mixin混入 </span> </a> </li> <li class=md-nav__item> <a href=../../Vue2%2B3/Vue2/21.plugins/ class=md-nav__link> <span class=md-ellipsis> 21. Plugins </span> </a> </li> <li class=md-nav__item> <a href=../../Vue2%2B3/Vue2/22.scope%E6%A0%B7%E5%BC%8F/ class=md-nav__link> <span class=md-ellipsis> 22.scope样式 </span> </a> </li> <li class=md-nav__item> <a href=../../Vue2%2B3/Vue2/23.Todo-List%E6%A1%88%E4%BE%8B/ class=md-nav__link> <span class=md-ellipsis> 23.Todo-List案例 </span> </a> </li> </ul> </nav> </li> </ul> </nav> </li> <li class="md-nav__item md-nav__item--nested"> <input class="md-nav__toggle md-toggle " type=checkbox id=__nav_2_2_2_6> <label class=md-nav__link for=__nav_2_2_2_6 id=__nav_2_2_2_6_label tabindex=0> <span class=md-ellipsis> React </span> <span class="md-nav__icon md-icon"></span> </label> <nav class=md-nav data-md-level=4 aria-labelledby=__nav_2_2_2_6_label aria-expanded=false> <label class=md-nav__title for=__nav_2_2_2_6> <span class="md-nav__icon md-icon"></span> React </label> <ul class=md-nav__list data-md-scrollfix> <li class=md-nav__item> <a href=../../React/01.React%E5%85%A5%E9%97%A8/ class=md-nav__link> <span class=md-ellipsis> 01. React入门 </span> </a> </li> <li class=md-nav__item> <a href=../../React/02.React%E9%9D%A2%E5%90%91%E7%BB%84%E4%BB%B6%E7%BC%96%E7%A8%8B/ class=md-nav__link> <span class=md-ellipsis> 02. React面向组件编程 </span> </a> </li> </ul> </nav> </li> </ul> </nav> </li> <li class="md-nav__item md-nav__item--nested"> <input class="md-nav__toggle md-toggle " type=checkbox id=__nav_2_2_3> <label class=md-nav__link for=__nav_2_2_3 id=__nav_2_2_3_label tabindex=0> <span class=md-ellipsis> Backend </span> <span class="md-nav__icon md-icon"></span> </label> <nav class=md-nav data-md-level=3 aria-labelledby=__nav_2_2_3_label aria-expanded=false> <label class=md-nav__title for=__nav_2_2_3> <span class="md-nav__icon md-icon"></span> Backend </label> <ul class=md-nav__list data-md-scrollfix> <li class=md-nav__item> <a href=../../../Backend/JavaRoadMap/JavaRoadMap/ class=md-nav__link> <span class=md-ellipsis> JavaRoadMap </span> </a> </li> <li class="md-nav__item md-nav__item--nested"> <input class="md-nav__toggle md-toggle " type=checkbox id=__nav_2_2_3_2> <label class=md-nav__link for=__nav_2_2_3_2 id=__nav_2_2_3_2_label tabindex=0> <span class=md-ellipsis> MySQL </span> <span class="md-nav__icon md-icon"></span> </label> <nav class=md-nav data-md-level=4 aria-labelledby=__nav_2_2_3_2_label aria-expanded=false> <label class=md-nav__title for=__nav_2_2_3_2> <span class="md-nav__icon md-icon"></span> MySQL </label> <ul class=md-nav__list data-md-scrollfix> <li class=md-nav__item> <a href=../../../Backend/MySQL/01.%E5%9F%BA%E7%A1%80/ class=md-nav__link> <span class=md-ellipsis> MySQL基础 </span> </a> </li> </ul> </nav> </li> <li class="md-nav__item md-nav__item--nested"> <input class="md-nav__toggle md-toggle " type=checkbox id=__nav_2_2_3_3> <label class=md-nav__link for=__nav_2_2_3_3 id=__nav_2_2_3_3_label tabindex=0> <span class=md-ellipsis> JavaSE </span> <span class="md-nav__icon md-icon"></span> </label> <nav class=md-nav data-md-level=4 aria-labelledby=__nav_2_2_3_3_label aria-expanded=false> <label class=md-nav__title for=__nav_2_2_3_3> <span class="md-nav__icon md-icon"></span> JavaSE </label> <ul class=md-nav__list data-md-scrollfix> <li class=md-nav__item> <a href=../../../Backend/JavaSE/01.%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1%E5%9F%BA%E7%A1%80/ class=md-nav__link> <span class=md-ellipsis> 01. 面向对象基础 </span> </a> </li> <li class=md-nav__item> <a href=../../../Backend/JavaSE/02.String%E7%B1%BB/ class=md-nav__link> <span class=md-ellipsis> 02. String对象 </span> </a> </li> <li class=md-nav__item> <a href=../../../Backend/JavaSE/03.ArrayList%E7%B1%BB/ class=md-nav__link> <span class=md-ellipsis> 03. ArrayList类 </span> </a> </li> <li class=md-nav__item> <a href=../../../Backend/JavaSE/04.static/ class=md-nav__link> <span class=md-ellipsis> 04. static </span> </a> </li> <li class=md-nav__item> <a href=../../../Backend/JavaSE/05.%E7%BB%A7%E6%89%BF/ class=md-nav__link> <span class=md-ellipsis> 05. 继承 </span> </a> </li> <li class=md-nav__item> <a href=../../../Backend/JavaSE/06.%E5%A4%9A%E6%80%81/ class=md-nav__link> <span class=md-ellipsis> 06. 多态 </span> </a> </li> <li class=md-nav__item> <a href=../../../Backend/JavaSE/07.%E6%8A%BD%E8%B1%A1%E7%B1%BB/ class=md-nav__link> <span class=md-ellipsis> 07. 抽象类 </span> </a> </li> <li class=md-nav__item> <a href=../../../Backend/JavaSE/08.%E6%8E%A5%E5%8F%A3/ class=md-nav__link> <span class=md-ellipsis> 08. 接口 </span> </a> </li> <li class=md-nav__item> <a href=../../../Backend/JavaSE/09.%E5%86%85%E9%83%A8%E7%B1%BB/ class=md-nav__link> <span class=md-ellipsis> 09. 内部类 </span> </a> </li> <li class=md-nav__item> <a href=../../../Backend/JavaSE/10.enum%E7%B1%BB/ class=md-nav__link> <span class=md-ellipsis> 10. enum类 </span> </a> </li> <li class=md-nav__item> <a href=../../../Backend/JavaSE/11.%E6%B3%9B%E5%9E%8B/ class=md-nav__link> <span class=md-ellipsis> 11. 泛型 </span> </a> </li> <li class=md-nav__item> <a href=../../../Backend/JavaSE/12.lang_Object/ class=md-nav__link> <span class=md-ellipsis> 12. lang.Object </span> </a> </li> <li class=md-nav__item> <a href=../../../Backend/JavaSE/13.util_Objects/ class=md-nav__link> <span class=md-ellipsis> 13. util.Objects </span> </a> </li> <li class=md-nav__item> <a href=../../../Backend/JavaSE/14.lang_wrappers/ class=md-nav__link> <span class=md-ellipsis> 14. 包装类 </span> </a> </li> <li class=md-nav__item> <a href=../../../Backend/JavaSE/15.lang_StringBuilder/ class=md-nav__link> <span class=md-ellipsis> 15. lang.StringBuilder </span> </a> </li> <li class=md-nav__item> <a href=../../../Backend/JavaSE/16.lang_StringBuffer/ class=md-nav__link> <span class=md-ellipsis> 16. lang.StringBuffer </span> </a> </li> <li class=md-nav__item> <a href=../../../Backend/JavaSE/17.lang_StringJoiner/ class=md-nav__link> <span class=md-ellipsis> 17. lang.StringJoiner </span> </a> </li> <li class=md-nav__item> <a href=../../../Backend/JavaSE/18.lang_Math/ class=md-nav__link> <span class=md-ellipsis> 18. lang.Math </span> </a> </li> <li class=md-nav__item> <a href=../../../Backend/JavaSE/19.lang_System/ class=md-nav__link> <span class=md-ellipsis> 19. lang.System </span> </a> </li> <li class=md-nav__item> <a href=../../../Backend/JavaSE/20.lang_Runtime/ class=md-nav__link> <span class=md-ellipsis> 20. lang.Runtime </span> </a> </li> <li class=md-nav__item> <a href=../../../Backend/JavaSE/21.lang_BigDecimal/ class=md-nav__link> <span class=md-ellipsis> 21. lang.BigDecimal </span> </a> </li> <li class=md-nav__item> <a href=../../../Backend/JavaSE/22.util_Arrays/ class=md-nav__link> <span class=md-ellipsis> 22. util.Arrays </span> </a> </li> <li class=md-nav__item> <a href=../../../Backend/JavaSE/23.JDK8_LambdaExpression/ class=md-nav__link> <span class=md-ellipsis> 23. LambdaExpression </span> </a> </li> <li class=md-nav__item> <a href=../../../Backend/JavaSE/24.JDK8_%E6%96%B9%E6%B3%95%E5%BC%95%E7%94%A8/ class=md-nav__link> <span class=md-ellipsis> 24. JDK8 新特性：方法引用 </span> </a> </li> <li class=md-nav__item> <a href=../../../Backend/JavaSE/25.regularExpression/ class=md-nav__link> <span class=md-ellipsis> 25. Regular Expression </span> </a> </li> <li class=md-nav__item> <a href=../../../Backend/JavaSE/26.Exception/ class=md-nav__link> <span class=md-ellipsis> 26. Exception </span> </a> </li> <li class=md-nav__item> <a href=../../../Backend/JavaSE/27.CollectionFramework/ class=md-nav__link> <span class=md-ellipsis> 27. Collection Framework </span> </a> </li> <li class=md-nav__item> <a href=../../../Backend/JavaSE/28.io_File/ class=md-nav__link> <span class=md-ellipsis> 28. io_File 与 IO流 </span> </a> </li> <li class=md-nav__item> <a href=../../../Backend/JavaSE/29.IO/ class=md-nav__link> <span class=md-ellipsis> 29. IO </span> </a> </li> <li class=md-nav__item> <a href=../../../Backend/JavaSE/30.specialFileandJournaling/ class=md-nav__link> <span class=md-ellipsis> 30.Special File and Journaling </span> </a> </li> <li class=md-nav__item> <a href=../../../Backend/JavaSE/31.multithreading/ class=md-nav__link> <span class=md-ellipsis> 31. Multithreading </span> </a> </li> <li class=md-nav__item> <a href=../../../Backend/JavaSE/32.%E7%BD%91%E7%BB%9C%E7%BC%96%E7%A8%8B/ class=md-nav__link> <span class=md-ellipsis> 32. 网络编程 </span> </a> </li> </ul> </nav> </li> <li class="md-nav__item md-nav__item--nested"> <input class="md-nav__toggle md-toggle " type=checkbox id=__nav_2_2_3_4> <label class=md-nav__link for=__nav_2_2_3_4 id=__nav_2_2_3_4_label tabindex=0> <span class=md-ellipsis> JavaWeb </span> <span class="md-nav__icon md-icon"></span> </label> <nav class=md-nav data-md-level=4 aria-labelledby=__nav_2_2_3_4_label aria-expanded=false> <label class=md-nav__title for=__nav_2_2_3_4> <span class="md-nav__icon md-icon"></span> JavaWeb </label> <ul class=md-nav__list data-md-scrollfix> <li class=md-nav__item> <a href=../../../Backend/JavaWeb/00.RoadMap/ class=md-nav__link> <span class=md-ellipsis> 0. RoadMap </span> </a> </li> <li class=md-nav__item> <a href=../../../Backend/JavaWeb/01.%E5%89%8D%E7%BD%AE%E7%9F%A5%E8%AF%86/ class=md-nav__link> <span class=md-ellipsis> 01. 前置知识 </span> </a> </li> <li class=md-nav__item> <a href=../../../Backend/JavaWeb/02.Maven/ class=md-nav__link> <span class=md-ellipsis> 02. Maven </span> </a> </li> <li class=md-nav__item> <a href=../../../Backend/JavaWeb/03.Web%E5%85%A5%E9%97%A8/ class=md-nav__link> <span class=md-ellipsis> 03. Web入门 </span> </a> </li> <li class=md-nav__item> <a href=../../../Backend/JavaWeb/04.%E8%AF%B7%E6%B1%82%E5%93%8D%E5%BA%94%E5%88%86%E5%B1%82%E8%A7%A3%E8%80%A6/ class=md-nav__link> <span class=md-ellipsis> 04.请求-响应-分层解耦 </span> </a> </li> <li class=md-nav__item> <a href=../../../Backend/JavaWeb/06.MyBatis/ class=md-nav__link> <span class=md-ellipsis> 06. MyBatis </span> </a> </li> </ul> </nav> </li> <li class="md-nav__item md-nav__item--nested"> <input class="md-nav__toggle md-toggle " type=checkbox id=__nav_2_2_3_5> <label class=md-nav__link for=__nav_2_2_3_5 id=__nav_2_2_3_5_label tabindex=0> <span class=md-ellipsis> Project </span> <span class="md-nav__icon md-icon"></span> </label> <nav class=md-nav data-md-level=4 aria-labelledby=__nav_2_2_3_5_label aria-expanded=false> <label class=md-nav__title for=__nav_2_2_3_5> <span class="md-nav__icon md-icon"></span> Project </label> <ul class=md-nav__list data-md-scrollfix> <li class="md-nav__item md-nav__item--nested"> <input class="md-nav__toggle md-toggle " type=checkbox id=__nav_2_2_3_5_1> <label class=md-nav__link for=__nav_2_2_3_5_1 id=__nav_2_2_3_5_1_label tabindex=0> <span class=md-ellipsis> HungryPig </span> <span class="md-nav__icon md-icon"></span> </label> <nav class=md-nav data-md-level=5 aria-labelledby=__nav_2_2_3_5_1_label aria-expanded=false> <label class=md-nav__title for=__nav_2_2_3_5_1> <span class="md-nav__icon md-icon"></span> HungryPig </label> <ul class=md-nav__list data-md-scrollfix> <li class=md-nav__item> <a href=../../../Backend/Project/HungryPig/01.%E6%95%B4%E4%BD%93%E4%BB%8B%E7%BB%8D/ class=md-nav__link> <span class=md-ellipsis> 01.整体介绍 </span> </a> </li> </ul> </nav> </li> </ul> </nav> </li> </ul> </nav> </li> </ul> </nav> </li> <li class=md-nav__item> <a href=../../../../computerEnglish/ class=md-nav__link> <span class=md-ellipsis> Computer English(processing) </span> </a> </li> <li class="md-nav__item md-nav__item--section md-nav__item--nested"> <input class="md-nav__toggle md-toggle " type=checkbox id=__nav_2_4> <label class=md-nav__link for=__nav_2_4 id=__nav_2_4_label tabindex> <span class=md-ellipsis> Useful Website </span> <span class="md-nav__icon md-icon"></span> </label> <nav class=md-nav data-md-level=2 aria-labelledby=__nav_2_4_label aria-expanded=false> <label class=md-nav__title for=__nav_2_4> <span class="md-nav__icon md-icon"></span> Useful Website </label> <ul class=md-nav__list data-md-scrollfix> <li class=md-nav__item> <a href=../../../../website/code/ class=md-nav__link> <span class=md-ellipsis> Code </span> </a> </li> </ul> </nav> </li> <li class="md-nav__item md-nav__item--section md-nav__item--nested"> <input class="md-nav__toggle md-toggle " type=checkbox id=__nav_2_5> <label class=md-nav__link for=__nav_2_5 id=__nav_2_5_label tabindex> <span class=md-ellipsis> Youtuber </span> <span class="md-nav__icon md-icon"></span> </label> <nav class=md-nav data-md-level=2 aria-labelledby=__nav_2_5_label aria-expanded=false> <label class=md-nav__title for=__nav_2_5> <span class="md-nav__icon md-icon"></span> Youtuber </label> <ul class=md-nav__list data-md-scrollfix> <li class=md-nav__item> <a href=../../../../youtuber/coder/ class=md-nav__link> <span class=md-ellipsis> Coder </span> </a> </li> </ul> </nav> </li> </ul> </nav> </li> <li class="md-nav__item md-nav__item--nested"> <input class="md-nav__toggle md-toggle " type=checkbox id=__nav_3> <div class="md-nav__link md-nav__container"> <a href=../../../../../blog/ class="md-nav__link "> <span class=md-ellipsis> Blog </span> </a> <label class="md-nav__link " for=__nav_3 id=__nav_3_label tabindex=0> <span class="md-nav__icon md-icon"></span> </label> </div> <nav class=md-nav data-md-level=1 aria-labelledby=__nav_3_label aria-expanded=false> <label class=md-nav__title for=__nav_3> <span class="md-nav__icon md-icon"></span> Blog </label> <ul class=md-nav__list data-md-scrollfix> <li class="md-nav__item md-nav__item--nested"> <input class="md-nav__toggle md-toggle " type=checkbox id=__nav_3_2> <label class=md-nav__link for=__nav_3_2 id=__nav_3_2_label tabindex=0> <span class=md-ellipsis> Archive </span> <span class="md-nav__icon md-icon"></span> </label> <nav class=md-nav data-md-level=2 aria-labelledby=__nav_3_2_label aria-expanded=false> <label class=md-nav__title for=__nav_3_2> <span class="md-nav__icon md-icon"></span> Archive </label> <ul class=md-nav__list data-md-scrollfix> <li class=md-nav__item> <a href=../../../../../blog/archive/2024/ class=md-nav__link> <span class=md-ellipsis> 2024 </span> </a> </li> </ul> </nav> </li> <li class="md-nav__item md-nav__item--nested"> <input class="md-nav__toggle md-toggle " type=checkbox id=__nav_3_3> <label class=md-nav__link for=__nav_3_3 id=__nav_3_3_label tabindex=0> <span class=md-ellipsis> Categories </span> <span class="md-nav__icon md-icon"></span> </label> <nav class=md-nav data-md-level=2 aria-labelledby=__nav_3_3_label aria-expanded=false> <label class=md-nav__title for=__nav_3_3> <span class="md-nav__icon md-icon"></span> Categories </label> <ul class=md-nav__list data-md-scrollfix> <li class=md-nav__item> <a href=../../../../../blog/category/fluff/ class=md-nav__link> <span class=md-ellipsis> Fluff </span> </a> </li> <li class=md-nav__item> <a href=../../../../../blog/category/musing/ class=md-nav__link> <span class=md-ellipsis> Musing </span> </a> </li> <li class=md-nav__item> <a href=../../../../../blog/category/playlist-pulse/ class=md-nav__link> <span class=md-ellipsis> Playlist Pulse </span> </a> </li> <li class=md-nav__item> <a href=../../../../../blog/category/website-update/ class=md-nav__link> <span class=md-ellipsis> Website update </span> </a> </li> </ul> </nav> </li> </ul> </nav> </li> <li class="md-nav__item md-nav__item--nested"> <input class="md-nav__toggle md-toggle " type=checkbox id=__nav_4> <div class="md-nav__link md-nav__container"> <a href=../../../../../reprint/ class="md-nav__link "> <span class=md-ellipsis> Reprint </span> </a> <label class="md-nav__link " for=__nav_4 id=__nav_4_label tabindex=0> <span class="md-nav__icon md-icon"></span> </label> </div> <nav class=md-nav data-md-level=1 aria-labelledby=__nav_4_label aria-expanded=false> <label class=md-nav__title for=__nav_4> <span class="md-nav__icon md-icon"></span> Reprint </label> <ul class=md-nav__list data-md-scrollfix> <li class=md-nav__item> <a href=../../../../../reprint/code/ class=md-nav__link> <span class=md-ellipsis> Code </span> </a> </li> <li class=md-nav__item> <a href=../../../../../reprint/articles/ class=md-nav__link> <span class=md-ellipsis> Articles </span> </a> </li> <li class="md-nav__item md-nav__item--nested"> <input class="md-nav__toggle md-toggle " type=checkbox id=__nav_4_4> <div class="md-nav__link md-nav__container"> <a href=../../../../../reprint/poetry/ class="md-nav__link "> <span class=md-ellipsis> Poetry </span> </a> <label class="md-nav__link " for=__nav_4_4 id=__nav_4_4_label tabindex=0> <span class="md-nav__icon md-icon"></span> </label> </div> <nav class=md-nav data-md-level=2 aria-labelledby=__nav_4_4_label aria-expanded=false> <label class=md-nav__title for=__nav_4_4> <span class="md-nav__icon md-icon"></span> Poetry </label> <ul class=md-nav__list data-md-scrollfix> <li class=md-nav__item> <a href=../../../../../reprint/poetry/ch/ class=md-nav__link> <span class=md-ellipsis> CH </span> </a> </li> <li class=md-nav__item> <a href=../../../../../reprint/poetry/en/ class=md-nav__link> <span class=md-ellipsis> EN </span> </a> </li> </ul> </nav> </li> </ul> </nav> </li> <li class="md-nav__item md-nav__item--nested"> <input class="md-nav__toggle md-toggle " type=checkbox id=__nav_5> <div class="md-nav__link md-nav__container"> <a href=../../../../../loveStory/ class="md-nav__link "> <span class=md-ellipsis> LoveStory </span> </a> </div> <nav class=md-nav data-md-level=1 aria-labelledby=__nav_5_label aria-expanded=false> <label class=md-nav__title for=__nav_5> <span class="md-nav__icon md-icon"></span> LoveStory </label> <ul class=md-nav__list data-md-scrollfix> </ul> </nav> </li> <li class=md-nav__item> <a href=../../../../../about/ class=md-nav__link> <span class=md-ellipsis> About </span> </a> </li> <li class="md-nav__item md-nav__item--nested"> <input class="md-nav__toggle md-toggle " type=checkbox id=__nav_7> <div class="md-nav__link md-nav__container"> <a href=../../../../../motivation/ class="md-nav__link "> <span class=md-ellipsis> Motivation </span> </a> <label class="md-nav__link " for=__nav_7 id=__nav_7_label tabindex=0> <span class="md-nav__icon md-icon"></span> </label> </div> <nav class=md-nav data-md-level=1 aria-labelledby=__nav_7_label aria-expanded=false> <label class=md-nav__title for=__nav_7> <span class="md-nav__icon md-icon"></span> Motivation </label> <ul class=md-nav__list data-md-scrollfix> <li class=md-nav__item> <a href=../../../../../motivation/done/ class=md-nav__link> <span class=md-ellipsis> Done </span> </a> </li> <li class=md-nav__item> <a href=../../../../../motivation/processing/ class=md-nav__link> <span class=md-ellipsis> Processing </span> </a> </li> <li class=md-nav__item> <a href=../../../../../motivation/plan/ class=md-nav__link> <span class=md-ellipsis> Plan </span> </a> </li> </ul> </nav> </li> </ul> </nav> </div> </div> </div> <div class=md-content data-md-component=content> <article class="md-content__inner md-typeset"> <h1 id=01了解web及网络基础>01.了解Web及网络基础<a class=headerlink href=#01了解web及网络基础 title="Permanent link"></a></h1> <h2 id=11-使用http协议访问web>1.1 使用HTTP协议访问Web<a class=headerlink href=#11-使用http协议访问web title="Permanent link"></a></h2> <p>Web 页面当然不能凭空显示出来。根据 Web 浏览器地址栏中指定的 URL，Web 浏览器从 Web 服务器端获取文件资源（resource）等信息，从而显示出 Web 页面。像这种通过发送请求获取服务器资源的 Web 浏览器等，都可称为客户端（client）。</p> <p><img alt="alt text" src=../image.png></p> <p>Web 使用一种名为 HTTP（HyperText Transfer Protocol，超文本传输协议）的协议作为规范，完成从客户端到服务器端等一系列运作流程。而协议是指规则的约定。可以说，Web 是建立在 HTTP 协议上通信的。</p> <p>现在已提出了 3 项 WWW 构建技术，分别是：把 SGML（Standard Generalized Markup Language，标准通用标记语言）作为页面的文本标记语言的 HTML（HyperText Markup Language，超文本标记语言）；作为文档传递协议的 HTTP ；指定文档所在地址的 URL（Uniform Resource Locator，统一资源定位符）。WWW 这一名称，是 Web 浏览器当年用来浏览超文本的客户端应用程序时的名称。现在则用来表示这一系列的集合，也可简称为 Web。</p> <h2 id=12-网络基础-tcpip>1.2 网络基础 TCP/IP<a class=headerlink href=#12-网络基础-tcpip title="Permanent link"></a></h2> <p>为了理解 HTTP，我们有必要事先了解一下 TCP/IP 协议族。通常使用的网络（包括互联网）是在 TCP/IP 协议族的基础上运作的。而 HTTP 属于它内部的一个子集。</p> <h3 id=121-tcpip-协议族>1.2.1 TCP/IP 协议族<a class=headerlink href=#121-tcpip-协议族 title="Permanent link"></a></h3> <p>计算机与网络设备要相互通信，双方就必须基于相同的方法。如，如何探测到通信目标、由哪一边先发起通信、使用哪种语言进行通信、怎样结束通信等规则都需要事先确定。不同的硬件、操作系统之间的通信，所有的这一切都需要一种规则。而我们就把这种规则称为协议（protocol）。</p> <p><img alt="alt text" src=../image-1.png></p> <h3 id=122-tcpip-的分层管理>1.2.2　TCP/IP 的分层管理<a class=headerlink href=#122-tcpip-的分层管理 title="Permanent link"></a></h3> <ul> <li> <p>TCP/IP 协议族里重要的一点就是分层。</p> <ul> <li>TCP/IP 协议族按层次分别分为以下 4 层：应用层、传输层、网络层和数据链路层。</li> <li>把 TCP/IP 层次化是有好处的。比如，如果互联网只由一个协议统筹，某个地方需要改变设计时，就必须把所有部分整体替换掉。而分层之后只需把变动的层替换掉即可。把各层之间的接口部分规划好之后，每个层次内部的设计就能够自由改动了。</li> </ul> </li> <li> <p>TCP/IP 协议族各层的作用如下：</p> <ul> <li>应用层<ul> <li>应用层决定了向用户提供应用服务时通信的活动。TCP/IP 协议族内预存了各类通用的应用服务。</li> <li>比如，FTP（File Transfer Protocol，文件传输协议）和 DNS（Domain Name System，域名系统）服务就是其中两类。HTTP 协议也处于该层。</li> </ul> </li> <li>传输层<ul> <li>传输层对上层应用层，提供处于网络连接中的两台计算机之间的数据传输。</li> <li>在传输层有两个性质不同的协议：TCP（Transmission Control Protocol，传输控制协议）和 UDP（User Data Protocol，用户数据报协议）。</li> </ul> </li> <li>网络层（又名网络互连层）<ul> <li>网络层用来处理在网络上流动的数据包。数据包是网络传输的最小数据单位。该层规定了通过怎样的路径（所谓的传输路线）到达对方计算机，并把数据包传送给对方。</li> <li>与对方计算机之间通过多台计算机或网络设备进行传输时，网络层所起的作用就是在众多的选项内选择一条传输路线。</li> </ul> </li> <li>链路层（又名数据链路层，网络接口层）<ul> <li>用来处理连接网络的硬件部分。包括控制操作系统、硬件的设备驱动、NIC（Network Interface Card，网络适配器，即网卡），及光纤等物理可见部分（还包括连接器等一切传输媒介）。</li> <li>硬件上的范畴均在链路层的作用范围之内。</li> </ul> </li> </ul> </li> </ul> <h3 id=123-tcpip-通信传输流>1.2.3 TCP/IP 通信传输流<a class=headerlink href=#123-tcpip-通信传输流 title="Permanent link"></a></h3> <p>利用 TCP/IP 协议族进行网络通信时，会通过分层顺序与对方进行通信。发送端从应用层往下走，接收端则往应用层往上走。</p> <ul> <li>我们用 HTTP 举例来说明：</li> <li>首先作为发送端的客户端在应用层（HTTP 协议）发出一个想看某个 Web 页面的 HTTP 请求。</li> <li>接着，为了传输方便，在传输层（TCP 协议）把从应用层处收到的数据（HTTP 请求报文）进行分割，并在各个报文上打上标记序号及端口号后转发给网络层。</li> <li>在网络层（IP 协议），增加作为通信目的地的 MAC 地址后转发给链路层。这样一来，发往网络的通信请求就准备齐全了。</li> <li>接收端的服务器在链路层接收到数据，按序往上层发送，一直到应用层。当传输到应用层，才能算真正接收到由客户端发送过来的 HTTP 请求。</li> </ul> <p><img alt="alt text" src=../image-2.png></p> <ul> <li>发送端在层与层之间传输数据时，每经过一层时必定会被打上一个该层所属的首部信息。反之，接收端在层与层传输数据时，每经过一层时会把对应的首部消去。</li> <li>这种把数据信息包装起来的做法称为封装（encapsulate）。</li> </ul> <h2 id=13-与-http-关系密切的协议iptcp-和-dns>1.3 与 HTTP 关系密切的协议：IP、TCP 和 DNS<a class=headerlink href=#13-与-http-关系密切的协议iptcp-和-dns title="Permanent link"></a></h2> <h3 id=131-负责传输的-ip-协议>1.3.1 负责传输的 IP 协议<a class=headerlink href=#131-负责传输的-ip-协议 title="Permanent link"></a></h3> <ul> <li>按层次分，IP（Internet Protocol）网际协议位于网络层。</li> <li> <p>几乎所有使用网络的系统都会用到 IP 协议。</p> </li> <li> <p>IP 协议的作用是把各种数据包传送给对方。而要保证确实传送到对方那里，则需要满足各类条件。其中两个重要的条件是 IP 地址和 MAC地址（Media Access Control Address）。</p> <ul> <li>IP 地址指明了节点被分配到的地址，MAC 地址是指网卡所属的固定地址。</li> <li>IP 地址可以和 MAC 地址进行配对。IP 地址可变换，但 MAC地址基本上不会更改。</li> </ul> </li> </ul> <h4 id=使用-arp-协议凭借-mac-地址进行通信>使用 ARP 协议凭借 MAC 地址进行通信<a class=headerlink href=#使用-arp-协议凭借-mac-地址进行通信 title="Permanent link"></a></h4> <ul> <li>IP 间的通信依赖 MAC 地址。</li> <li>在网络上，通常是经过多台计算机和网络设备中转才能连接到对方。而在进行中转时，会利用下一站中转设备的 MAC 地址来搜索下一个中转目标。这时，会采用 ARP 协议（Address Resolution Protocol）。ARP 是一种用以解析地址的协议，根据通信方的 IP 地址就可以反查出对应的 MAC 地址。</li> </ul> <h4 id=没有人能够全面掌握互联网中的传输状况>没有人能够全面掌握互联网中的传输状况<a class=headerlink href=#没有人能够全面掌握互联网中的传输状况 title="Permanent link"></a></h4> <ul> <li>在到达通信目标前的中转过程中，那些计算机和路由器等网络设备只能获悉很粗略的传输路线。</li> <li>无论哪台计算机、哪台网络设备，它们都无法全面掌握互联网中的细节。</li> <li>这种机制称为路由选择（routing）</li> </ul> <p><img alt="alt text" src=../image-3.png></p> <h3 id=132-确保可靠传输的-tcp-协议>1.3.2 确保可靠传输的 TCP 协议<a class=headerlink href=#132-确保可靠传输的-tcp-协议 title="Permanent link"></a></h3> <ul> <li>按层次分，TCP 位于传输层，提供可靠的字节流服务。<ul> <li>所谓的字节流服务（Byte Stream Service）是指，为了方便传输，将大块数据分割成以报文段（segment）为单位的数据包进行管理。</li> <li>而可靠的传输服务是指，能够把数据准确可靠地传给对方。</li> </ul> </li> <li>TCP 协议为了更容易传送大数据才把数据分割，而且 TCP 协议能够确认数据最终是否送达到对方。</li> </ul> <h4 id=确保数据能到达目标>确保数据能到达目标<a class=headerlink href=#确保数据能到达目标 title="Permanent link"></a></h4> <ul> <li>为了准确无误地将数据送达目标处，TCP 协议采用了三次握手（three-way handshaking）策略。<ul> <li>握手过程中使用了 TCP 的标志（flag）——SYN（synchronize）和 ACK（acknowledgement）。</li> <li>发送端首先发送一个带 SYN 标志的数据包给对方。接收端收到后，回传一个带有 SYN/ACK 标志的数据包以示传达确认信息。最后，发送端再回传一个带 ACK 标志的数据包，代表“握手”结束。若在握手过程中某个阶段莫名中断，TCP 协议会再次以相同的顺序发送相同的数据包。</li> </ul> </li> </ul> <p><img alt="alt text" src=../image-4.png></p> <h3 id=133-负责域名解析的-dns-服务>1.3.3 负责域名解析的 DNS 服务<a class=headerlink href=#133-负责域名解析的-dns-服务 title="Permanent link"></a></h3> <ul> <li>DNS（Domain Name System）服务是和 HTTP 协议一样位于应用层的协议</li> <li>DNS 协议提供通过域名查找 IP 地址，或逆向从 IP 地址反查域名的服务。</li> </ul> <p><img alt="alt text" src=../image-5.png></p> <h3 id=134-各种协议与-http-协议的关系>1.3.4 各种协议与 HTTP 协议的关系<a class=headerlink href=#134-各种协议与-http-协议的关系 title="Permanent link"></a></h3> <p><img alt="alt text" src=../image-6.png></p> <h2 id=14-uri-和-url>1.4 URI 和 URL<a class=headerlink href=#14-uri-和-url title="Permanent link"></a></h2> <ul> <li>与 URI（统一资源标识符）相比，我们更熟悉 URL（Uniform Resource Locator，统一资源定位符）。URL 正是使用 Web 浏览器等访问Web 页面时需要输入的网页地址。</li> </ul> <h3 id=141-统一资源标识符>1.4.1 统一资源标识符<a class=headerlink href=#141-统一资源标识符 title="Permanent link"></a></h3> <p>URI 是 Uniform Resource Identifier 的缩写。RFC2396 分别对这3 个单词进行了如下定义。</p> <h4 id=uniform>Uniform<a class=headerlink href=#uniform title="Permanent link"></a></h4> <p>规定统一的格式可方便处理多种不同类型的资源，而不用根据上下文环境来识别资源指定的访问方式。另外，加入新增的协议方案（如 http: 或 ftp:）也更容易。</p> <h4 id=resource>Resource<a class=headerlink href=#resource title="Permanent link"></a></h4> <p>资源的定义是“可标识的任何东西”。除了文档文件、图像或服务（例如当天的天气预报）等能够区别于其他类型的，全都可作为资源。另外，资源不仅可以是单一的，也可以是多数的集合体。</p> <h4 id=identifier>Identifier<a class=headerlink href=#identifier title="Permanent link"></a></h4> <p>表示可标识的对象。也称为标识符。</p> <h4 id=总结>总结<a class=headerlink href=#总结 title="Permanent link"></a></h4> <p>综上所述，URI 就是由某个协议方案表示的资源的定位标识符。协议方案是指访问资源所使用的协议类型名称。</p> <p>URI 用字符串标识某一互联网资源，而 URL 表示资源的地点（互 联网上所处的位置）。可见 URL 是 URI 的子集。</p> <h3 id=142-url-的组成>1.4.2 URL 的组成<a class=headerlink href=#142-url-的组成 title="Permanent link"></a></h3> <p>URL分为：涵盖全部必要信息的绝对 URI、绝对 URL以及相对URL。</p> <p><img alt="alt text" src=../image-7.png></p> <h4 id=登录信息认证>登录信息（认证）<a class=headerlink href=#登录信息认证 title="Permanent link"></a></h4> <p>指定用户名和密码作为从服务器端获取资源时必要的登录信息（身份认证）。此项是可选项。</p> <h4 id=服务器地址>服务器地址<a class=headerlink href=#服务器地址 title="Permanent link"></a></h4> <p>使用绝对 URI 必须指定待访问的服务器地址。地址可以是类似hackr.jp 这种 DNS 可解析的名称，或是 192.168.1.1 这类 IPv4 地址名，还可以是 [0:0:0:0:0:0:0:1] 这样用方括号括起来的 IPv6 地址名。</p> <h4 id=服务器端口号>服务器端口号<a class=headerlink href=#服务器端口号 title="Permanent link"></a></h4> <p>指定服务器连接的网络端口号。此项也是可选项，若用户省略则自动使用默认端口号。</p> <h4 id=带层次的文件路径>带层次的文件路径<a class=headerlink href=#带层次的文件路径 title="Permanent link"></a></h4> <p>指定服务器上的文件路径来定位特指的资源。这与 UNIX 系统的文件目录结构相似。</p> <h4 id=查询字符串>查询字符串<a class=headerlink href=#查询字符串 title="Permanent link"></a></h4> <p>针对已指定的文件路径内的资源，可以使用查询字符串传入任意参数。此项可选。</p> <h4 id=片段标识符>片段标识符<a class=headerlink href=#片段标识符 title="Permanent link"></a></h4> <p>使用片段标识符通常可标记出已获取资源中的子资源（文档内的某个位置）。但在 RFC 中并没有明确规定其使用方法。该项也为可选项。</p> </article> </div> <script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script> </div> <button type=button class="md-top md-icon" data-md-component=top hidden> <svg xmlns=http://www.w3.org/2000/svg viewbox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8v12Z"/></svg> Back to top </button> </main> <!-- Footer --> <footer class=md-footer> <!-- Link to previous and/or next page --> <!-- Further information --> <div class="md-footer-meta md-typeset"> <div class="md-footer-meta__inner md-grid"> <div class=md-copyright> Made with <a href=https://squidfunk.github.io/mkdocs-material/ target=_blank rel=noopener> Material for MkDocs </a> </div> <div class=footer-visit-count style="display: flex; justify-content: center; align-items: center;"> 本站访问量： <script async src=//finicounter.eu.org/finicounter.js></script> <span id=finicount_views></span> <!-- &nbsp;|&nbsp; --> <!-- <a href="https://icp.gov.moe/?keyword=20230640" target="_blank">萌ICP备20230640号</a> --> </div> <style>
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+        <meta name="author" content="Pigasso">
+      
+      
+        <link rel="canonical" href="https://pigassooo.github.io/my-blog/notes/notes/Frontend/HTTP/01.%E4%BA%86%E8%A7%A3Web%E5%8F%8A%E7%BD%91%E7%BB%9C%E5%9F%BA%E7%A1%80/">
+      
+      
+        <link rel="prev" href="../../%E5%AE%A2%E6%88%B7%E7%AB%AF%E5%AD%98%E5%82%A8/">
+      
+      
+        <link rel="next" href="../02.%E7%AE%80%E5%8D%95%E7%9A%84HTTP%E5%8D%8F%E8%AE%AE/">
+      
+      
+      <link rel="icon" href="../../../../../images/favicon.png">
+      <meta name="generator" content="mkdocs-1.6.0, mkdocs-material-9.5.29">
+    
+    
+      
+        <title>01.了解Web及网络基础 - Pigasso's Web</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../../../../assets/stylesheets/main.76a95c52.min.css">
+      
+        
+        <link rel="stylesheet" href="../../../../../assets/stylesheets/palette.06af60db.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+      <link rel="stylesheet" href="../../../../../stylesheets/extra.css">
+    
+    <script>__md_scope=new URL("../../../../..",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+    
+  </head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="indigo">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#01了解web及网络基础" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow md-header--lifted" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="../../../../.." title="Pigasso&#39;s Web" class="md-header__button md-logo" aria-label="Pigasso's Web" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512"><!--! Font Awesome Free 6.5.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2024 Fonticons, Inc.--><path d="M0 96c0-35.3 28.7-64 64-64h96c88.4 0 160 71.6 160 160s-71.6 160-160 160H64v96c0 17.7-14.3 32-32 32S0 465.7 0 448V96zm64 192h96c53 0 96-43 96-96s-43-96-96-96H64v192z"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2Z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            Pigasso's Web
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              01.了解Web及网络基础
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+        <form class="md-header__option" data-md-component="palette">
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="indigo"  aria-label="Switch to dark mode"  type="radio" name="__palette" id="__palette_0">
+    
+      <label class="md-header__button md-icon" title="Switch to dark mode" for="__palette_1" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a4 4 0 0 0-4 4 4 4 0 0 0 4 4 4 4 0 0 0 4-4 4 4 0 0 0-4-4m0 10a6 6 0 0 1-6-6 6 6 0 0 1 6-6 6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12 20 8.69Z"/></svg>
+      </label>
+    
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="slate" data-md-color-primary="indigo" data-md-color-accent="indigo"  aria-label="Switch to light mode"  type="radio" name="__palette" id="__palette_1">
+    
+      <label class="md-header__button md-icon" title="Switch to light mode" for="__palette_0" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 18c-.89 0-1.74-.2-2.5-.55C11.56 16.5 13 14.42 13 12c0-2.42-1.44-4.5-3.5-5.45C10.26 6.2 11.11 6 12 6a6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12 20 8.69Z"/></svg>
+      </label>
+    
+  
+</form>
+      
+    
+    
+      <script>var media,input,key,value,palette=__md_get("__palette");if(palette&&palette.color){"(prefers-color-scheme)"===palette.color.media&&(media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']"),palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent"));for([key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+      <div class="md-header__option">
+  <div class="md-select">
+    
+    <button class="md-header__button md-icon" aria-label="Select language">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="m12.87 15.07-2.54-2.51.03-.03A17.52 17.52 0 0 0 14.07 6H17V4h-7V2H8v2H1v2h11.17C11.5 7.92 10.44 9.75 9 11.35 8.07 10.32 7.3 9.19 6.69 8h-2c.73 1.63 1.73 3.17 2.98 4.56l-5.09 5.02L4 19l5-5 3.11 3.11.76-2.04M18.5 10h-2L12 22h2l1.12-3h4.75L21 22h2l-4.5-12m-2.62 7 1.62-4.33L19.12 17h-3.24Z"/></svg>
+    </button>
+    <div class="md-select__inner">
+      <ul class="md-select__list">
+        
+          <li class="md-select__item">
+            <a href="/en/" hreflang="en" class="md-select__link">
+              English
+            </a>
+          </li>
+        
+          <li class="md-select__item">
+            <a href="/zh/" hreflang="zh" class="md-select__link">
+              中文
+            </a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+</div>
+    
+    
+      <label class="md-header__button md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+      </label>
+      <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41Z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+      <div class="md-header__source">
+        <a href="https://github.com/Pigassooo" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 496 512"><!--! Font Awesome Free 6.5.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2024 Fonticons, Inc.--><path d="M165.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6zm-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3zm44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9zM244.8 8C106.1 8 0 113.3 0 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C428.2 457.8 496 362.9 496 252 496 113.3 383.5 8 244.8 8zM97.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1zm-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7zm32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1zm-11.4-14.7c-1.6 1-1.6 3.6 0 5.9 1.6 2.3 4.3 3.3 5.6 2.3 1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2z"/></svg>
+  </div>
+  <div class="md-source__repository">
+    GitHub
+  </div>
+</a>
+      </div>
+    
+  </nav>
+  
+    
+      
+<nav class="md-tabs" aria-label="Tabs" data-md-component="tabs">
+  <div class="md-grid">
+    <ul class="md-tabs__list">
+      
+        
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../../../.." class="md-tabs__link">
+        
+  
+    
+  
+  Home
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+    
+  
+  
+    
+    
+      <li class="md-tabs__item md-tabs__item--active">
+        <a href="../../../../" class="md-tabs__link">
+          
+  
+    
+  
+  Notes
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../../../../blog/" class="md-tabs__link">
+          
+  
+    
+  
+  Blog
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../../../../reprint/" class="md-tabs__link">
+          
+  
+    
+  
+  Reprint
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../../../../loveStory/" class="md-tabs__link">
+          
+  
+    
+  
+  LoveStory
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../../../../about/" class="md-tabs__link">
+        
+  
+    
+  
+  About
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../../../../motivation/" class="md-tabs__link">
+          
+  
+    
+  
+  Motivation
+
+        </a>
+      </li>
+    
+  
+
+      
+    </ul>
+  </div>
+</nav>
+    
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+  
+
+
+  
+
+<nav class="md-nav md-nav--primary md-nav--lifted md-nav--integrated" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../../../../.." title="Pigasso&#39;s Web" class="md-nav__button md-logo" aria-label="Pigasso's Web" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512"><!--! Font Awesome Free 6.5.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2024 Fonticons, Inc.--><path d="M0 96c0-35.3 28.7-64 64-64h96c88.4 0 160 71.6 160 160s-71.6 160-160 160H64v96c0 17.7-14.3 32-32 32S0 465.7 0 448V96zm64 192h96c53 0 96-43 96-96s-43-96-96-96H64v192z"/></svg>
+
+    </a>
+    Pigasso's Web
+  </label>
+  
+    <div class="md-nav__source">
+      <a href="https://github.com/Pigassooo" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 496 512"><!--! Font Awesome Free 6.5.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2024 Fonticons, Inc.--><path d="M165.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6zm-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3zm44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9zM244.8 8C106.1 8 0 113.3 0 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C428.2 457.8 496 362.9 496 252 496 113.3 383.5 8 244.8 8zM97.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1zm-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7zm32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1zm-11.4-14.7c-1.6 1-1.6 3.6 0 5.9 1.6 2.3 4.3 3.3 5.6 2.3 1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2z"/></svg>
+  </div>
+  <div class="md-source__repository">
+    GitHub
+  </div>
+</a>
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../.." class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Home
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+      
+        
+        
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" checked>
+        
+          
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../../../../" class="md-nav__link ">
+              
+  
+  <span class="md-ellipsis">
+    Notes
+  </span>
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_2" id="__nav_2_label" tabindex="">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_2">
+            <span class="md-nav__icon md-icon"></span>
+            Notes
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+    
+    
+      
+      
+        
+          
+          
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_2" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_2_2" id="__nav_2_2_label" tabindex="">
+            
+  
+  <span class="md-ellipsis">
+    Notes
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_2_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_2_2">
+            <span class="md-nav__icon md-icon"></span>
+            Notes
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+      
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_2_1" >
+        
+          
+          <label class="md-nav__link" for="__nav_2_2_1" id="__nav_2_2_1_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Algorithm
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_2_2_1_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_2_1">
+            <span class="md-nav__icon md-icon"></span>
+            Algorithm
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Algorithm/01.BasicAlgorithm1/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Basic Algorithm 1
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_2_2" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_2_2_2" id="__nav_2_2_2_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    FrontEnd
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_2_2_2_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_2_2_2">
+            <span class="md-nav__icon md-icon"></span>
+            FrontEnd
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../%E5%AE%A2%E6%88%B7%E7%AB%AF%E5%AD%98%E5%82%A8/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Storage
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_2_2_2" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_2_2_2_2" id="__nav_2_2_2_2_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    HTTP
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="4" aria-labelledby="__nav_2_2_2_2_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_2_2_2_2">
+            <span class="md-nav__icon md-icon"></span>
+            HTTP
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  <span class="md-ellipsis">
+    01.了解Web及网络基础
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  <span class="md-ellipsis">
+    01.了解Web及网络基础
+  </span>
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#11-使用http协议访问web" class="md-nav__link">
+    <span class="md-ellipsis">
+      1.1 使用HTTP协议访问Web
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#12-网络基础-tcpip" class="md-nav__link">
+    <span class="md-ellipsis">
+      1.2 网络基础 TCP/IP
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="1.2 网络基础 TCP/IP">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#121-tcpip-协议族" class="md-nav__link">
+    <span class="md-ellipsis">
+      1.2.1 TCP/IP 协议族
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#122-tcpip-的分层管理" class="md-nav__link">
+    <span class="md-ellipsis">
+      1.2.2 TCP/IP 的分层管理
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#123-tcpip-通信传输流" class="md-nav__link">
+    <span class="md-ellipsis">
+      1.2.3 TCP/IP 通信传输流
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#13-与-http-关系密切的协议iptcp-和-dns" class="md-nav__link">
+    <span class="md-ellipsis">
+      1.3 与 HTTP 关系密切的协议：IP、TCP 和 DNS
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="1.3 与 HTTP 关系密切的协议：IP、TCP 和 DNS">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#131-负责传输的-ip-协议" class="md-nav__link">
+    <span class="md-ellipsis">
+      1.3.1 负责传输的 IP 协议
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="1.3.1 负责传输的 IP 协议">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#使用-arp-协议凭借-mac-地址进行通信" class="md-nav__link">
+    <span class="md-ellipsis">
+      使用 ARP 协议凭借 MAC 地址进行通信
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#没有人能够全面掌握互联网中的传输状况" class="md-nav__link">
+    <span class="md-ellipsis">
+      没有人能够全面掌握互联网中的传输状况
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#132-确保可靠传输的-tcp-协议" class="md-nav__link">
+    <span class="md-ellipsis">
+      1.3.2 确保可靠传输的 TCP 协议
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="1.3.2 确保可靠传输的 TCP 协议">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#确保数据能到达目标" class="md-nav__link">
+    <span class="md-ellipsis">
+      确保数据能到达目标
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#133-负责域名解析的-dns-服务" class="md-nav__link">
+    <span class="md-ellipsis">
+      1.3.3 负责域名解析的 DNS 服务
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#134-各种协议与-http-协议的关系" class="md-nav__link">
+    <span class="md-ellipsis">
+      1.3.4 各种协议与 HTTP 协议的关系
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#14-uri-和-url" class="md-nav__link">
+    <span class="md-ellipsis">
+      1.4 URI 和 URL
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="1.4 URI 和 URL">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#141-统一资源标识符" class="md-nav__link">
+    <span class="md-ellipsis">
+      1.4.1 统一资源标识符
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="1.4.1 统一资源标识符">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#uniform" class="md-nav__link">
+    <span class="md-ellipsis">
+      Uniform
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#resource" class="md-nav__link">
+    <span class="md-ellipsis">
+      Resource
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#identifier" class="md-nav__link">
+    <span class="md-ellipsis">
+      Identifier
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#总结" class="md-nav__link">
+    <span class="md-ellipsis">
+      总结
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#142-url-的组成" class="md-nav__link">
+    <span class="md-ellipsis">
+      1.4.2 URL 的组成
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="1.4.2 URL 的组成">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#登录信息认证" class="md-nav__link">
+    <span class="md-ellipsis">
+      登录信息（认证）
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#服务器地址" class="md-nav__link">
+    <span class="md-ellipsis">
+      服务器地址
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#服务器端口号" class="md-nav__link">
+    <span class="md-ellipsis">
+      服务器端口号
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#带层次的文件路径" class="md-nav__link">
+    <span class="md-ellipsis">
+      带层次的文件路径
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#查询字符串" class="md-nav__link">
+    <span class="md-ellipsis">
+      查询字符串
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#片段标识符" class="md-nav__link">
+    <span class="md-ellipsis">
+      片段标识符
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../02.%E7%AE%80%E5%8D%95%E7%9A%84HTTP%E5%8D%8F%E8%AE%AE/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    02.简单的HTTP协议
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Axios/Axios%E7%9A%84%E7%90%86%E8%A7%A3%E4%B8%8E%E4%BD%BF%E7%94%A8/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Axios
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+      
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_2_2_4" >
+        
+          
+          <label class="md-nav__link" for="__nav_2_2_2_4" id="__nav_2_2_2_4_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    JavaScript
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="4" aria-labelledby="__nav_2_2_2_4_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_2_2_4">
+            <span class="md-nav__icon md-icon"></span>
+            JavaScript
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_2_2_4_1" >
+        
+          
+          <label class="md-nav__link" for="__nav_2_2_2_4_1" id="__nav_2_2_2_4_1_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    API
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="5" aria-labelledby="__nav_2_2_2_4_1_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_2_2_4_1">
+            <span class="md-nav__icon md-icon"></span>
+            API
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_2_2_4_1_1" >
+        
+          
+          <label class="md-nav__link" for="__nav_2_2_2_4_1_1" id="__nav_2_2_2_4_1_1_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    DOM
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="6" aria-labelledby="__nav_2_2_2_4_1_1_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_2_2_4_1_1">
+            <span class="md-nav__icon md-icon"></span>
+            DOM
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../JavaScript/API/01.DOM/01.API%E7%9A%84%E5%9F%BA%E6%9C%AC%E8%AE%A4%E7%9F%A5/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    01.API的基本认知
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../JavaScript/API/01.DOM/02.%E8%8E%B7%E5%8F%96DOM%E5%85%83%E7%B4%A0/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    02.获取DOM元素
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../JavaScript/API/01.DOM/03.%E6%93%8D%E4%BD%9C%E5%85%83%E7%B4%A0%E5%86%85%E5%AE%B9/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    03.操作元素内容
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../JavaScript/API/01.DOM/04.%E6%93%8D%E4%BD%9C%E5%85%83%E7%B4%A0%E5%B1%9E%E6%80%A7/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    04.操作元素属性
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../JavaScript/API/01.DOM/05.%E6%93%8D%E4%BD%9C%E8%A1%A8%E5%8D%95%E5%85%83%E7%B4%A0/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    05.操作表单元素
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../JavaScript/API/01.DOM/06.%E8%87%AA%E5%AE%9A%E4%B9%89%E5%B1%9E%E6%80%A7/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    06.自定义属性
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../JavaScript/API/01.DOM/07.%E5%AE%9A%E6%97%B6%E5%99%A8%E9%97%B4%E6%AD%87%E5%87%BD%E6%95%B0/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    07.定时器间歇函数
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../JavaScript/API/01.DOM/08.%E4%BA%8B%E4%BB%B6%E7%9B%91%E5%90%AC/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    08.事件监听
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../JavaScript/API/01.DOM/09.%E4%BA%8B%E4%BB%B6%E7%B1%BB%E5%9E%8B/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    09.事件类型
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../JavaScript/API/01.DOM/10.%E4%BA%8B%E4%BB%B6%E5%AF%B9%E8%B1%A1/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    10.事件对象
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../JavaScript/API/01.DOM/11.%E5%9B%9E%E8%B0%83%E5%87%BD%E6%95%B0/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    11.回调函数
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../JavaScript/API/01.DOM/12.%E4%BA%8B%E4%BB%B6%E6%B5%81/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    12.事件流
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../JavaScript/API/01.DOM/13.%E4%BA%8B%E4%BB%B6%E5%A7%94%E6%89%98/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    13.事件委托
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../JavaScript/API/01.DOM/14.%E9%A1%B5%E9%9D%A2%E5%8A%A0%E8%BD%BD%E4%BA%8B%E4%BB%B6/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    14.页面加载事件
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../JavaScript/API/01.DOM/15.%E9%A1%B5%E9%9D%A2%E6%BB%9A%E5%8A%A8%E4%BA%8B%E4%BB%B6/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    15.页面滚动事件
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../JavaScript/API/01.DOM/16.%E9%A1%B5%E9%9D%A2%E5%B0%BA%E5%AF%B8%E4%BA%8B%E4%BB%B6/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    16.页面尺寸事件
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../JavaScript/API/01.DOM/17.%E5%85%83%E7%B4%A0%E5%B0%BA%E5%AF%B8%E4%B8%8E%E4%BD%8D%E7%BD%AE/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    17.元素尺寸与位置
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../JavaScript/API/01.DOM/18.%E6%97%A5%E6%9C%9F%E5%AF%B9%E8%B1%A1/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    18.日期对象
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../JavaScript/API/01.DOM/19.%E8%8A%82%E7%82%B9%E6%93%8D%E4%BD%9C/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    19.节点操作
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../JavaScript/API/01.DOM/20.M%E7%AB%AF%E4%BA%8B%E4%BB%B6/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    20.M端事件
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../JavaScript/API/01.DOM/21.%E9%87%8D%E7%BB%98%E5%92%8C%E5%9B%9E%E6%B5%81/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    21.重绘和回流
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_2_2_4_1_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_2_2_2_4_1_2" id="__nav_2_2_2_4_1_2_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    BOM
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="6" aria-labelledby="__nav_2_2_2_4_1_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_2_2_4_1_2">
+            <span class="md-nav__icon md-icon"></span>
+            BOM
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../JavaScript/API/02.BOM/01.BOM/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    01.BOM
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../JavaScript/API/02.BOM/02.%E5%BB%B6%E6%97%B6%E5%87%BD%E6%95%B0/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    02.延时函数
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../JavaScript/API/02.BOM/03.JS%E6%89%A7%E8%A1%8C%E6%9C%BA%E5%88%B6/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    03.JS执行机制
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../JavaScript/API/02.BOM/04.location%E5%AF%B9%E8%B1%A1/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    04.location 对象
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../JavaScript/API/02.BOM/05.navigator%E5%AF%B9%E8%B1%A1/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    05.navigator对象
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../JavaScript/API/02.BOM/06.history%E5%AF%B9%E8%B1%A1/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    06.history对象
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../JavaScript/API/02.BOM/07.%E6%9C%AC%E5%9C%B0%E5%AD%98%E5%82%A8/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    07.本地存储
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../JavaScript/API/02.BOM/08.%E6%9C%AC%E5%9C%B0%E5%AD%98%E5%82%A8%E6%A1%88%E4%BE%8B/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    08.本地存储案例
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../JavaScript/API/02.BOM/09.%E6%95%B0%E7%BB%84%E7%9A%84%E6%96%B9%E6%B3%95%28%E8%A1%A5%E5%85%85%29/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    09.数组的方法(补充)
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../JavaScript/API/02.BOM/10.%E6%AD%A3%E5%88%99%E8%A1%A8%E8%BE%BE%E5%BC%8F/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    10.正则表达式
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+      
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_2_2_5" >
+        
+          
+          <label class="md-nav__link" for="__nav_2_2_2_5" id="__nav_2_2_2_5_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Vue
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="4" aria-labelledby="__nav_2_2_2_5_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_2_2_5">
+            <span class="md-nav__icon md-icon"></span>
+            Vue
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_2_2_5_1" >
+        
+          
+          <label class="md-nav__link" for="__nav_2_2_2_5_1" id="__nav_2_2_2_5_1_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Vue2基础
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="5" aria-labelledby="__nav_2_2_2_5_1_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_2_2_5_1">
+            <span class="md-nav__icon md-icon"></span>
+            Vue2基础
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Vue2%2B3/Vue2/01.Vue%E7%AE%80%E4%BB%8B/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    01. Vue简介
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Vue2%2B3/Vue2/02.%E6%95%B0%E6%8D%AE%E7%BB%91%E5%AE%9A/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    02.数据绑定
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Vue2%2B3/Vue2/03.%E4%BA%8B%E4%BB%B6%E5%A4%84%E7%90%86/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    03.事件处理
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Vue2%2B3/Vue2/04.%E8%AE%A1%E7%AE%97%E5%B1%9E%E6%80%A7%E4%B8%8E%E7%9B%91%E8%A7%86/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    04.计算属性与监视
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Vue2%2B3/Vue2/05.class%E4%B8%8Estyle%E7%BB%91%E5%AE%9A/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    05.class与style绑定
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Vue2%2B3/Vue2/06.%E6%9D%A1%E4%BB%B6%E6%B8%B2%E6%9F%93/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    06.条件渲染
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Vue2%2B3/Vue2/07.%E5%88%97%E8%A1%A8%E6%B8%B2%E6%9F%93/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    07.列表渲染
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Vue2%2B3/Vue2/08.Vue%E7%9B%91%E6%B5%8B%E6%95%B0%E6%8D%AE%E7%9A%84%E5%8E%9F%E7%90%86/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    08.Vue监测数据的原理
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Vue2%2B3/Vue2/09.%E6%94%B6%E9%9B%86%E8%A1%A8%E5%8D%95%E6%95%B0%E6%8D%AE/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    09.收集表单数据
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Vue2%2B3/Vue2/10.%E8%BF%87%E6%BB%A4%E5%99%A8/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    10.过滤器
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Vue2%2B3/Vue2/11.%E5%86%85%E7%BD%AE%E6%8C%87%E4%BB%A4/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    11. 内置指令
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Vue2%2B3/Vue2/12.%E8%87%AA%E5%AE%9A%E4%B9%89%E6%8C%87%E4%BB%A4/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    12.自定义指令
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Vue2%2B3/Vue2/13.%E7%94%9F%E5%91%BD%E5%91%A8%E6%9C%9F/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    13. 生命周期
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Vue2%2B3/Vue2/14.%E7%BB%84%E4%BB%B6%E7%AE%80%E4%BB%8B/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    14.组件简介
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Vue2%2B3/Vue2/15.%E5%8D%95%E6%96%87%E4%BB%B6%E7%BB%84%E4%BB%B6/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    15. 单文件组件
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Vue2%2B3/Vue2/16.Vue%E8%84%9A%E6%89%8B%E6%9E%B6%E5%88%9B%E5%BB%BA%E4%B8%8E%E7%AE%80%E4%BB%8B/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    16.Vue脚手架
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Vue2%2B3/Vue2/17.%E4%BF%AE%E6%94%B9%E9%BB%98%E8%AE%A4%E9%85%8D%E7%BD%AE%E9%A1%B9/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    17. 修改默认配置项
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Vue2%2B3/Vue2/18.ref%E5%B1%9E%E6%80%A7/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    18.ref属性
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Vue2%2B3/Vue2/19.%E9%85%8D%E7%BD%AE%E9%A1%B9props/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    19.配置项props
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Vue2%2B3/Vue2/20.mixin%E6%B7%B7%E5%85%A5/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    20.mixin混入
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Vue2%2B3/Vue2/21.plugins/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    21. Plugins
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Vue2%2B3/Vue2/22.scope%E6%A0%B7%E5%BC%8F/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    22.scope样式
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Vue2%2B3/Vue2/23.Todo-List%E6%A1%88%E4%BE%8B/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    23.Todo-List案例
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_2_2_6" >
+        
+          
+          <label class="md-nav__link" for="__nav_2_2_2_6" id="__nav_2_2_2_6_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    React
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="4" aria-labelledby="__nav_2_2_2_6_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_2_2_6">
+            <span class="md-nav__icon md-icon"></span>
+            React
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../React/01.React%E5%85%A5%E9%97%A8/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    01. React入门
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../React/02.React%E9%9D%A2%E5%90%91%E7%BB%84%E4%BB%B6%E7%BC%96%E7%A8%8B/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    02. React面向组件编程
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_2_3" >
+        
+          
+          <label class="md-nav__link" for="__nav_2_2_3" id="__nav_2_2_3_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Backend
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_2_2_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_2_3">
+            <span class="md-nav__icon md-icon"></span>
+            Backend
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Backend/JavaRoadMap/JavaRoadMap/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    JavaRoadMap
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+      
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_2_3_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_2_2_3_2" id="__nav_2_2_3_2_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    MySQL
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="4" aria-labelledby="__nav_2_2_3_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_2_3_2">
+            <span class="md-nav__icon md-icon"></span>
+            MySQL
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Backend/MySQL/01.%E5%9F%BA%E7%A1%80/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    MySQL基础
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_2_3_3" >
+        
+          
+          <label class="md-nav__link" for="__nav_2_2_3_3" id="__nav_2_2_3_3_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    JavaSE
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="4" aria-labelledby="__nav_2_2_3_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_2_3_3">
+            <span class="md-nav__icon md-icon"></span>
+            JavaSE
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Backend/JavaSE/01.%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1%E5%9F%BA%E7%A1%80/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    01. 面向对象基础
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Backend/JavaSE/02.String%E7%B1%BB/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    02. String对象
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Backend/JavaSE/03.ArrayList%E7%B1%BB/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    03. ArrayList类
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Backend/JavaSE/04.static/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    04. static
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Backend/JavaSE/05.%E7%BB%A7%E6%89%BF/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    05. 继承
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Backend/JavaSE/06.%E5%A4%9A%E6%80%81/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    06. 多态
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Backend/JavaSE/07.%E6%8A%BD%E8%B1%A1%E7%B1%BB/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    07. 抽象类
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Backend/JavaSE/08.%E6%8E%A5%E5%8F%A3/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    08. 接口
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Backend/JavaSE/09.%E5%86%85%E9%83%A8%E7%B1%BB/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    09. 内部类
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Backend/JavaSE/10.enum%E7%B1%BB/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    10. enum类
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Backend/JavaSE/11.%E6%B3%9B%E5%9E%8B/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    11. 泛型
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Backend/JavaSE/12.lang_Object/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    12. lang.Object
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Backend/JavaSE/13.util_Objects/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    13. util.Objects
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Backend/JavaSE/14.lang_wrappers/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    14. 包装类
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Backend/JavaSE/15.lang_StringBuilder/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    15. lang.StringBuilder
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Backend/JavaSE/16.lang_StringBuffer/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    16. lang.StringBuffer
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Backend/JavaSE/17.lang_StringJoiner/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    17. lang.StringJoiner
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Backend/JavaSE/18.lang_Math/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    18. lang.Math
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Backend/JavaSE/19.lang_System/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    19. lang.System
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Backend/JavaSE/20.lang_Runtime/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    20. lang.Runtime
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Backend/JavaSE/21.lang_BigDecimal/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    21. lang.BigDecimal
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Backend/JavaSE/22.util_Arrays/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    22. util.Arrays
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Backend/JavaSE/23.JDK8_LambdaExpression/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    23. LambdaExpression
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Backend/JavaSE/24.JDK8_%E6%96%B9%E6%B3%95%E5%BC%95%E7%94%A8/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    24. JDK8 新特性：方法引用
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Backend/JavaSE/25.regularExpression/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    25. Regular Expression
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Backend/JavaSE/26.Exception/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    26. Exception
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Backend/JavaSE/27.CollectionFramework/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    27. Collection Framework
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Backend/JavaSE/28.io_File/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    28. io_File 与 IO流
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Backend/JavaSE/29.IO/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    29. IO
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Backend/JavaSE/30.specialFileandJournaling/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    30.Special File and Journaling
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Backend/JavaSE/31.multithreading/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    31. Multithreading
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Backend/JavaSE/32.%E7%BD%91%E7%BB%9C%E7%BC%96%E7%A8%8B/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    32. 网络编程
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_2_3_4" >
+        
+          
+          <label class="md-nav__link" for="__nav_2_2_3_4" id="__nav_2_2_3_4_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    JavaWeb
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="4" aria-labelledby="__nav_2_2_3_4_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_2_3_4">
+            <span class="md-nav__icon md-icon"></span>
+            JavaWeb
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Backend/JavaWeb/00.RoadMap/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    0. RoadMap
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Backend/JavaWeb/01.%E5%89%8D%E7%BD%AE%E7%9F%A5%E8%AF%86/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    01. 前置知识
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Backend/JavaWeb/02.Maven/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    02. Maven
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Backend/JavaWeb/03.Web%E5%85%A5%E9%97%A8/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    03. Web入门
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Backend/JavaWeb/04.%E8%AF%B7%E6%B1%82%E5%93%8D%E5%BA%94%E5%88%86%E5%B1%82%E8%A7%A3%E8%80%A6/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    04.请求-响应-分层解耦
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Backend/JavaWeb/06.MyBatis/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    06. MyBatis
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+      
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_2_3_5" >
+        
+          
+          <label class="md-nav__link" for="__nav_2_2_3_5" id="__nav_2_2_3_5_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Project
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="4" aria-labelledby="__nav_2_2_3_5_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_2_3_5">
+            <span class="md-nav__icon md-icon"></span>
+            Project
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+      
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_2_3_5_1" >
+        
+          
+          <label class="md-nav__link" for="__nav_2_2_3_5_1" id="__nav_2_2_3_5_1_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    HungryPig
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="5" aria-labelledby="__nav_2_2_3_5_1_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_2_3_5_1">
+            <span class="md-nav__icon md-icon"></span>
+            HungryPig
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Backend/Project/HungryPig/01.%E6%95%B4%E4%BD%93%E4%BB%8B%E7%BB%8D/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    01.整体介绍
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../computerEnglish/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Computer English(processing)
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+      
+    
+    
+      
+      
+        
+          
+          
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_4" >
+        
+          
+          <label class="md-nav__link" for="__nav_2_4" id="__nav_2_4_label" tabindex="">
+            
+  
+  <span class="md-ellipsis">
+    Useful Website
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_4_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_4">
+            <span class="md-nav__icon md-icon"></span>
+            Useful Website
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../website/code/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Code
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+      
+    
+    
+      
+      
+        
+          
+          
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_5" >
+        
+          
+          <label class="md-nav__link" for="__nav_2_5" id="__nav_2_5_label" tabindex="">
+            
+  
+  <span class="md-ellipsis">
+    Youtuber
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_5_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_5">
+            <span class="md-nav__icon md-icon"></span>
+            Youtuber
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../youtuber/coder/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Coder
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" >
+        
+          
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../../../../../blog/" class="md-nav__link ">
+              
+  
+  <span class="md-ellipsis">
+    Blog
+  </span>
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_3" id="__nav_3_label" tabindex="0">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3">
+            <span class="md-nav__icon md-icon"></span>
+            Blog
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+      
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_3_2" id="__nav_3_2_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Archive
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3_2">
+            <span class="md-nav__icon md-icon"></span>
+            Archive
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+    
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../../blog/archive/2024/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    2024
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_3" >
+        
+          
+          <label class="md-nav__link" for="__nav_3_3" id="__nav_3_3_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Categories
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3_3">
+            <span class="md-nav__icon md-icon"></span>
+            Categories
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+    
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../../blog/category/fluff/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Fluff
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../../blog/category/musing/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Musing
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../../blog/category/playlist-pulse/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Playlist Pulse
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../../blog/category/website-update/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Website update
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+      
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4" >
+        
+          
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../../../../../reprint/" class="md-nav__link ">
+              
+  
+  <span class="md-ellipsis">
+    Reprint
+  </span>
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_4" id="__nav_4_label" tabindex="0">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4">
+            <span class="md-nav__icon md-icon"></span>
+            Reprint
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../../reprint/code/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Code
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../../reprint/articles/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Articles
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4_4" >
+        
+          
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../../../../../reprint/poetry/" class="md-nav__link ">
+              
+  
+  <span class="md-ellipsis">
+    Poetry
+  </span>
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_4_4" id="__nav_4_4_label" tabindex="0">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_4_4_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4_4">
+            <span class="md-nav__icon md-icon"></span>
+            Poetry
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../../reprint/poetry/ch/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    CH
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../../reprint/poetry/en/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    EN
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5" >
+        
+          
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../../../../../loveStory/" class="md-nav__link ">
+              
+  
+  <span class="md-ellipsis">
+    LoveStory
+  </span>
+  
+
+            </a>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_5_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_5">
+            <span class="md-nav__icon md-icon"></span>
+            LoveStory
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../../about/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    About
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_7" >
+        
+          
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../../../../../motivation/" class="md-nav__link ">
+              
+  
+  <span class="md-ellipsis">
+    Motivation
+  </span>
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_7" id="__nav_7_label" tabindex="0">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_7_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_7">
+            <span class="md-nav__icon md-icon"></span>
+            Motivation
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../../motivation/done/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Done
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../../motivation/processing/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Processing
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../../motivation/plan/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Plan
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+  
+  
+
+
+<h1 id="01了解web及网络基础">01.了解Web及网络基础<a class="headerlink" href="#01了解web及网络基础" title="Permanent link"></a></h1>
+<h2 id="11-使用http协议访问web">1.1 使用HTTP协议访问Web<a class="headerlink" href="#11-使用http协议访问web" title="Permanent link"></a></h2>
+<p>Web 页面当然不能凭空显示出来。根据 Web 浏览器地址栏中指定的 URL，Web 浏览器从 Web 服务器端获取文件资源（resource）等信息，从而显示出 Web 页面。像这种通过发送请求获取服务器资源的 Web 浏览器等，都可称为客户端（client）。</p>
+<p><img alt="alt text" src="../image.png" /></p>
+<p>Web 使用一种名为 HTTP（HyperText Transfer Protocol，超文本传输协议）的协议作为规范，完成从客户端到服务器端等一系列运作流程。而协议是指规则的约定。可以说，Web 是建立在 HTTP 协议上通信的。</p>
+<p>现在已提出了 3 项 WWW 构建技术，分别是：把 SGML（Standard Generalized Markup Language，标准通用标记语言）作为页面的文本标记语言的 HTML（HyperText Markup Language，超文本标记语言）；作为文档传递协议的 HTTP ；指定文档所在地址的 URL（Uniform Resource Locator，统一资源定位符）。WWW 这一名称，是 Web 浏览器当年用来浏览超文本的客户端应用程序时的名称。现在则用来表示这一系列的集合，也可简称为 Web。</p>
+<h2 id="12-网络基础-tcpip">1.2 网络基础 TCP/IP<a class="headerlink" href="#12-网络基础-tcpip" title="Permanent link"></a></h2>
+<p>为了理解 HTTP，我们有必要事先了解一下 TCP/IP 协议族。通常使用的网络（包括互联网）是在 TCP/IP 协议族的基础上运作的。而 HTTP 属于它内部的一个子集。</p>
+<h3 id="121-tcpip-协议族">1.2.1 TCP/IP 协议族<a class="headerlink" href="#121-tcpip-协议族" title="Permanent link"></a></h3>
+<p>计算机与网络设备要相互通信，双方就必须基于相同的方法。如，如何探测到通信目标、由哪一边先发起通信、使用哪种语言进行通信、怎样结束通信等规则都需要事先确定。不同的硬件、操作系统之间的通信，所有的这一切都需要一种规则。而我们就把这种规则称为协议（protocol）。</p>
+<p><img alt="alt text" src="../image-1.png" /></p>
+<h3 id="122-tcpip-的分层管理">1.2.2　TCP/IP 的分层管理<a class="headerlink" href="#122-tcpip-的分层管理" title="Permanent link"></a></h3>
+<ul>
+<li>
+<p>TCP/IP 协议族里重要的一点就是分层。</p>
+<ul>
+<li>TCP/IP 协议族按层次分别分为以下 4 层：应用层、传输层、网络层和数据链路层。</li>
+<li>把 TCP/IP 层次化是有好处的。比如，如果互联网只由一个协议统筹，某个地方需要改变设计时，就必须把所有部分整体替换掉。而分层之后只需把变动的层替换掉即可。把各层之间的接口部分规划好之后，每个层次内部的设计就能够自由改动了。</li>
+</ul>
+</li>
+<li>
+<p>TCP/IP 协议族各层的作用如下：</p>
+<ul>
+<li>应用层<ul>
+<li>应用层决定了向用户提供应用服务时通信的活动。TCP/IP 协议族内预存了各类通用的应用服务。</li>
+<li>比如，FTP（File Transfer Protocol，文件传输协议）和 DNS（Domain Name System，域名系统）服务就是其中两类。HTTP 协议也处于该层。</li>
+</ul>
+</li>
+<li>传输层<ul>
+<li>传输层对上层应用层，提供处于网络连接中的两台计算机之间的数据传输。</li>
+<li>在传输层有两个性质不同的协议：TCP（Transmission Control Protocol，传输控制协议）和 UDP（User Data Protocol，用户数据报协议）。</li>
+</ul>
+</li>
+<li>网络层（又名网络互连层）<ul>
+<li>网络层用来处理在网络上流动的数据包。数据包是网络传输的最小数据单位。该层规定了通过怎样的路径（所谓的传输路线）到达对方计算机，并把数据包传送给对方。</li>
+<li>与对方计算机之间通过多台计算机或网络设备进行传输时，网络层所起的作用就是在众多的选项内选择一条传输路线。</li>
+</ul>
+</li>
+<li>链路层（又名数据链路层，网络接口层）<ul>
+<li>用来处理连接网络的硬件部分。包括控制操作系统、硬件的设备驱动、NIC（Network Interface Card，网络适配器，即网卡），及光纤等物理可见部分（还包括连接器等一切传输媒介）。</li>
+<li>硬件上的范畴均在链路层的作用范围之内。</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<h3 id="123-tcpip-通信传输流">1.2.3 TCP/IP 通信传输流<a class="headerlink" href="#123-tcpip-通信传输流" title="Permanent link"></a></h3>
+<p>利用 TCP/IP 协议族进行网络通信时，会通过分层顺序与对方进行通信。发送端从应用层往下走，接收端则往应用层往上走。</p>
+<ul>
+<li>我们用 HTTP 举例来说明：</li>
+<li>首先作为发送端的客户端在应用层（HTTP 协议）发出一个想看某个 Web 页面的 HTTP 请求。</li>
+<li>接着，为了传输方便，在传输层（TCP 协议）把从应用层处收到的数据（HTTP 请求报文）进行分割，并在各个报文上打上标记序号及端口号后转发给网络层。</li>
+<li>在网络层（IP 协议），增加作为通信目的地的 MAC 地址后转发给链路层。这样一来，发往网络的通信请求就准备齐全了。</li>
+<li>接收端的服务器在链路层接收到数据，按序往上层发送，一直到应用层。当传输到应用层，才能算真正接收到由客户端发送过来的 HTTP 请求。</li>
+</ul>
+<p><img alt="alt text" src="../image-2.png" /></p>
+<ul>
+<li>发送端在层与层之间传输数据时，每经过一层时必定会被打上一个该层所属的首部信息。反之，接收端在层与层传输数据时，每经过一层时会把对应的首部消去。</li>
+<li>这种把数据信息包装起来的做法称为封装（encapsulate）。</li>
+</ul>
+<h2 id="13-与-http-关系密切的协议iptcp-和-dns">1.3 与 HTTP 关系密切的协议：IP、TCP 和 DNS<a class="headerlink" href="#13-与-http-关系密切的协议iptcp-和-dns" title="Permanent link"></a></h2>
+<h3 id="131-负责传输的-ip-协议">1.3.1 负责传输的 IP 协议<a class="headerlink" href="#131-负责传输的-ip-协议" title="Permanent link"></a></h3>
+<ul>
+<li>按层次分，IP（Internet Protocol）网际协议位于网络层。</li>
+<li>
+<p>几乎所有使用网络的系统都会用到 IP 协议。</p>
+</li>
+<li>
+<p>IP 协议的作用是把各种数据包传送给对方。而要保证确实传送到对方那里，则需要满足各类条件。其中两个重要的条件是 IP 地址和 MAC地址（Media Access Control Address）。</p>
+<ul>
+<li>IP 地址指明了节点被分配到的地址，MAC 地址是指网卡所属的固定地址。</li>
+<li>IP 地址可以和 MAC 地址进行配对。IP 地址可变换，但 MAC地址基本上不会更改。</li>
+</ul>
+</li>
+</ul>
+<h4 id="使用-arp-协议凭借-mac-地址进行通信">使用 ARP 协议凭借 MAC 地址进行通信<a class="headerlink" href="#使用-arp-协议凭借-mac-地址进行通信" title="Permanent link"></a></h4>
+<ul>
+<li>IP 间的通信依赖 MAC 地址。</li>
+<li>在网络上，通常是经过多台计算机和网络设备中转才能连接到对方。而在进行中转时，会利用下一站中转设备的 MAC 地址来搜索下一个中转目标。这时，会采用 ARP 协议（Address Resolution Protocol）。ARP 是一种用以解析地址的协议，根据通信方的 IP 地址就可以反查出对应的 MAC 地址。</li>
+</ul>
+<h4 id="没有人能够全面掌握互联网中的传输状况">没有人能够全面掌握互联网中的传输状况<a class="headerlink" href="#没有人能够全面掌握互联网中的传输状况" title="Permanent link"></a></h4>
+<ul>
+<li>在到达通信目标前的中转过程中，那些计算机和路由器等网络设备只能获悉很粗略的传输路线。</li>
+<li>无论哪台计算机、哪台网络设备，它们都无法全面掌握互联网中的细节。</li>
+<li>这种机制称为路由选择（routing）</li>
+</ul>
+<p><img alt="alt text" src="../image-3.png" /></p>
+<h3 id="132-确保可靠传输的-tcp-协议">1.3.2 确保可靠传输的 TCP 协议<a class="headerlink" href="#132-确保可靠传输的-tcp-协议" title="Permanent link"></a></h3>
+<ul>
+<li>按层次分，TCP 位于传输层，提供可靠的字节流服务。<ul>
+<li>所谓的字节流服务（Byte Stream Service）是指，为了方便传输，将大块数据分割成以报文段（segment）为单位的数据包进行管理。</li>
+<li>而可靠的传输服务是指，能够把数据准确可靠地传给对方。</li>
+</ul>
+</li>
+<li>TCP 协议为了更容易传送大数据才把数据分割，而且 TCP 协议能够确认数据最终是否送达到对方。</li>
+</ul>
+<h4 id="确保数据能到达目标">确保数据能到达目标<a class="headerlink" href="#确保数据能到达目标" title="Permanent link"></a></h4>
+<ul>
+<li>为了准确无误地将数据送达目标处，TCP 协议采用了三次握手（three-way handshaking）策略。<ul>
+<li>握手过程中使用了 TCP 的标志（flag）——SYN（synchronize）和 ACK（acknowledgement）。</li>
+<li>发送端首先发送一个带 SYN 标志的数据包给对方。接收端收到后，回传一个带有 SYN/ACK 标志的数据包以示传达确认信息。最后，发送端再回传一个带 ACK 标志的数据包，代表“握手”结束。若在握手过程中某个阶段莫名中断，TCP 协议会再次以相同的顺序发送相同的数据包。</li>
+</ul>
+</li>
+</ul>
+<p><img alt="alt text" src="../image-4.png" /></p>
+<h3 id="133-负责域名解析的-dns-服务">1.3.3 负责域名解析的 DNS 服务<a class="headerlink" href="#133-负责域名解析的-dns-服务" title="Permanent link"></a></h3>
+<ul>
+<li>DNS（Domain Name System）服务是和 HTTP 协议一样位于应用层的协议</li>
+<li>DNS 协议提供通过域名查找 IP 地址，或逆向从 IP 地址反查域名的服务。</li>
+</ul>
+<p><img alt="alt text" src="../image-5.png" /></p>
+<h3 id="134-各种协议与-http-协议的关系">1.3.4 各种协议与 HTTP 协议的关系<a class="headerlink" href="#134-各种协议与-http-协议的关系" title="Permanent link"></a></h3>
+<p><img alt="alt text" src="../image-6.png" /></p>
+<h2 id="14-uri-和-url">1.4 URI 和 URL<a class="headerlink" href="#14-uri-和-url" title="Permanent link"></a></h2>
+<ul>
+<li>与 URI（统一资源标识符）相比，我们更熟悉 URL（Uniform Resource Locator，统一资源定位符）。URL 正是使用 Web 浏览器等访问Web 页面时需要输入的网页地址。</li>
+</ul>
+<h3 id="141-统一资源标识符">1.4.1 统一资源标识符<a class="headerlink" href="#141-统一资源标识符" title="Permanent link"></a></h3>
+<p>URI 是 Uniform Resource Identifier 的缩写。RFC2396 分别对这3 个单词进行了如下定义。</p>
+<h4 id="uniform">Uniform<a class="headerlink" href="#uniform" title="Permanent link"></a></h4>
+<p>规定统一的格式可方便处理多种不同类型的资源，而不用根据上下文环境来识别资源指定的访问方式。另外，加入新增的协议方案（如 http: 或 ftp:）也更容易。</p>
+<h4 id="resource">Resource<a class="headerlink" href="#resource" title="Permanent link"></a></h4>
+<p>资源的定义是“可标识的任何东西”。除了文档文件、图像或服务（例如当天的天气预报）等能够区别于其他类型的，全都可作为资源。另外，资源不仅可以是单一的，也可以是多数的集合体。</p>
+<h4 id="identifier">Identifier<a class="headerlink" href="#identifier" title="Permanent link"></a></h4>
+<p>表示可标识的对象。也称为标识符。</p>
+<h4 id="总结">总结<a class="headerlink" href="#总结" title="Permanent link"></a></h4>
+<p>综上所述，URI 就是由某个协议方案表示的资源的定位标识符。协议方案是指访问资源所使用的协议类型名称。</p>
+<p>URI 用字符串标识某一互联网资源，而 URL 表示资源的地点（互
+联网上所处的位置）。可见 URL 是 URI 的子集。</p>
+<h3 id="142-url-的组成">1.4.2 URL 的组成<a class="headerlink" href="#142-url-的组成" title="Permanent link"></a></h3>
+<p>URL分为：涵盖全部必要信息的绝对 URI、绝对 URL以及相对URL。</p>
+<p><img alt="alt text" src="../image-7.png" /></p>
+<h4 id="登录信息认证">登录信息（认证）<a class="headerlink" href="#登录信息认证" title="Permanent link"></a></h4>
+<p>指定用户名和密码作为从服务器端获取资源时必要的登录信息（身份认证）。此项是可选项。</p>
+<h4 id="服务器地址">服务器地址<a class="headerlink" href="#服务器地址" title="Permanent link"></a></h4>
+<p>使用绝对 URI 必须指定待访问的服务器地址。地址可以是类似hackr.jp 这种 DNS 可解析的名称，或是 192.168.1.1 这类 IPv4 地址名，还可以是 [0:0:0:0:0:0:0:1] 这样用方括号括起来的 IPv6 地址名。</p>
+<h4 id="服务器端口号">服务器端口号<a class="headerlink" href="#服务器端口号" title="Permanent link"></a></h4>
+<p>指定服务器连接的网络端口号。此项也是可选项，若用户省略则自动使用默认端口号。</p>
+<h4 id="带层次的文件路径">带层次的文件路径<a class="headerlink" href="#带层次的文件路径" title="Permanent link"></a></h4>
+<p>指定服务器上的文件路径来定位特指的资源。这与 UNIX 系统的文件目录结构相似。</p>
+<h4 id="查询字符串">查询字符串<a class="headerlink" href="#查询字符串" title="Permanent link"></a></h4>
+<p>针对已指定的文件路径内的资源，可以使用查询字符串传入任意参数。此项可选。</p>
+<h4 id="片段标识符">片段标识符<a class="headerlink" href="#片段标识符" title="Permanent link"></a></h4>
+<p>使用片段标识符通常可标记出已获取资源中的子资源（文档内的某个位置）。但在 RFC 中并没有明确规定其使用方法。该项也为可选项。</p>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+          <button type="button" class="md-top md-icon" data-md-component="top" hidden>
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8v12Z"/></svg>
+  Back to top
+</button>
+        
+      </main>
+      
+        <!-- Footer -->
+<footer class="md-footer">
+
+    <!-- Link to previous and/or next page -->
+    
+
+    <!-- Further information -->
+    <div class="md-footer-meta md-typeset">
+        <div class="md-footer-meta__inner md-grid">
+            <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+            <div class="footer-visit-count" style="display: flex; justify-content: center; align-items: center;">
+                本站访问量：
+                <script async src="//finicounter.eu.org/finicounter.js"></script>
+                <span id="finicount_views"></span>
+                <!-- &nbsp;|&nbsp; -->
+                <!-- <a href="https://icp.gov.moe/?keyword=20230640" target="_blank">萌ICP备20230640号</a> -->
+            </div>
+            <style>
                 .footer-visit-count {
                     height: fit-content;
                     min-height: 55px;
                     /* 根据实际情况调整此高度 */
                 }
-            </style> <div class=md-social> <a href="mailto:<1219632665@qq.com>" target=_blank rel=noopener title class=md-social__link> <svg xmlns=http://www.w3.org/2000/svg viewbox="0 0 24 24"><path d="m20 8-8 5-8-5V6l8 5 8-5m0-2H4c-1.11 0-2 .89-2 2v12a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2V6a2 2 0 0 0-2-2Z"/></svg> </a> <a href=https://www.youtube.com/channel/UCKX_MGD-u_ceV2XtNA6re3Q target=_blank rel=noopener title=www.youtube.com class=md-social__link> <svg xmlns=http://www.w3.org/2000/svg viewbox="0 0 576 512"><!-- Font Awesome Free 6.5.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2024 Fonticons, Inc.--><path d="M549.655 124.083c-6.281-23.65-24.787-42.276-48.284-48.597C458.781 64 288 64 288 64S117.22 64 74.629 75.486c-23.497 6.322-42.003 24.947-48.284 48.597-11.412 42.867-11.412 132.305-11.412 132.305s0 89.438 11.412 132.305c6.281 23.65 24.787 41.5 48.284 47.821C117.22 448 288 448 288 448s170.78 0 213.371-11.486c23.497-6.321 42.003-24.171 48.284-47.821 11.412-42.867 11.412-132.305 11.412-132.305s0-89.438-11.412-132.305zm-317.51 213.508V175.185l142.739 81.205-142.739 81.201z"/></svg> </a> <a href=https://www.reddit.com/user/Pigasso_4ever/ target=_blank rel=noopener title=www.reddit.com class=md-social__link> <svg xmlns=http://www.w3.org/2000/svg viewbox="0 0 24 24"><path d="M12 0C5.373 0 0 5.373 0 12c0 3.314 1.343 6.314 3.515 8.485l-2.286 2.286A.72.72 0 0 0 1.738 24H12c6.627 0 12-5.373 12-12S18.627 0 12 0Zm4.388 3.199a1.999 1.999 0 1 1-1.947 2.46v.002a2.368 2.368 0 0 0-2.032 2.341v.007c1.776.067 3.4.567 4.686 1.363a2.802 2.802 0 1 1 2.908 4.753c-.088 3.256-3.637 5.876-7.997 5.876-4.361 0-7.905-2.617-7.998-5.87a2.8 2.8 0 0 1 1.189-5.34c.645 0 1.239.218 1.712.585 1.275-.79 2.881-1.291 4.64-1.365v-.01a3.229 3.229 0 0 1 2.88-3.207 2 2 0 0 1 1.959-1.595Zm-8.085 8.376c-.784 0-1.459.78-1.506 1.797-.047 1.016.64 1.429 1.426 1.429.786 0 1.371-.369 1.418-1.385.047-1.017-.553-1.841-1.338-1.841Zm7.406 0c-.786 0-1.385.824-1.338 1.841.047 1.017.634 1.385 1.418 1.385.785 0 1.473-.413 1.426-1.429-.046-1.017-.721-1.797-1.506-1.797Zm-3.703 4.013c-.974 0-1.907.048-2.77.135a.222.222 0 0 0-.183.305 3.199 3.199 0 0 0 2.953 1.964 3.2 3.2 0 0 0 2.953-1.964.222.222 0 0 0-.184-.305 27.75 27.75 0 0 0-2.769-.135Z"/></svg> </a> <a href="https://space.bilibili.com/493000186?spm_id_from=333.1007.0.0" target=_blank rel=noopener title=space.bilibili.com class=md-social__link> <svg xmlns=http://www.w3.org/2000/svg viewbox="0 0 24 24"><path d="M17.813 4.653h.854c1.51.054 2.769.578 3.773 1.574 1.004.995 1.524 2.249 1.56 3.76v7.36c-.036 1.51-.556 2.769-1.56 3.773s-2.262 1.524-3.773 1.56H5.333c-1.51-.036-2.769-.556-3.773-1.56S.036 18.858 0 17.347v-7.36c.036-1.511.556-2.765 1.56-3.76 1.004-.996 2.262-1.52 3.773-1.574h.774l-1.174-1.12a1.234 1.234 0 0 1-.373-.906c0-.356.124-.658.373-.907l.027-.027c.267-.249.573-.373.92-.373.347 0 .653.124.92.373L9.653 4.44c.071.071.134.142.187.213h4.267a.836.836 0 0 1 .16-.213l2.853-2.747c.267-.249.573-.373.92-.373.347 0 .662.151.929.4.267.249.391.551.391.907 0 .355-.124.657-.373.906zM5.333 7.24c-.746.018-1.373.276-1.88.773-.506.498-.769 1.13-.786 1.894v7.52c.017.764.28 1.395.786 1.893.507.498 1.134.756 1.88.773h13.334c.746-.017 1.373-.275 1.88-.773.506-.498.769-1.129.786-1.893v-7.52c-.017-.765-.28-1.396-.786-1.894-.507-.497-1.134-.755-1.88-.773zM8 11.107c.373 0 .684.124.933.373.25.249.383.569.4.96v1.173c-.017.391-.15.711-.4.96-.249.25-.56.374-.933.374s-.684-.125-.933-.374c-.25-.249-.383-.569-.4-.96V12.44c0-.373.129-.689.386-.947.258-.257.574-.386.947-.386zm8 0c.373 0 .684.124.933.373.25.249.383.569.4.96v1.173c-.017.391-.15.711-.4.96-.249.25-.56.374-.933.374s-.684-.125-.933-.374c-.25-.249-.383-.569-.4-.96V12.44c.017-.391.15-.711.4-.96.249-.249.56-.373.933-.373Z"/></svg> </a> <a href=https://s2.loli.net/2024/04/22/4GYzcikCTqmZonw.jpg target=_blank rel=noopener title=s2.loli.net class=md-social__link> <svg xmlns=http://www.w3.org/2000/svg viewbox="0 0 24 24"><path d="M8.691 2.188C3.891 2.188 0 5.476 0 9.53c0 2.212 1.17 4.203 3.002 5.55a.59.59 0 0 1 .213.665l-.39 1.48c-.019.07-.048.141-.048.213 0 .163.13.295.29.295a.326.326 0 0 0 .167-.054l1.903-1.114a.864.864 0 0 1 .717-.098 10.16 10.16 0 0 0 2.837.403c.276 0 .543-.027.811-.05-.857-2.578.157-4.972 1.932-6.446 1.703-1.415 3.882-1.98 5.853-1.838-.576-3.583-4.196-6.348-8.596-6.348zM5.785 5.991c.642 0 1.162.529 1.162 1.18a1.17 1.17 0 0 1-1.162 1.178A1.17 1.17 0 0 1 4.623 7.17c0-.651.52-1.18 1.162-1.18zm5.813 0c.642 0 1.162.529 1.162 1.18a1.17 1.17 0 0 1-1.162 1.178 1.17 1.17 0 0 1-1.162-1.178c0-.651.52-1.18 1.162-1.18zm5.34 2.867c-1.797-.052-3.746.512-5.28 1.786-1.72 1.428-2.687 3.72-1.78 6.22.942 2.453 3.666 4.229 6.884 4.229.826 0 1.622-.12 2.361-.336a.722.722 0 0 1 .598.082l1.584.926a.272.272 0 0 0 .14.047c.134 0 .24-.111.24-.247 0-.06-.023-.12-.038-.177l-.327-1.233a.582.582 0 0 1-.023-.156.49.49 0 0 1 .201-.398C23.024 18.48 24 16.82 24 14.98c0-3.21-2.931-5.837-6.656-6.088V8.89c-.135-.01-.27-.027-.407-.03zm-2.53 3.274c.535 0 .969.44.969.982a.976.976 0 0 1-.969.983.976.976 0 0 1-.969-.983c0-.542.434-.982.97-.982zm4.844 0c.535 0 .969.44.969.982a.976.976 0 0 1-.969.983.976.976 0 0 1-.969-.983c0-.542.434-.982.969-.982z"/></svg> </a> </div> </div> </div> </footer> </div> <div class=md-dialog data-md-component=dialog> <div class="md-dialog__inner md-typeset"></div> </div> <div class=md-progress data-md-component=progress role=progressbar></div> <script id=__config type=application/json>{"base": "../../../../..", "features": ["navigation.instant", "navigation.instant.prefetch", "navigation.instant.progress", "navigation.tabs", "navigation.tabs.sticky", "navigation.indexes", "navigation.sections", "navigation.top", "toc.integrate", "toc.follow", "search.highlight"], "search": "../../../../../assets/javascripts/workers/search.b8dbb3d2.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script> <script src=../../../../../assets/javascripts/bundle.fe8b6f2b.min.js></script> </body> </html>
+            </style>
+
+            
+            <div class="md-social">
+  
+    
+    
+    
+    
+    <a href="mailto:<1219632665@qq.com>" target="_blank" rel="noopener" title="" class="md-social__link">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="m20 8-8 5-8-5V6l8 5 8-5m0-2H4c-1.11 0-2 .89-2 2v12a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2V6a2 2 0 0 0-2-2Z"/></svg>
+    </a>
+  
+    
+    
+    
+    
+      
+      
+    
+    <a href="https://www.youtube.com/channel/UCKX_MGD-u_ceV2XtNA6re3Q" target="_blank" rel="noopener" title="www.youtube.com" class="md-social__link">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512"><!--! Font Awesome Free 6.5.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2024 Fonticons, Inc.--><path d="M549.655 124.083c-6.281-23.65-24.787-42.276-48.284-48.597C458.781 64 288 64 288 64S117.22 64 74.629 75.486c-23.497 6.322-42.003 24.947-48.284 48.597-11.412 42.867-11.412 132.305-11.412 132.305s0 89.438 11.412 132.305c6.281 23.65 24.787 41.5 48.284 47.821C117.22 448 288 448 288 448s170.78 0 213.371-11.486c23.497-6.321 42.003-24.171 48.284-47.821 11.412-42.867 11.412-132.305 11.412-132.305s0-89.438-11.412-132.305zm-317.51 213.508V175.185l142.739 81.205-142.739 81.201z"/></svg>
+    </a>
+  
+    
+    
+    
+    
+      
+      
+    
+    <a href="https://www.reddit.com/user/Pigasso_4ever/" target="_blank" rel="noopener" title="www.reddit.com" class="md-social__link">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 0C5.373 0 0 5.373 0 12c0 3.314 1.343 6.314 3.515 8.485l-2.286 2.286A.72.72 0 0 0 1.738 24H12c6.627 0 12-5.373 12-12S18.627 0 12 0Zm4.388 3.199a1.999 1.999 0 1 1-1.947 2.46v.002a2.368 2.368 0 0 0-2.032 2.341v.007c1.776.067 3.4.567 4.686 1.363a2.802 2.802 0 1 1 2.908 4.753c-.088 3.256-3.637 5.876-7.997 5.876-4.361 0-7.905-2.617-7.998-5.87a2.8 2.8 0 0 1 1.189-5.34c.645 0 1.239.218 1.712.585 1.275-.79 2.881-1.291 4.64-1.365v-.01a3.229 3.229 0 0 1 2.88-3.207 2 2 0 0 1 1.959-1.595Zm-8.085 8.376c-.784 0-1.459.78-1.506 1.797-.047 1.016.64 1.429 1.426 1.429.786 0 1.371-.369 1.418-1.385.047-1.017-.553-1.841-1.338-1.841Zm7.406 0c-.786 0-1.385.824-1.338 1.841.047 1.017.634 1.385 1.418 1.385.785 0 1.473-.413 1.426-1.429-.046-1.017-.721-1.797-1.506-1.797Zm-3.703 4.013c-.974 0-1.907.048-2.77.135a.222.222 0 0 0-.183.305 3.199 3.199 0 0 0 2.953 1.964 3.2 3.2 0 0 0 2.953-1.964.222.222 0 0 0-.184-.305 27.75 27.75 0 0 0-2.769-.135Z"/></svg>
+    </a>
+  
+    
+    
+    
+    
+      
+      
+    
+    <a href="https://space.bilibili.com/493000186?spm_id_from=333.1007.0.0" target="_blank" rel="noopener" title="space.bilibili.com" class="md-social__link">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M17.813 4.653h.854c1.51.054 2.769.578 3.773 1.574 1.004.995 1.524 2.249 1.56 3.76v7.36c-.036 1.51-.556 2.769-1.56 3.773s-2.262 1.524-3.773 1.56H5.333c-1.51-.036-2.769-.556-3.773-1.56S.036 18.858 0 17.347v-7.36c.036-1.511.556-2.765 1.56-3.76 1.004-.996 2.262-1.52 3.773-1.574h.774l-1.174-1.12a1.234 1.234 0 0 1-.373-.906c0-.356.124-.658.373-.907l.027-.027c.267-.249.573-.373.92-.373.347 0 .653.124.92.373L9.653 4.44c.071.071.134.142.187.213h4.267a.836.836 0 0 1 .16-.213l2.853-2.747c.267-.249.573-.373.92-.373.347 0 .662.151.929.4.267.249.391.551.391.907 0 .355-.124.657-.373.906zM5.333 7.24c-.746.018-1.373.276-1.88.773-.506.498-.769 1.13-.786 1.894v7.52c.017.764.28 1.395.786 1.893.507.498 1.134.756 1.88.773h13.334c.746-.017 1.373-.275 1.88-.773.506-.498.769-1.129.786-1.893v-7.52c-.017-.765-.28-1.396-.786-1.894-.507-.497-1.134-.755-1.88-.773zM8 11.107c.373 0 .684.124.933.373.25.249.383.569.4.96v1.173c-.017.391-.15.711-.4.96-.249.25-.56.374-.933.374s-.684-.125-.933-.374c-.25-.249-.383-.569-.4-.96V12.44c0-.373.129-.689.386-.947.258-.257.574-.386.947-.386zm8 0c.373 0 .684.124.933.373.25.249.383.569.4.96v1.173c-.017.391-.15.711-.4.96-.249.25-.56.374-.933.374s-.684-.125-.933-.374c-.25-.249-.383-.569-.4-.96V12.44c.017-.391.15-.711.4-.96.249-.249.56-.373.933-.373Z"/></svg>
+    </a>
+  
+    
+    
+    
+    
+      
+      
+    
+    <a href="https://s2.loli.net/2024/04/22/4GYzcikCTqmZonw.jpg" target="_blank" rel="noopener" title="s2.loli.net" class="md-social__link">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M8.691 2.188C3.891 2.188 0 5.476 0 9.53c0 2.212 1.17 4.203 3.002 5.55a.59.59 0 0 1 .213.665l-.39 1.48c-.019.07-.048.141-.048.213 0 .163.13.295.29.295a.326.326 0 0 0 .167-.054l1.903-1.114a.864.864 0 0 1 .717-.098 10.16 10.16 0 0 0 2.837.403c.276 0 .543-.027.811-.05-.857-2.578.157-4.972 1.932-6.446 1.703-1.415 3.882-1.98 5.853-1.838-.576-3.583-4.196-6.348-8.596-6.348zM5.785 5.991c.642 0 1.162.529 1.162 1.18a1.17 1.17 0 0 1-1.162 1.178A1.17 1.17 0 0 1 4.623 7.17c0-.651.52-1.18 1.162-1.18zm5.813 0c.642 0 1.162.529 1.162 1.18a1.17 1.17 0 0 1-1.162 1.178 1.17 1.17 0 0 1-1.162-1.178c0-.651.52-1.18 1.162-1.18zm5.34 2.867c-1.797-.052-3.746.512-5.28 1.786-1.72 1.428-2.687 3.72-1.78 6.22.942 2.453 3.666 4.229 6.884 4.229.826 0 1.622-.12 2.361-.336a.722.722 0 0 1 .598.082l1.584.926a.272.272 0 0 0 .14.047c.134 0 .24-.111.24-.247 0-.06-.023-.12-.038-.177l-.327-1.233a.582.582 0 0 1-.023-.156.49.49 0 0 1 .201-.398C23.024 18.48 24 16.82 24 14.98c0-3.21-2.931-5.837-6.656-6.088V8.89c-.135-.01-.27-.027-.407-.03zm-2.53 3.274c.535 0 .969.44.969.982a.976.976 0 0 1-.969.983.976.976 0 0 1-.969-.983c0-.542.434-.982.97-.982zm4.844 0c.535 0 .969.44.969.982a.976.976 0 0 1-.969.983.976.976 0 0 1-.969-.983c0-.542.434-.982.969-.982z"/></svg>
+    </a>
+  
+</div>
+            
+        </div>
+    </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+      <div class="md-progress" data-md-component="progress" role="progressbar"></div>
+    
+    
+    <script id="__config" type="application/json">{"base": "../../../../..", "features": ["navigation.instant", "navigation.instant.prefetch", "navigation.instant.progress", "navigation.tabs", "navigation.tabs.sticky", "navigation.indexes", "navigation.sections", "navigation.top", "toc.integrate", "toc.follow", "search.highlight"], "search": "../../../../../assets/javascripts/workers/search.b8dbb3d2.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
+    
+    
+      <script src="../../../../../assets/javascripts/bundle.fe8b6f2b.min.js"></script>
+      
+    
+  </body>
+</html>
