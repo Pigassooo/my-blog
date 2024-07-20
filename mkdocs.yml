@@ -30,7 +30,7 @@ theme:
   features:
 
     # - codehilite:  # 高亮代码块
-    #     guess_lang: false
+    # - guess_lang: false
     - navigation.instant  # 实现页面的即时加载
     - navigation.instant.prefetch #即时预取
     - navigation.instant.progress #进度指示器
@@ -96,7 +96,7 @@ plugins:
       minify_js: true
       minify_css: true
   # - git-revision-date-localized:
-  #     enable_creation_date: true
+  # - enable_creation_date: true
   - blog:
       blog_dir: blog
       post_dir: blog/posts
