@@ -16,7 +16,7 @@
         <link rel="prev" href="../01.React%E5%85%A5%E9%97%A8/">
       
       
-        <link rel="next" href="../../../Backend/JavaRoadMap/JavaRoadMap/">
+        <link rel="next" href="../03.React%E5%BA%94%E7%94%A8%28%E5%9F%BA%E4%BA%8E%E8%84%9A%E6%89%8B%E6%9E%B6%29/">
       
       
       <link rel="icon" href="../../../../../images/favicon.png">
@@ -2399,6 +2399,8 @@
       
         
       
+        
+      
     
     
       
@@ -2569,6 +2571,27 @@
   
 </nav>
       
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../03.React%E5%BA%94%E7%94%A8%28%E5%9F%BA%E4%BA%8E%E8%84%9A%E6%89%8B%E6%9E%B6%29/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    03. React应用(基于脚手架)
+  </span>
+  
+
+      </a>
     </li>
   
 
@@ -4821,22 +4844,24 @@
 <span class="normal"><a href="#__codelineno-1-13">13</a></span>
 <span class="normal"><a href="#__codelineno-1-14">14</a></span>
 <span class="normal"><a href="#__codelineno-1-15">15</a></span>
-<span class="normal"><a href="#__codelineno-1-16">16</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1"></a><span class="o">&lt;</span><span class="nx">script</span><span class="w"> </span><span class="nx">type</span><span class="o">=</span><span class="s2">&quot;text/babel&quot;</span><span class="o">&gt;</span>
+<span class="normal"><a href="#__codelineno-1-16">16</a></span>
+<span class="normal"><a href="#__codelineno-1-17">17</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1"></a><span class="o">&lt;</span><span class="nx">script</span><span class="w"> </span><span class="nx">type</span><span class="o">=</span><span class="s2">&quot;text/babel&quot;</span><span class="o">&gt;</span>
 <a id="__codelineno-1-2" name="__codelineno-1-2"></a><span class="w">    </span><span class="kd">class</span><span class="w"> </span><span class="nx">MyComponent</span><span class="w"> </span><span class="k">extends</span><span class="w"> </span><span class="nx">React</span><span class="p">.</span><span class="nx">Component</span><span class="p">{</span>
 <a id="__codelineno-1-3" name="__codelineno-1-3"></a><span class="w">        </span><span class="nx">render</span><span class="p">(){</span>
-<a id="__codelineno-1-4" name="__codelineno-1-4"></a><span class="w">            </span><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="k">this</span><span class="p">)</span><span class="w"> </span><span class="c1">// 此处的this是MyComponent的实例对象 MyComponent组件实例对象</span>
-<a id="__codelineno-1-5" name="__codelineno-1-5"></a><span class="w">            </span><span class="c1">// render是放在哪里的？ -- MyComponent的原型对象上，供实例使用</span>
-<a id="__codelineno-1-6" name="__codelineno-1-6"></a><span class="w">            </span><span class="k">return</span><span class="w"> </span><span class="o">&lt;</span><span class="nx">h1</span><span class="o">&gt;</span><span class="nx">我是用类定义的组件</span><span class="err">（</span><span class="nx">适用于</span><span class="err">【</span><span class="nx">复杂组件</span><span class="err">】</span><span class="nx">的定义</span><span class="err">）</span><span class="o">&lt;</span><span class="err">/h1&gt;</span>
-<a id="__codelineno-1-7" name="__codelineno-1-7"></a><span class="w">        </span><span class="p">}</span>
-<a id="__codelineno-1-8" name="__codelineno-1-8"></a><span class="w">    </span><span class="p">}</span>
-<a id="__codelineno-1-9" name="__codelineno-1-9"></a><span class="w">    </span><span class="nx">ReactDOM</span><span class="p">.</span><span class="nx">render</span><span class="p">(</span><span class="o">&lt;</span><span class="nx">MyComponent</span><span class="o">/&gt;</span><span class="p">,</span><span class="w"> </span><span class="nb">document</span><span class="p">.</span><span class="nx">getElementById</span><span class="p">(</span><span class="s1">&#39;root&#39;</span><span class="p">));</span>
-<a id="__codelineno-1-10" name="__codelineno-1-10"></a><span class="w">    </span><span class="cm">/*</span>
-<a id="__codelineno-1-11" name="__codelineno-1-11"></a><span class="cm">        执行了ReactDOM.render(...)后，发生了什么？</span>
-<a id="__codelineno-1-12" name="__codelineno-1-12"></a><span class="cm">            1. React解析组件标签，找到了MyComponent组件</span>
-<a id="__codelineno-1-13" name="__codelineno-1-13"></a><span class="cm">            2. 发现组件是用类定义的，于是创建了实例对象，并通过该实例调用到原型上的render方法</span>
-<a id="__codelineno-1-14" name="__codelineno-1-14"></a><span class="cm">            3. 将render返回的虚拟DOM解析为真实DOM，并插入到指定的页面元素内部</span>
-<a id="__codelineno-1-15" name="__codelineno-1-15"></a><span class="cm">    */</span>
-<a id="__codelineno-1-16" name="__codelineno-1-16"></a><span class="o">&lt;</span><span class="nx">script</span><span class="o">/&gt;</span>
+<a id="__codelineno-1-4" name="__codelineno-1-4"></a><span class="w">            </span><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="k">this</span><span class="p">)</span>
+<a id="__codelineno-1-5" name="__codelineno-1-5"></a><span class="w">        </span><span class="c1">// 此处的this是MyComponent的实例对象 MyComponent组件实例对象</span>
+<a id="__codelineno-1-6" name="__codelineno-1-6"></a><span class="w">        </span><span class="c1">// render是放在哪里的？ -- MyComponent的原型对象上，供实例使用</span>
+<a id="__codelineno-1-7" name="__codelineno-1-7"></a><span class="w">            </span><span class="k">return</span><span class="w"> </span><span class="o">&lt;</span><span class="nx">h1</span><span class="o">&gt;</span><span class="nx">我是用类定义的组件</span><span class="err">（</span><span class="nx">适用于</span><span class="err">【</span><span class="nx">复杂组件</span><span class="err">】</span><span class="nx">的定义</span><span class="err">）</span><span class="o">&lt;</span><span class="err">/h1&gt;</span>
+<a id="__codelineno-1-8" name="__codelineno-1-8"></a><span class="w">        </span><span class="p">}</span>
+<a id="__codelineno-1-9" name="__codelineno-1-9"></a><span class="w">    </span><span class="p">}</span>
+<a id="__codelineno-1-10" name="__codelineno-1-10"></a><span class="w">    </span><span class="nx">ReactDOM</span><span class="p">.</span><span class="nx">render</span><span class="p">(</span><span class="o">&lt;</span><span class="nx">MyComponent</span><span class="o">/&gt;</span><span class="p">,</span><span class="w"> </span><span class="nb">document</span><span class="p">.</span><span class="nx">getElementById</span><span class="p">(</span><span class="s1">&#39;root&#39;</span><span class="p">));</span>
+<a id="__codelineno-1-11" name="__codelineno-1-11"></a><span class="w">    </span><span class="cm">/*</span>
+<a id="__codelineno-1-12" name="__codelineno-1-12"></a><span class="cm">        执行了ReactDOM.render(...)后，发生了什么？</span>
+<a id="__codelineno-1-13" name="__codelineno-1-13"></a><span class="cm">            1. React解析组件标签，找到了MyComponent组件</span>
+<a id="__codelineno-1-14" name="__codelineno-1-14"></a><span class="cm">            2. 发现组件是用类定义的，于是创建了实例对象，并通过该实例调用到原型上的render方法</span>
+<a id="__codelineno-1-15" name="__codelineno-1-15"></a><span class="cm">            3. 将render返回的虚拟DOM解析为真实DOM，并插入到指定的页面元素内部</span>
+<a id="__codelineno-1-16" name="__codelineno-1-16"></a><span class="cm">    */</span>
+<a id="__codelineno-1-17" name="__codelineno-1-17"></a><span class="o">&lt;</span><span class="nx">script</span><span class="o">/&gt;</span>
 </code></pre></div></td></tr></table></div>
 <p><img alt="alt text" src="../image-5.png" /></p>
 <h3 id="注意">注意<a class="headerlink" href="#注意" title="Permanent link"></a></h3>
