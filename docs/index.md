@@ -16,9 +16,9 @@ comments: false
 <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/2.0.2/anime.min.js"></script>
  -->
 
-<div class="red-box">
+<!-- <div class="red-box">
   <img src="https://s2.loli.net/2024/04/22/EU9eGydnI4HWzO2.jpg" class="flying-image" alt="Flying image">
-</div>
+</div> -->
 
 <div id="rcorners2" >
   <div id="rcorners1">

@@ -205,6 +205,7 @@ nav:
           - notes/notes/Frontend/React/01.React入门.md
           - notes/notes/Frontend/React/02.React面向组件编程.md
           - notes/notes/Frontend/React/03.React应用(基于脚手架).md
+          - notes/notes/Frontend/React/04.React-Ajax.md
       - Backend:
         - notes/notes/Backend/JavaRoadMap/JavaRoadMap.md
         - MySQL:
@@ -249,6 +250,19 @@ nav:
           - notes/notes/Backend/JavaWeb/03.Web入门.md
           - notes/notes/Backend/JavaWeb/04.请求响应分层解耦.md
           - notes/notes/Backend/JavaWeb/06.MyBatis.md
+        - .NET:
+          - notes/notes/Backend/dotNET/00.Overview.md
+          - notes/notes/Backend/dotNET/01.FolderStructure.md
+          - notes/notes/Backend/dotNET/02.DI.md
+          - notes/notes/Backend/dotNET/03.Setup_Dbcontext.md
+          - notes/notes/Backend/dotNET/04.Create_Category_table.md
+          - notes/notes/Backend/dotNET/05.Add_CategoryController.md
+          - notes/notes/Backend/dotNET/06.Add_Category_link_in_header.md
+          - notes/notes/Backend/dotNET/07.Seed_Category_tables.md
+          - notes/notes/Backend/dotNET/08.GetAll_Categories.md
+          - notes/notes/Backend/dotNET/09.Add_Theme_and_Icon.md
+        - .NET Interview:
+          - notes/notes/Backend/dotNETinterview/01.C#.md
         - Project:
           - HungryPig:
             - notes/notes/Backend/Project/HungryPig/01.整体介绍.md
