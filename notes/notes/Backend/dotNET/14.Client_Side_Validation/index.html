@@ -16,7 +16,7 @@
       
       
       <link rel="icon" href="../../../../../images/favicon.png">
-      <meta name="generator" content="mkdocs-1.6.0, mkdocs-material-9.5.30">
+      <meta name="generator" content="mkdocs-1.6.0, mkdocs-material-9.5.31">
     
     
       
@@ -5058,11 +5058,22 @@
 
 
 <h1 id="client-side-validation">Client Side Validation<a class="headerlink" href="#client-side-validation" title="Permanent link"></a></h1>
-<p>在<code>Create.cshtml</code>的末端加上 <code>@section Scripts{ @ { &lt;partial name="_ValidationScriptsPartial" /&gt; } }</code> 的作用是确保页面中的客户端验证脚本能够正确加载和执行。这些验证脚本主要是用来实现表单中的数据验证功能。具体来说，这段代码做了以下几件事情：</p>
-<h3 id="1-客户端验证脚本的加载">1. 客户端验证脚本的加载<a class="headerlink" href="#1-客户端验证脚本的加载" title="Permanent link"></a></h3>
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-0-1">1</a></span>
-<span class="normal"><a href="#__codelineno-0-2">2</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1"></a>&lt;script src=&quot;~/lib/jquery-validation/dist/jquery.validate.min.js&quot;&gt;&lt;/script&gt;
-<a id="__codelineno-0-2" name="__codelineno-0-2"></a>&lt;script src=&quot;~/lib/jquery-validation-unobtrusive/jquery.validate.unobtrusive.min.js&quot;&gt;&lt;/script&gt;
+<span class="normal"><a href="#__codelineno-0-2">2</a></span>
+<span class="normal"><a href="#__codelineno-0-3">3</a></span>
+<span class="normal"><a href="#__codelineno-0-4">4</a></span>
+<span class="normal"><a href="#__codelineno-0-5">5</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1"></a>@section Scripts{
+<a id="__codelineno-0-2" name="__codelineno-0-2"></a>    @{
+<a id="__codelineno-0-3" name="__codelineno-0-3"></a>        &lt;partial name=&quot;_ValidationScriptsPartial&quot; /&gt;
+<a id="__codelineno-0-4" name="__codelineno-0-4"></a>    }
+<a id="__codelineno-0-5" name="__codelineno-0-5"></a>}
+</code></pre></div></td></tr></table></div>
+<p>这一部分定义了一个名为 <code>Scripts</code> 的Razor部分，内容是引用了 <code>_ValidationScriptsPartial</code>。这样做的目的是确保表单验证脚本在页面底部加载，从而支持表单的客户端验证功能。</p>
+<p>具体来说，这段代码做了以下几件事情：</p>
+<h3 id="1-客户端验证脚本的加载">1. 客户端验证脚本的加载<a class="headerlink" href="#1-客户端验证脚本的加载" title="Permanent link"></a></h3>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-1-1">1</a></span>
+<span class="normal"><a href="#__codelineno-1-2">2</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1"></a>&lt;script src=&quot;~/lib/jquery-validation/dist/jquery.validate.min.js&quot;&gt;&lt;/script&gt;
+<a id="__codelineno-1-2" name="__codelineno-1-2"></a>&lt;script src=&quot;~/lib/jquery-validation-unobtrusive/jquery.validate.unobtrusive.min.js&quot;&gt;&lt;/script&gt;
 </code></pre></div></td></tr></table></div>
 <p>这些脚本文件来自 <code>_ValidationScriptsPartial</code>，其中包括了 <code>jquery.validate.min.js</code> 和 <code>jquery.validate.unobtrusive.min.js</code>：</p>
 <ul>
@@ -5073,93 +5084,19 @@
 <p>通过在 <code>@section Scripts</code> 中引用 <code>_ValidationScriptsPartial</code>，可以确保这些脚本在页面加载完成后在页面的底部加载。这种方式有助于优化页面加载性能，因为脚本文件会在HTML内容之后加载，避免阻塞页面的渲染。</p>
 <h3 id="3-支持表单的客户端验证">3. 支持表单的客户端验证<a class="headerlink" href="#3-支持表单的客户端验证" title="Permanent link"></a></h3>
 <p>表单中有一些ASP.NET Core提供的辅助标签，如：</p>
-<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-1-1">1</a></span>
-<span class="normal"><a href="#__codelineno-1-2">2</a></span>
-<span class="normal"><a href="#__codelineno-1-3">3</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1"></a>&lt;label asp-for=&quot;Name&quot; class=&quot;p-0&quot;&gt;&lt;/label&gt;
-<a id="__codelineno-1-2" name="__codelineno-1-2"></a>&lt;input asp-for=&quot;Name&quot; class=&quot;form-control&quot; /&gt;
-<a id="__codelineno-1-3" name="__codelineno-1-3"></a>&lt;span asp-validation-for=&quot;Name&quot; class=&quot;text-danger&quot;&gt;&lt;/span&gt;
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-2-1">1</a></span>
+<span class="normal"><a href="#__codelineno-2-2">2</a></span>
+<span class="normal"><a href="#__codelineno-2-3">3</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-2-1" name="__codelineno-2-1"></a>&lt;label asp-for=&quot;Name&quot; class=&quot;p-0&quot;&gt;&lt;/label&gt;
+<a id="__codelineno-2-2" name="__codelineno-2-2"></a>&lt;input asp-for=&quot;Name&quot; class=&quot;form-control&quot; /&gt;
+<a id="__codelineno-2-3" name="__codelineno-2-3"></a>&lt;span asp-validation-for=&quot;Name&quot; class=&quot;text-danger&quot;&gt;&lt;/span&gt;
 </code></pre></div></td></tr></table></div>
 <p>这些标签生成的HTML会包含用于验证的属性，例如 <code>data-val</code> 和 <code>data-val-required</code>。客户端验证脚本读取这些属性，并在用户提交表单之前进行客户端验证，给用户即时的反馈，避免无效数据提交到服务器。</p>
-<h3 id="具体代码段分析">具体代码段分析<a class="headerlink" href="#具体代码段分析" title="Permanent link"></a></h3>
-<h4 id="表单结构">表单结构<a class="headerlink" href="#表单结构" title="Permanent link"></a></h4>
-<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-2-1"> 1</a></span>
-<span class="normal"><a href="#__codelineno-2-2"> 2</a></span>
-<span class="normal"><a href="#__codelineno-2-3"> 3</a></span>
-<span class="normal"><a href="#__codelineno-2-4"> 4</a></span>
-<span class="normal"><a href="#__codelineno-2-5"> 5</a></span>
-<span class="normal"><a href="#__codelineno-2-6"> 6</a></span>
-<span class="normal"><a href="#__codelineno-2-7"> 7</a></span>
-<span class="normal"><a href="#__codelineno-2-8"> 8</a></span>
-<span class="normal"><a href="#__codelineno-2-9"> 9</a></span>
-<span class="normal"><a href="#__codelineno-2-10">10</a></span>
-<span class="normal"><a href="#__codelineno-2-11">11</a></span>
-<span class="normal"><a href="#__codelineno-2-12">12</a></span>
-<span class="normal"><a href="#__codelineno-2-13">13</a></span>
-<span class="normal"><a href="#__codelineno-2-14">14</a></span>
-<span class="normal"><a href="#__codelineno-2-15">15</a></span>
-<span class="normal"><a href="#__codelineno-2-16">16</a></span>
-<span class="normal"><a href="#__codelineno-2-17">17</a></span>
-<span class="normal"><a href="#__codelineno-2-18">18</a></span>
-<span class="normal"><a href="#__codelineno-2-19">19</a></span>
-<span class="normal"><a href="#__codelineno-2-20">20</a></span>
-<span class="normal"><a href="#__codelineno-2-21">21</a></span>
-<span class="normal"><a href="#__codelineno-2-22">22</a></span>
-<span class="normal"><a href="#__codelineno-2-23">23</a></span>
-<span class="normal"><a href="#__codelineno-2-24">24</a></span>
-<span class="normal"><a href="#__codelineno-2-25">25</a></span>
-<span class="normal"><a href="#__codelineno-2-26">26</a></span>
-<span class="normal"><a href="#__codelineno-2-27">27</a></span>
-<span class="normal"><a href="#__codelineno-2-28">28</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-2-1" name="__codelineno-2-1"></a>&lt;form method=&quot;post&quot;&gt;
-<a id="__codelineno-2-2" name="__codelineno-2-2"></a>    &lt;div class=&quot;border p-3 mt-4&quot;&gt;
-<a id="__codelineno-2-3" name="__codelineno-2-3"></a>        &lt;div class=&quot;row pb-2&quot;&gt;
-<a id="__codelineno-2-4" name="__codelineno-2-4"></a>            &lt;h2 class=&quot;text-primary&quot;&gt;Create Category&lt;/h2&gt;
-<a id="__codelineno-2-5" name="__codelineno-2-5"></a>            &lt;hr/&gt;
-<a id="__codelineno-2-6" name="__codelineno-2-6"></a>        &lt;/div&gt;
-<a id="__codelineno-2-7" name="__codelineno-2-7"></a>        &lt;div class=&quot;mb-3 row p-1&quot;&gt;
-<a id="__codelineno-2-8" name="__codelineno-2-8"></a>            &lt;label asp-for=&quot;Name&quot; class=&quot;p-0&quot;&gt;&lt;/label&gt;
-<a id="__codelineno-2-9" name="__codelineno-2-9"></a>            &lt;input asp-for=&quot;Name&quot; class=&quot;form-control&quot; /&gt;
-<a id="__codelineno-2-10" name="__codelineno-2-10"></a>            &lt;span asp-validation-for=&quot;Name&quot; class=&quot;text-danger&quot;&gt;&lt;/span&gt;
-<a id="__codelineno-2-11" name="__codelineno-2-11"></a>        &lt;/div&gt;
-<a id="__codelineno-2-12" name="__codelineno-2-12"></a>        &lt;div class=&quot;mb-3 row p-1&quot;&gt;
-<a id="__codelineno-2-13" name="__codelineno-2-13"></a>            &lt;label asp-for=&quot;DisplayOrder&quot; class=&quot;p-0&quot;&gt;&lt;/label&gt;
-<a id="__codelineno-2-14" name="__codelineno-2-14"></a>            &lt;input asp-for=&quot;DisplayOrder&quot; class=&quot;form-control&quot; /&gt;
-<a id="__codelineno-2-15" name="__codelineno-2-15"></a>            &lt;span asp-validation-for=&quot;DisplayOrder&quot; class=&quot;text-danger&quot;&gt;&lt;/span&gt;
-<a id="__codelineno-2-16" name="__codelineno-2-16"></a>        &lt;/div&gt;
-<a id="__codelineno-2-17" name="__codelineno-2-17"></a>        &lt;div class=&quot;row&quot;&gt;
-<a id="__codelineno-2-18" name="__codelineno-2-18"></a>            &lt;div class=&quot;col-6 col-md-3&quot;&gt;
-<a id="__codelineno-2-19" name="__codelineno-2-19"></a>                &lt;button type=&quot;submit&quot; class=&quot;btn btn-primary form-control&quot;&gt;Create&lt;/button&gt;
-<a id="__codelineno-2-20" name="__codelineno-2-20"></a>            &lt;/div&gt;
-<a id="__codelineno-2-21" name="__codelineno-2-21"></a>            &lt;div class=&quot;col-6 col-md-3&quot;&gt;
-<a id="__codelineno-2-22" name="__codelineno-2-22"></a>                &lt;a asp-controller=&quot;Category&quot; asp-action=&quot;Index&quot; class=&quot;btn btn-outline-secondary form-control&quot;&gt;
-<a id="__codelineno-2-23" name="__codelineno-2-23"></a>                    Back To List
-<a id="__codelineno-2-24" name="__codelineno-2-24"></a>                &lt;/a&gt;
-<a id="__codelineno-2-25" name="__codelineno-2-25"></a>            &lt;/div&gt;
-<a id="__codelineno-2-26" name="__codelineno-2-26"></a>        &lt;/div&gt;
-<a id="__codelineno-2-27" name="__codelineno-2-27"></a>    &lt;/div&gt;
-<a id="__codelineno-2-28" name="__codelineno-2-28"></a>&lt;/form&gt;
-</code></pre></div></td></tr></table></div>
-<ul>
-<li><strong>表单元素</strong>：<code>&lt;form method="post"&gt;</code> 表示这个表单是一个POST提交表单。</li>
-<li><strong>表单内容</strong>：表单中包含两个字段：<code>Name</code> 和 <code>DisplayOrder</code>，每个字段都有对应的输入框和验证提示。</li>
-<li><strong>按钮</strong>：表单包含一个提交按钮和一个返回按钮。</li>
-</ul>
-<h4 id="scripts部分">Scripts部分<a class="headerlink" href="#scripts部分" title="Permanent link"></a></h4>
-<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-3-1">1</a></span>
-<span class="normal"><a href="#__codelineno-3-2">2</a></span>
-<span class="normal"><a href="#__codelineno-3-3">3</a></span>
-<span class="normal"><a href="#__codelineno-3-4">4</a></span>
-<span class="normal"><a href="#__codelineno-3-5">5</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-3-1" name="__codelineno-3-1"></a>@section Scripts{
-<a id="__codelineno-3-2" name="__codelineno-3-2"></a>    @{
-<a id="__codelineno-3-3" name="__codelineno-3-3"></a>        &lt;partial name=&quot;_ValidationScriptsPartial&quot; /&gt;
-<a id="__codelineno-3-4" name="__codelineno-3-4"></a>    }
-<a id="__codelineno-3-5" name="__codelineno-3-5"></a>}
-</code></pre></div></td></tr></table></div>
-<p>这一部分定义了一个名为 <code>Scripts</code> 的Razor部分，内容是引用了 <code>_ValidationScriptsPartial</code>。这样做的目的是确保表单验证脚本在页面底部加载，从而支持表单的客户端验证功能。</p>
 <h3 id="总结">总结<a class="headerlink" href="#总结" title="Permanent link"></a></h3>
-<p>在这段代码的末尾添加 <code>@section Scripts{ @ { &lt;partial name="_ValidationScriptsPartial" /&gt; } }</code> 的主要作用是：
-1. 引入客户端验证脚本，使表单具备客户端验证功能。
-2. 确保这些脚本在页面加载完成后加载，优化页面性能。
-3. 提供即时的用户反馈，提升用户体验，避免提交无效数据。</p>
+<ol>
+<li>引入客户端验证脚本，使表单具备客户端验证功能。</li>
+<li>确保这些脚本在页面加载完成后加载，优化页面性能。</li>
+<li>提供即时的用户反馈，提升用户体验，避免提交无效数据。</li>
+</ol>
 
 
 
