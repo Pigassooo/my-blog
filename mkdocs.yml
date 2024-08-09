@@ -261,6 +261,13 @@ nav:
           - notes/notes/Backend/dotNET/07.Seed_Category_tables.md
           - notes/notes/Backend/dotNET/08.GetAll_Categories.md
           - notes/notes/Backend/dotNET/09.Add_Theme_and_Icon.md
+          - notes/notes/Backend/dotNET/10.Tag_Helper.md
+          - notes/notes/Backend/dotNET/11.Create_Category.md
+          - notes/notes/Backend/dotNET/12.Server_side_validations.md
+          - notes/notes/Backend/dotNET/13.Custom_Valid.md
+          - notes/notes/Backend/dotNET/14.Client_Side_Validation.md
+          - notes/notes/Backend/dotNET/15.Get_CategoryDetailsToEdit.md
+          - notes/notes/Backend/dotNET/16.GetandPostActionforDeleteCategory.md
         - .NET Interview:
           - notes/notes/Backend/dotNETinterview/01.C#.md
         - Project:
