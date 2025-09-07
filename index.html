@@ -5540,7 +5540,7 @@ comments: false
 <!-- <div class="red-box">
   <img src="https://s2.loli.net/2024/04/22/EU9eGydnI4HWzO2.jpg" class="flying-image" alt="Flying image">
 </div> -->
-
+<!-- 
 <div id="rcorners2" >
   <div id="rcorners1">
     <body>
@@ -5644,8 +5644,8 @@ comments: false
     },1000)
     </script>
   </font>
-</body>
-<p>&rarr;</p>
+</body> -->
+
 <!-- /***
  *      ┌─┐       ┌─┐
  *   ┌──┘ ┴───────┘ ┴──┐
@@ -6271,22 +6271,6 @@ hr {
 </style>
 
 <hr />
-<!--  
-____    __    ____  ______   ______   ____    __    ____  __  .__   __. 
-\   \  /  \  /   / /      | /  __  \  \   \  /  \  /   / |  | |  \ |  | 
- \   \/    \/   / |  ,----'|  |  |  |  \   \/    \/   /  |  | |   \|  | 
-  \            /  |  |     |  |  |  |   \            /   |  | |  . `  | 
-   \    /\    /   |  `----.|  `--'  |    \    /\    /    |  | |  |\   | 
-    \__/  \__/     \______| \______/      \__/  \__/     |__| |__| \__| 
--->
-
-<!-- 发邮件(1) 微信(2) MKdocs视频教程(3)
-{ .annotate }
-
-1. 点击右下角[:material-email:](mailto:<wangkewen821@gmail.com>)即可发送邮件.
-2. TEL:18939533255(微信号)
-3. 点击右下角[:simple-bilibili:](https://space.bilibili.com/1407028951/lists/4566631?type=series)图标查看视频教程. -->
-
 <style>
 .md-grid {
   max-width: 1220px;
@@ -6368,6 +6352,35 @@ body::before {
 </script> -->
 
 <p><meta name="algolia-site-verification"  content="3CAAB2C27102AD08" /></p>
+<body>
+    <font color="#B9B9B9">
+    <p style="text-align: center; ">
+        <span>This site has been running for</span>
+        <span id='box1'></span>
+    </p>
+    <div id="box1"></div>
+    <script>
+    function timingTime(){
+      let start = '2024-04-20 00:00:00'
+      let startTime = new Date(start).getTime()
+      let currentTime = new Date().getTime()
+      let difference = currentTime - startTime
+      let m =  Math.floor(difference / (1000))
+      let mm = m % 60  // 秒
+      let f = Math.floor(m / 60)
+      let ff = f % 60 // 分钟
+      let s = Math.floor(f/ 60) // 小时
+      let ss = s % 24
+      let day = Math.floor(s  / 24 ) // 天数
+      return day + "days " + ss + "h " + ff + "min " + mm +'s'
+    }
+    setInterval(()=>{
+      document.getElementById('box1').innerHTML = timingTime()
+    },1000)
+    </script>
+  </font>
+</body>
+
 <div class="footnote">
 <hr />
 <ol>
