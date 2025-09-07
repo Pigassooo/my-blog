@@ -1,8 +1,8 @@
 ---
-# title: 欢迎来到我的博客
+title: 欢迎来到我的博客
 hide:
 #   - navigation # 显示右
-#   - toc #显示左
+  - toc #显示左
   - footer
   - feedback
 comments: false
@@ -174,7 +174,7 @@ comments: false
     <div class="orion-header-title">Orion Pigasso</div>
     <div class="orion-header-subtitle">
       <span class="orion-header-subtitle-inner">
-        A college student
+        UNSW undergraduate student
         <svg width="280" height="18" class="orion-header-underline" xmlns="http://www.w3.org/2000/svg">
           <path d="M8,12 Q38,18 68,12 Q98,6 128,12 Q158,18 188,12 Q218,6 248,12 Q278,18 308,12"
             stroke="#6ecbff" stroke-width="5" fill="none"
@@ -185,8 +185,8 @@ comments: false
     </div>
     <!-- <div class="orion-header-motto">Free and diffuse</div> -->
     <div class="orion-header-btns">
-      <a href="https://github.com/orion" target="_blank" class="orion-header-btn">Github</a>
-      <a href="mailto:orion@qq.com" class="orion-header-btn">Contact me</a>
+      <a href="https://github.com/Pigassooo" target="_blank" class="orion-header-btn">Github</a>
+      <a href="zfzf1219632665@gmail.com" class="orion-header-btn">Contact me</a>
     </div>
   </div>
   <!-- 右侧：头像及光辉 -->
@@ -729,7 +729,7 @@ hr {
 
     - [x] 通过{==目录==}以打开文章
     - [x] 搜索{~~~>关键词~~}查询文章
-    - [x] 如遇页面卡顿，请使用[{--科学上网--}](blog/technique%20sharing/kexue.md)
+    - [x] 如遇页面卡顿，请使用{--科学上网--}
     - [x] 𝕙𝕒𝕧𝕖 𝕒 𝕘𝕠𝕠𝕕 𝕥𝕚𝕞𝕖 !  
 
     === "Mac/PC端"
