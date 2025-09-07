@@ -1,3 +1,14 @@
+---
+# title: 欢迎来到我的博客
+hide:
+#   - navigation # 显示右
+#   - toc #显示左
+  - footer
+  - feedback
+comments: false
+hide_comment: true
+---
+
 <!-- ---
 title: Home
 hide:
@@ -19,6 +30,7 @@ comments: false
 <!-- <div class="red-box">
   <img src="https://s2.loli.net/2024/04/22/EU9eGydnI4HWzO2.jpg" class="flying-image" alt="Flying image">
 </div> -->
+
 <!-- 
 <div id="rcorners2" >
   <div id="rcorners1">
@@ -125,7 +137,6 @@ comments: false
   </font>
 </body> -->
 
-
 <!-- /***
  *      ┌─┐       ┌─┐
  *   ┌──┘ ┴───────┘ ┴──┐
@@ -152,29 +163,19 @@ comments: false
  */ -->
 
 
----
-# title: 欢迎来到我的博客
-hide:
-#   - navigation # 显示右
-#   - toc #显示左
-  - footer
-  - feedback
-comments: false
-hide_comment: true
----
 <!-- 在头部添加预加载关键资源 -->
 <link rel="preload" href="https://pic4.zhimg.com/v2-a0456a5f527c1923f096759f2926012f_1440w.jpg" as="image" fetchpriority="high">
 <link rel="preload" href="https://s1.imagehub.cc/images/2025/07/25/27c0e105ea7efbed5d046d3a8c303e9d.jpeg" as="image">
 <!-- https://picx.zhimg.com/v2-fb22186d2490043435a72876950492f5_1440w.jpg -->
-<!-- wcowin-header.html -->
-<div class="wcowin-header-row">
+<!-- orion-header.html -->
+<div class="orion-header-row">
   <!-- 左侧：文字内容 -->
-  <div class="wcowin-header-text">
-    <div class="wcowin-header-title">Wcowin</div>
-    <div class="wcowin-header-subtitle">
-      <span class="wcowin-header-subtitle-inner">
+  <div class="orion-header-text">
+    <div class="orion-header-title">Orion Pigasso</div>
+    <div class="orion-header-subtitle">
+      <span class="orion-header-subtitle-inner">
         A college student
-        <svg width="280" height="18" class="wcowin-header-underline" xmlns="http://www.w3.org/2000/svg">
+        <svg width="280" height="18" class="orion-header-underline" xmlns="http://www.w3.org/2000/svg">
           <path d="M8,12 Q38,18 68,12 Q98,6 128,12 Q158,18 188,12 Q218,6 248,12 Q278,18 308,12"
             stroke="#6ecbff" stroke-width="5" fill="none"
             stroke-linecap="round" stroke-linejoin="round"
@@ -182,14 +183,14 @@ hide_comment: true
         </svg>
       </span>
     </div>
-    <!-- <div class="wcowin-header-motto">Free and diffuse</div> -->
-    <div class="wcowin-header-btns">
-      <a href="https://github.com/Wcowin" target="_blank" class="wcowin-header-btn">Github</a>
-      <a href="mailto:wcowin@qq.com" class="wcowin-header-btn">Contact me</a>
+    <!-- <div class="orion-header-motto">Free and diffuse</div> -->
+    <div class="orion-header-btns">
+      <a href="https://github.com/orion" target="_blank" class="orion-header-btn">Github</a>
+      <a href="mailto:orion@qq.com" class="orion-header-btn">Contact me</a>
     </div>
   </div>
   <!-- 右侧：头像及光辉 -->
-  <div class="wcowin-header-avatar">
+  <div class="orion-header-avatar">
     <div class="flip-glow-ultimate">
       <div class="flip-glow-ultimate-glow"></div>
       <div class="flip-glow-ultimate-imgs">
@@ -207,7 +208,7 @@ hide_comment: true
 
 <style>
 /* ====== 布局主容器 ====== */
-.wcowin-header-row {
+.orion-header-row {
   display: flex;
   align-items: center;
   justify-content: center;
@@ -218,7 +219,7 @@ hide_comment: true
 }
 
 /* ====== 左侧文字区 ====== */
-.wcowin-header-text {
+.orion-header-text {
   display: flex;
   flex-direction: column;
   align-items: flex-start;
@@ -228,7 +229,7 @@ hide_comment: true
   padding: 0 8px;
 }
 
-.wcowin-header-title {
+.orion-header-title {
   font-size: 3.2rem;
   /* font-family: 'LXGW WenKai', 'Segoe UI', 'PingFang SC', 'Hiragino Sans', Arial, sans-serif; */
   font-weight: 800;
@@ -244,7 +245,7 @@ hide_comment: true
   text-shadow: 0 2px 10px rgba(106, 203, 255, 0.13);
 }
 
-.wcowin-header-subtitle {
+.orion-header-subtitle {
   font-size: 1.7rem;
   font-weight: bold;
   color: #222;
@@ -258,7 +259,7 @@ hide_comment: true
   white-space: nowrap; /* 防止文本换行 */
 }
 
-.wcowin-header-subtitle-inner {
+.orion-header-subtitle-inner {
   color: #757575;
   position: relative;
   display: inline-block;
@@ -271,7 +272,7 @@ hide_comment: true
 /* Safari特定修复 */
 @media not all and (min-resolution:.001dpcm) { 
   @supports (-webkit-appearance:none) {
-    .wcowin-header-subtitle-inner {
+    .orion-header-subtitle-inner {
       display: inline-block;
       width: auto !important;
       min-width: 280px; /* 确保足够宽度容纳文本 */
@@ -281,34 +282,34 @@ hide_comment: true
 
 /* 添加深色模式的文字颜色适配 - 更强烈的对比度 */
 @media (prefers-color-scheme: dark) {
-  .wcowin-header-subtitle {
+  .orion-header-subtitle {
     color: #757575;
   }
   
-  .wcowin-header-subtitle-inner {
+  .orion-header-subtitle-inner {
     color: #757575;
     text-shadow: 0 2px 4px rgba(0, 0, 0, 0.5) !important; /* 增强阴影 */
   }
   
-  .wcowin-header-motto {
+  .orion-header-motto {
     color: #d0d0d0 !important; /* 更亮的灰色 */
   }
   
   /* 确保SVG波浪线在深色模式下可见 */
-  .wcowin-header-underline path {
+  .orion-header-underline path {
     stroke: #6ecbff !important; /* 确保波浪线颜色鲜明 */
     opacity: 1 !important;
   }
 }
 
-.wcowin-header-underline {
+.orion-header-underline {
   position: absolute;
   left: 0;
   bottom: 0;
   pointer-events: none;
 }
 
-.wcowin-header-motto {
+.orion-header-motto {
   /* font-family: 'LXGW WenKai', sans-serif; */
   font-size: 1.2rem;
   color: #757575;
@@ -318,13 +319,13 @@ hide_comment: true
   opacity: 0.92;
 }
 
-.wcowin-header-btns {
+.orion-header-btns {
   display: flex;
   gap: 18px;
   margin-top: 8px;
 }
 
-.wcowin-header-btn {
+.orion-header-btn {
   display: inline-block;
   padding: 7px 22px;
   font-size: 1.08rem;
@@ -337,7 +338,7 @@ hide_comment: true
   transition: background 0.2s, color 0.2s, border 0.2s;
   box-shadow: 0 2px 8px rgba(106, 203, 255, 0.07);
 }
-.wcowin-header-btn:hover {
+.orion-header-btn:hover {
   background: #e6f4ff;
   color: #222;
   border-color: #3a8dde;
@@ -345,14 +346,14 @@ hide_comment: true
 
 /* 夜间模式按钮样式 */
 @media (prefers-color-scheme: dark) {
-  .wcowin-header-btn {
+  .orion-header-btn {
     color: #6ecbff;
     background: rgba(30, 41, 59, 0.8);
     border-color: rgba(110, 203, 255, 0.4);
     box-shadow: 0 2px 8px rgba(106, 203, 255, 0.1);
   }
   
-  .wcowin-header-btn:hover {
+  .orion-header-btn:hover {
     background: rgba(110, 203, 255, 0.15);
     color: #ffffff;
     border-color: #6ecbff;
@@ -360,21 +361,21 @@ hide_comment: true
 }
 
 /* 为使用 data-md-color-scheme 的主题添加支持 */
-[data-md-color-scheme="slate"] .wcowin-header-btn {
+[data-md-color-scheme="slate"] .orion-header-btn {
   color: #6ecbff;
   background: rgba(30, 41, 59, 0.8);
   border-color: rgba(110, 203, 255, 0.4);
   box-shadow: 0 2px 8px rgba(106, 203, 255, 0.1);
 }
 
-[data-md-color-scheme="slate"] .wcowin-header-btn:hover {
+[data-md-color-scheme="slate"] .orion-header-btn:hover {
   background: rgba(110, 203, 255, 0.15);
   color: #ffffff;
   border-color: #6ecbff;
 }
 
 /* ====== 右侧头像区 ====== */
-.wcowin-header-avatar {
+.orion-header-avatar {
   display: flex;
   align-items: center;
   justify-content: center;
@@ -484,10 +485,10 @@ hide_comment: true
 
 /* ====== 响应式布局 ====== */
 @media (max-width: 1100px) {
-  .wcowin-header-row {
+  .orion-header-row {
     gap: 32px;
   }
-  .wcowin-header-title {
+  .orion-header-title {
     font-size: 2.2rem;
   }
   .flip-glow-ultimate,
@@ -501,28 +502,28 @@ hide_comment: true
   }
 }
 @media (max-width: 700px) {
-  .wcowin-header-row {
+  .orion-header-row {
     flex-direction: column-reverse;
     gap: 0px; /* 减少到最小间距 */
     min-height: unset;
     margin: 12px 0 12px 0; /* 减小上下边距 */
   }
-  .wcowin-header-text {
+  .orion-header-text {
     align-items: center;
     text-align: center;
     max-width: 98vw;
     margin-top: -10px; /* 添加负边距拉近与头像的距离 */
   }
-  .wcowin-header-avatar {
+  .orion-header-avatar {
     margin-bottom: 0px; /* 移除底部间距 */
   }
-  .wcowin-header-title {
+  .orion-header-title {
     margin-bottom: 12px; /* 减小标题下方间距 */
   }
-  .wcowin-header-subtitle {
+  .orion-header-subtitle {
     margin-bottom: 16px; /* 减小副标题下方间距 */
   }
-  .wcowin-header-motto {
+  .orion-header-motto {
     margin-bottom: 16px; /* 减小座右铭下方间距 */
   }
   
@@ -561,7 +562,7 @@ hide_comment: true
 
 @media (max-width: 700px) {
   /* 隐藏原有头部 */
-  .wcowin-header-row {
+  .orion-header-row {
     display: none !important;
   }
   
