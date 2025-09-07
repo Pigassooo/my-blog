@@ -288,8 +288,8 @@ nav:
       - reprint/poetry/index.md
       - CH: reprint/poetry/ch/index.md
       - EN: reprint/poetry/en/index.md
-  - LoveStory:
-    - loveStory/index.md
+  # - LoveStory:
+  #   - loveStory/index.md
   - About: about.md
   - Motivation:
     - motivation/index.md
