@@ -740,7 +740,7 @@
         const hours = Math.floor((difference % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
         const minutes = Math.floor((difference % (1000 * 60 * 60)) / (1000 * 60));
         const seconds = Math.floor((difference % (1000 * 60)) / 1000);
-        timerElement.innerHTML = `${days}d ${hours}h ${minutes}m ${seconds}s`;
+        timerElement.innerHTML = `${days}d ${hours}h`;
       }, 1000);
       // 立即执行一次以避免页面初次加载时空白一秒
       // Run once immediately to avoid a one-second blank state on page load
@@ -752,7 +752,7 @@
            const hours = Math.floor((difference % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
            const minutes = Math.floor((difference % (1000 * 60 * 60)) / (1000 * 60));
            const seconds = Math.floor((difference % (1000 * 60)) / 1000);
-           timerElement.innerHTML = `${days}d ${hours}h ${minutes}m ${seconds}s`;
+           timerElement.innerHTML = `${days}d ${hours}h`;
          } else {
            timerElement.innerHTML = "目标日期已到达！";
          }
@@ -761,7 +761,7 @@
     // --- 初始化你的两个倒计时器 ---
     // --- Initialize your two countdown timers ---
     // 启动第一个倒计时器
-    reateCountdown('countdown-timer-1', '2025-10-30 00:00:00');
+    createCountdown('countdown-timer-1', '2025-10-30 00:00:00');
     // 启动第二个倒计时器
     createCountdown('countdown-timer-2', '2025-12-07 08:00:00');
     </script>
