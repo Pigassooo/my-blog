@@ -91,6 +91,7 @@ theme:
     previous: fontawesome/solid/angle-left
     # top: fontawesome/solid/angles-up
     alternate: fontawesome/solid/language
+  
   features:
     # - codehilite:  # 高亮代码块
     # - guess_lang: false
