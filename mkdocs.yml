@@ -3,30 +3,94 @@ site_author: 'Orion'
 site_url: 'https://pigassooo.github.io/my-blog/'
 repo_url: 'https://github.com/Pigassooo'
 
+# theme:
+#   custom_dir: docs/overrides
+#   name: material
+#   language: en
+#   font:
+#     text: 'Roboto'
+#     code: 'Roboto Mono'
+#   palette:
+#     # Palette toggle for light mode
+#     - scheme: default
+#       toggle:
+#         icon: material/brightness-7
+#         name: Switch to dark mode
+#     # Palette toggle for dark mode
+#     - scheme: slate
+#       toggle:
+#         icon: material/brightness-4
+#         name: Switch to light mode
+#   favicon: 'images/favicon.png'
+#   icon:
+#     repo: fontawesome/brands/github
+#     logo: fontawesome/solid/p
+
+
 theme:
-  custom_dir: docs/overrides
   name: material
-  language: en
-  font:
-    text: 'Roboto'
-    code: 'Roboto Mono'
+  custom_dir: docs/overrides
+  # font: false
+  logo: https://pica.zhimg.com/80/v2-74ecd899c7c4cc0258930eaff239a21b_1440w.webp
+  # https://s1.imagehub.cc/images/2025/01/05/64eafdf8c27f482c7ecb83003d460d6a.webp
+  # https://s1.imagehub.cc/images/2024/02/02/91a767e93d1a344e44c69936464c583e.png
+
+  favicon: https://i.stardots.io/wcowin/1750090373988.png
+  # https://s1.imagehub.cc/images/2025/05/05/7ff9985e6f5baffe306907df47042787.png
+  # https://pic4.zhimg.com/v2-fee2c2622ad68aeed98a8b411a8b272b_1440w.jpg
+  # https://s2.loli.net/2024/04/06/yEOZavwMr6kTWhu.png
   palette:
-    # Palette toggle for light mode
-    - scheme: default
+    - media: "(prefers-color-scheme)"
       toggle:
-        icon: material/brightness-7
-        name: Switch to dark mode
-    # Palette toggle for dark mode
-    - scheme: slate
+        icon: material/link
+        name: 关闭自动模式
+    - media: "(prefers-color-scheme: light)"
+      scheme: default # 日间模式
+      primary: blue # 主色
+      accent: indigo # 强调色
       toggle:
-        icon: material/brightness-4
-        name: Switch to light mode
-  favicon: 'images/favicon.png'
+        icon: material/toggle-switch
+        name: 切换至夜间模式
+    - media: "(prefers-color-scheme: dark)"
+      scheme: slate # 夜间模式
+      primary: black
+      accent: indigo
+      toggle:
+        icon: material/toggle-switch-off-outline
+        name: 切换至日间模式
+  features: 
+    - announce.dismiss # 可关闭公告栏
+    # - navigation.instant # 页面无刷新切换
+    - navigation.prune # 只渲染可见导航项
+    # - header.autohide  # 自动隐藏头部
+    # - navigation.instant.progress # 页面切换进度条
+    # - navigation.prune # 只渲染可见导航项
+    - navigation.tracking # 滚动时URL锚点自动更新
+    - navigation.tabs # 一级导航显示为顶部Tab
+    # - navigation.tabs.sticky  # Tab栏吸顶
+    - navigation.sections # 侧边栏分组
+    - navigation.top # 返回顶部按钮
+    - navigation.footer # 页脚显示在侧边栏
+    - search.suggest # 搜索建议
+    - search.highlight # 搜索高亮
+    - search.share # 搜索结果分享
+    - toc.follow # 目录跟随滚动
+    # - toc.integrate # 目录集成到侧边栏
+    - navigation.expand # 默认展开所有目录
+    - navigation.indexes # 支持节索引页
+    - content.tabs.link # 支持标签页链接
+    - content.tooltips # 支持鼠标悬浮提示
+    - content.code.copy # 代码块一键复制
+    - content.code.select # 代码块一键全选
+    # - content.action.edit # 编辑按钮
+    # - content.action.view # 查看源码按钮
+    - content.code.annotate # 代码注释
+  language: zh # 一些提示性的文字会变成中文
   icon:
-    repo: fontawesome/brands/github
-    logo: fontawesome/solid/p
-
-
+    repo: fontawesome/brands/github #右上角图标
+    previous: fontawesome/solid/angle-left
+    # top: fontawesome/solid/angles-up
+    alternate: fontawesome/solid/language
   features:
     # - codehilite:  # 高亮代码块
     # - guess_lang: false
@@ -130,169 +194,171 @@ extra:
 # 导航结构
 nav:
   - Home: index.md
-  - Notes:
-    - notes/index.md
-    - Notes:
-      - Algorithm:
-        - Basic Algorithm 1: notes/notes/Algorithm/01.BasicAlgorithm1.md
-      - FrontEnd:
-        - Storage: notes/notes/Frontend/客户端存储.md
-        - HTTP:
-          - notes/notes/Frontend/HTTP/01.了解Web及网络基础.md
-          - notes/notes/Frontend/HTTP/02.简单的HTTP协议.md
-        - Axios: notes/notes/Frontend/Axios/Axios的理解与使用.md
-        - JavaScript:
-          - API:
-            - DOM:
-              - notes/notes/Frontend/JavaScript/API/01.DOM/01.API的基本认知.md
-              - notes/notes/Frontend/JavaScript/API/01.DOM/02.获取DOM元素.md
-              - notes/notes/Frontend/JavaScript/API/01.DOM/03.操作元素内容.md
-              - notes/notes/Frontend/JavaScript/API/01.DOM/04.操作元素属性.md
-              - notes/notes/Frontend/JavaScript/API/01.DOM/05.操作表单元素.md
-              - notes/notes/Frontend/JavaScript/API/01.DOM/06.自定义属性.md
-              - notes/notes/Frontend/JavaScript/API/01.DOM/07.定时器间歇函数.md
-              - notes/notes/Frontend/JavaScript/API/01.DOM/08.事件监听.md
-              - notes/notes/Frontend/JavaScript/API/01.DOM/09.事件类型.md
-              - notes/notes/Frontend/JavaScript/API/01.DOM/10.事件对象.md
-              - notes/notes/Frontend/JavaScript/API/01.DOM/11.回调函数.md
-              - notes/notes/Frontend/JavaScript/API/01.DOM/12.事件流.md
-              - notes/notes/Frontend/JavaScript/API/01.DOM/13.事件委托.md
-              - notes/notes/Frontend/JavaScript/API/01.DOM/14.页面加载事件.md
-              - notes/notes/Frontend/JavaScript/API/01.DOM/15.页面滚动事件.md
-              - notes/notes/Frontend/JavaScript/API/01.DOM/16.页面尺寸事件.md
-              - notes/notes/Frontend/JavaScript/API/01.DOM/17.元素尺寸与位置.md
-              - notes/notes/Frontend/JavaScript/API/01.DOM/18.日期对象.md
-              - notes/notes/Frontend/JavaScript/API/01.DOM/19.节点操作.md
-              - notes/notes/Frontend/JavaScript/API/01.DOM/20.M端事件.md
-              - notes/notes/Frontend/JavaScript/API/01.DOM/21.重绘和回流.md
-            - BOM:
-              - notes/notes/Frontend/JavaScript/API/02.BOM/01.BOM.md
-              - notes/notes/Frontend/JavaScript/API/02.BOM/02.延时函数.md
-              - notes/notes/Frontend/JavaScript/API/02.BOM/03.JS执行机制.md
-              - notes/notes/Frontend/JavaScript/API/02.BOM/04.location对象.md
-              - notes/notes/Frontend/JavaScript/API/02.BOM/05.navigator对象.md
-              - notes/notes/Frontend/JavaScript/API/02.BOM/06.history对象.md
-              - notes/notes/Frontend/JavaScript/API/02.BOM/07.本地存储.md
-              - notes/notes/Frontend/JavaScript/API/02.BOM/08.本地存储案例.md
-              - notes/notes/Frontend/JavaScript/API/02.BOM/09.数组的方法(补充).md
-              - notes/notes/Frontend/JavaScript/API/02.BOM/10.正则表达式.md
-        - Vue:
-          - Vue2基础:
-            - notes/notes/Frontend/Vue2+3/Vue2/01.Vue简介.md
-            - notes/notes/Frontend/Vue2+3/Vue2/02.数据绑定.md
-            - notes/notes/Frontend/Vue2+3/Vue2/03.事件处理.md
-            - notes/notes/Frontend/Vue2+3/Vue2/04.计算属性与监视.md
-            - notes/notes/Frontend/Vue2+3/Vue2/05.class与style绑定.md
-            - notes/notes/Frontend/Vue2+3/Vue2/06.条件渲染.md
-            - notes/notes/Frontend/Vue2+3/Vue2/07.列表渲染.md
-            - notes/notes/Frontend/Vue2+3/Vue2/08.Vue监测数据的原理.md
-            - notes/notes/Frontend/Vue2+3/Vue2/09.收集表单数据.md
-            - notes/notes/Frontend/Vue2+3/Vue2/10.过滤器.md
-            - notes/notes/Frontend/Vue2+3/Vue2/11.内置指令.md
-            - notes/notes/Frontend/Vue2+3/Vue2/12.自定义指令.md
-            - notes/notes/Frontend/Vue2+3/Vue2/13.生命周期.md
-            - notes/notes/Frontend/Vue2+3/Vue2/14.组件简介.md
-            - notes/notes/Frontend/Vue2+3/Vue2/15.单文件组件.md
-            - notes/notes/Frontend/Vue2+3/Vue2/16.Vue脚手架创建与简介.md
-            - notes/notes/Frontend/Vue2+3/Vue2/17.修改默认配置项.md
-            - notes/notes/Frontend/Vue2+3/Vue2/18.ref属性.md
-            - notes/notes/Frontend/Vue2+3/Vue2/19.配置项props.md
-            - notes/notes/Frontend/Vue2+3/Vue2/20.mixin混入.md
-            - notes/notes/Frontend/Vue2+3/Vue2/21.plugins.md
-            - notes/notes/Frontend/Vue2+3/Vue2/22.scope样式.md
-            - notes/notes/Frontend/Vue2+3/Vue2/23.Todo-List案例.md
-        - React:
-          - notes/notes/Frontend/React/01.React入门.md
-          - notes/notes/Frontend/React/02.React面向组件编程.md
-          - notes/notes/Frontend/React/03.React应用(基于脚手架).md
-          - notes/notes/Frontend/React/04.React-Ajax.md
-      - Backend:
-        - notes/notes/Backend/JavaRoadMap/JavaRoadMap.md
-        - MySQL:
-          - MySQL基础: notes/notes/Backend/MySQL/01.基础.md
-        - JavaSE:
-          - notes/notes/Backend/JavaSE/01.面向对象基础.md
-          - notes/notes/Backend/JavaSE/02.String类.md
-          - notes/notes/Backend/JavaSE/03.ArrayList类.md
-          - notes/notes/Backend/JavaSE/04.static.md
-          - notes/notes/Backend/JavaSE/05.继承.md
-          - notes/notes/Backend/JavaSE/06.多态.md
-          - notes/notes/Backend/JavaSE/07.抽象类.md
-          - notes/notes/Backend/JavaSE/08.接口.md
-          - notes/notes/Backend/JavaSE/09.内部类.md
-          - notes/notes/Backend/JavaSE/10.enum类.md
-          - notes/notes/Backend/JavaSE/11.泛型.md
-          - notes/notes/Backend/JavaSE/12.lang_Object.md
-          - notes/notes/Backend/JavaSE/13.util_Objects.md
-          - notes/notes/Backend/JavaSE/14.lang_wrappers.md
-          - notes/notes/Backend/JavaSE/15.lang_StringBuilder.md
-          - notes/notes/Backend/JavaSE/16.lang_StringBuffer.md
-          - notes/notes/Backend/JavaSE/17.lang_StringJoiner.md
-          - notes/notes/Backend/JavaSE/18.lang_Math.md
-          - notes/notes/Backend/JavaSE/19.lang_System.md
-          - notes/notes/Backend/JavaSE/20.lang_Runtime.md
-          - notes/notes/Backend/JavaSE/21.lang_BigDecimal.md
-          - notes/notes/Backend/JavaSE/22.util_Arrays.md
-          - notes/notes/Backend/JavaSE/23.JDK8_LambdaExpression.md
-          - notes/notes/Backend/JavaSE/24.JDK8_方法引用.md
-          - notes/notes/Backend/JavaSE/25.regularExpression.md
-          - notes/notes/Backend/JavaSE/26.Exception.md
-          - notes/notes/Backend/JavaSE/27.CollectionFramework.md
-          - notes/notes/Backend/JavaSE/28.io_File.md
-          - notes/notes/Backend/JavaSE/29.IO.md
-          - notes/notes/Backend/JavaSE/30.specialFileandJournaling.md
-          - notes/notes/Backend/JavaSE/31.multithreading.md
-          - notes/notes/Backend/JavaSE/32.网络编程.md
-        - JavaWeb:
-          - notes/notes/Backend/JavaWeb/00.RoadMap.md
-          - notes/notes/Backend/JavaWeb/01.前置知识.md
-          - notes/notes/Backend/JavaWeb/02.Maven.md
-          - notes/notes/Backend/JavaWeb/03.Web入门.md
-          - notes/notes/Backend/JavaWeb/04.请求响应分层解耦.md
-          - notes/notes/Backend/JavaWeb/06.MyBatis.md
-        - .NET:
-          - notes/notes/Backend/dotNET/00.Overview.md
-          - notes/notes/Backend/dotNET/01.FolderStructure.md
-          - notes/notes/Backend/dotNET/02.DI.md
-          - notes/notes/Backend/dotNET/03.Setup_Dbcontext.md
-          - notes/notes/Backend/dotNET/04.Create_Category_table.md
-          - notes/notes/Backend/dotNET/05.Add_CategoryController.md
-          - notes/notes/Backend/dotNET/06.Add_Category_link_in_header.md
-          - notes/notes/Backend/dotNET/07.Seed_Category_tables.md
-          - notes/notes/Backend/dotNET/08.GetAll_Categories.md
-          - notes/notes/Backend/dotNET/09.Add_Theme_and_Icon.md
-          - notes/notes/Backend/dotNET/10.Tag_Helper.md
-          - notes/notes/Backend/dotNET/11.Create_Category.md
-          - notes/notes/Backend/dotNET/12.Server_side_validations.md
-          - notes/notes/Backend/dotNET/13.Custom_Valid.md
-          - notes/notes/Backend/dotNET/14.Client_Side_Validation.md
-          - notes/notes/Backend/dotNET/15.Get_CategoryDetailsToEdit.md
-          - notes/notes/Backend/dotNET/16.GetandPostActionforDeleteCategory.md
-        - .NET Interview:
-          - notes/notes/Backend/dotNETinterview/01.C#.md
-        - Project:
-          - HungryPig:
-            - notes/notes/Backend/Project/HungryPig/01.整体介绍.md
-    - Computer English(processing): notes/computerEnglish.md
-    - Useful Website:
-      - Code: notes/website/code.md
-    - Youtuber:
-      - Coder: notes/youtuber/coder.md
-  - Blog:
-    - blog/index.md
-  - Reprint:
-    - reprint/index.md
-    - Code: reprint/code/index.md
-    - Articles: reprint/articles/index.md
-    - Poetry:
-      - reprint/poetry/index.md
-      - CH: reprint/poetry/ch/index.md
-      - EN: reprint/poetry/en/index.md
+  - Plan: plan.md
+    - plan/index.md
+  # - Notes:
+  #   - notes/index.md
+  #   - Notes:
+  #     - Algorithm:
+  #       - Basic Algorithm 1: notes/notes/Algorithm/01.BasicAlgorithm1.md
+  #     - FrontEnd:
+  #       - Storage: notes/notes/Frontend/客户端存储.md
+  #       - HTTP:
+  #         - notes/notes/Frontend/HTTP/01.了解Web及网络基础.md
+  #         - notes/notes/Frontend/HTTP/02.简单的HTTP协议.md
+  #       - Axios: notes/notes/Frontend/Axios/Axios的理解与使用.md
+  #       - JavaScript:
+  #         - API:
+  #           - DOM:
+  #             - notes/notes/Frontend/JavaScript/API/01.DOM/01.API的基本认知.md
+  #             - notes/notes/Frontend/JavaScript/API/01.DOM/02.获取DOM元素.md
+  #             - notes/notes/Frontend/JavaScript/API/01.DOM/03.操作元素内容.md
+  #             - notes/notes/Frontend/JavaScript/API/01.DOM/04.操作元素属性.md
+  #             - notes/notes/Frontend/JavaScript/API/01.DOM/05.操作表单元素.md
+  #             - notes/notes/Frontend/JavaScript/API/01.DOM/06.自定义属性.md
+  #             - notes/notes/Frontend/JavaScript/API/01.DOM/07.定时器间歇函数.md
+  #             - notes/notes/Frontend/JavaScript/API/01.DOM/08.事件监听.md
+  #             - notes/notes/Frontend/JavaScript/API/01.DOM/09.事件类型.md
+  #             - notes/notes/Frontend/JavaScript/API/01.DOM/10.事件对象.md
+  #             - notes/notes/Frontend/JavaScript/API/01.DOM/11.回调函数.md
+  #             - notes/notes/Frontend/JavaScript/API/01.DOM/12.事件流.md
+  #             - notes/notes/Frontend/JavaScript/API/01.DOM/13.事件委托.md
+  #             - notes/notes/Frontend/JavaScript/API/01.DOM/14.页面加载事件.md
+  #             - notes/notes/Frontend/JavaScript/API/01.DOM/15.页面滚动事件.md
+  #             - notes/notes/Frontend/JavaScript/API/01.DOM/16.页面尺寸事件.md
+  #             - notes/notes/Frontend/JavaScript/API/01.DOM/17.元素尺寸与位置.md
+  #             - notes/notes/Frontend/JavaScript/API/01.DOM/18.日期对象.md
+  #             - notes/notes/Frontend/JavaScript/API/01.DOM/19.节点操作.md
+  #             - notes/notes/Frontend/JavaScript/API/01.DOM/20.M端事件.md
+  #             - notes/notes/Frontend/JavaScript/API/01.DOM/21.重绘和回流.md
+  #           - BOM:
+  #             - notes/notes/Frontend/JavaScript/API/02.BOM/01.BOM.md
+  #             - notes/notes/Frontend/JavaScript/API/02.BOM/02.延时函数.md
+  #             - notes/notes/Frontend/JavaScript/API/02.BOM/03.JS执行机制.md
+  #             - notes/notes/Frontend/JavaScript/API/02.BOM/04.location对象.md
+  #             - notes/notes/Frontend/JavaScript/API/02.BOM/05.navigator对象.md
+  #             - notes/notes/Frontend/JavaScript/API/02.BOM/06.history对象.md
+  #             - notes/notes/Frontend/JavaScript/API/02.BOM/07.本地存储.md
+  #             - notes/notes/Frontend/JavaScript/API/02.BOM/08.本地存储案例.md
+  #             - notes/notes/Frontend/JavaScript/API/02.BOM/09.数组的方法(补充).md
+  #             - notes/notes/Frontend/JavaScript/API/02.BOM/10.正则表达式.md
+  #       - Vue:
+  #         - Vue2基础:
+  #           - notes/notes/Frontend/Vue2+3/Vue2/01.Vue简介.md
+  #           - notes/notes/Frontend/Vue2+3/Vue2/02.数据绑定.md
+  #           - notes/notes/Frontend/Vue2+3/Vue2/03.事件处理.md
+  #           - notes/notes/Frontend/Vue2+3/Vue2/04.计算属性与监视.md
+  #           - notes/notes/Frontend/Vue2+3/Vue2/05.class与style绑定.md
+  #           - notes/notes/Frontend/Vue2+3/Vue2/06.条件渲染.md
+  #           - notes/notes/Frontend/Vue2+3/Vue2/07.列表渲染.md
+  #           - notes/notes/Frontend/Vue2+3/Vue2/08.Vue监测数据的原理.md
+  #           - notes/notes/Frontend/Vue2+3/Vue2/09.收集表单数据.md
+  #           - notes/notes/Frontend/Vue2+3/Vue2/10.过滤器.md
+  #           - notes/notes/Frontend/Vue2+3/Vue2/11.内置指令.md
+  #           - notes/notes/Frontend/Vue2+3/Vue2/12.自定义指令.md
+  #           - notes/notes/Frontend/Vue2+3/Vue2/13.生命周期.md
+  #           - notes/notes/Frontend/Vue2+3/Vue2/14.组件简介.md
+  #           - notes/notes/Frontend/Vue2+3/Vue2/15.单文件组件.md
+  #           - notes/notes/Frontend/Vue2+3/Vue2/16.Vue脚手架创建与简介.md
+  #           - notes/notes/Frontend/Vue2+3/Vue2/17.修改默认配置项.md
+  #           - notes/notes/Frontend/Vue2+3/Vue2/18.ref属性.md
+  #           - notes/notes/Frontend/Vue2+3/Vue2/19.配置项props.md
+  #           - notes/notes/Frontend/Vue2+3/Vue2/20.mixin混入.md
+  #           - notes/notes/Frontend/Vue2+3/Vue2/21.plugins.md
+  #           - notes/notes/Frontend/Vue2+3/Vue2/22.scope样式.md
+  #           - notes/notes/Frontend/Vue2+3/Vue2/23.Todo-List案例.md
+  #       - React:
+  #         - notes/notes/Frontend/React/01.React入门.md
+  #         - notes/notes/Frontend/React/02.React面向组件编程.md
+  #         - notes/notes/Frontend/React/03.React应用(基于脚手架).md
+  #         - notes/notes/Frontend/React/04.React-Ajax.md
+  #     - Backend:
+  #       - notes/notes/Backend/JavaRoadMap/JavaRoadMap.md
+  #       - MySQL:
+  #         - MySQL基础: notes/notes/Backend/MySQL/01.基础.md
+  #       - JavaSE:
+  #         - notes/notes/Backend/JavaSE/01.面向对象基础.md
+  #         - notes/notes/Backend/JavaSE/02.String类.md
+  #         - notes/notes/Backend/JavaSE/03.ArrayList类.md
+  #         - notes/notes/Backend/JavaSE/04.static.md
+  #         - notes/notes/Backend/JavaSE/05.继承.md
+  #         - notes/notes/Backend/JavaSE/06.多态.md
+  #         - notes/notes/Backend/JavaSE/07.抽象类.md
+  #         - notes/notes/Backend/JavaSE/08.接口.md
+  #         - notes/notes/Backend/JavaSE/09.内部类.md
+  #         - notes/notes/Backend/JavaSE/10.enum类.md
+  #         - notes/notes/Backend/JavaSE/11.泛型.md
+  #         - notes/notes/Backend/JavaSE/12.lang_Object.md
+  #         - notes/notes/Backend/JavaSE/13.util_Objects.md
+  #         - notes/notes/Backend/JavaSE/14.lang_wrappers.md
+  #         - notes/notes/Backend/JavaSE/15.lang_StringBuilder.md
+  #         - notes/notes/Backend/JavaSE/16.lang_StringBuffer.md
+  #         - notes/notes/Backend/JavaSE/17.lang_StringJoiner.md
+  #         - notes/notes/Backend/JavaSE/18.lang_Math.md
+  #         - notes/notes/Backend/JavaSE/19.lang_System.md
+  #         - notes/notes/Backend/JavaSE/20.lang_Runtime.md
+  #         - notes/notes/Backend/JavaSE/21.lang_BigDecimal.md
+  #         - notes/notes/Backend/JavaSE/22.util_Arrays.md
+  #         - notes/notes/Backend/JavaSE/23.JDK8_LambdaExpression.md
+  #         - notes/notes/Backend/JavaSE/24.JDK8_方法引用.md
+  #         - notes/notes/Backend/JavaSE/25.regularExpression.md
+  #         - notes/notes/Backend/JavaSE/26.Exception.md
+  #         - notes/notes/Backend/JavaSE/27.CollectionFramework.md
+  #         - notes/notes/Backend/JavaSE/28.io_File.md
+  #         - notes/notes/Backend/JavaSE/29.IO.md
+  #         - notes/notes/Backend/JavaSE/30.specialFileandJournaling.md
+  #         - notes/notes/Backend/JavaSE/31.multithreading.md
+  #         - notes/notes/Backend/JavaSE/32.网络编程.md
+  #       - JavaWeb:
+  #         - notes/notes/Backend/JavaWeb/00.RoadMap.md
+  #         - notes/notes/Backend/JavaWeb/01.前置知识.md
+  #         - notes/notes/Backend/JavaWeb/02.Maven.md
+  #         - notes/notes/Backend/JavaWeb/03.Web入门.md
+  #         - notes/notes/Backend/JavaWeb/04.请求响应分层解耦.md
+  #         - notes/notes/Backend/JavaWeb/06.MyBatis.md
+  #       - .NET:
+  #         - notes/notes/Backend/dotNET/00.Overview.md
+  #         - notes/notes/Backend/dotNET/01.FolderStructure.md
+  #         - notes/notes/Backend/dotNET/02.DI.md
+  #         - notes/notes/Backend/dotNET/03.Setup_Dbcontext.md
+  #         - notes/notes/Backend/dotNET/04.Create_Category_table.md
+  #         - notes/notes/Backend/dotNET/05.Add_CategoryController.md
+  #         - notes/notes/Backend/dotNET/06.Add_Category_link_in_header.md
+  #         - notes/notes/Backend/dotNET/07.Seed_Category_tables.md
+  #         - notes/notes/Backend/dotNET/08.GetAll_Categories.md
+  #         - notes/notes/Backend/dotNET/09.Add_Theme_and_Icon.md
+  #         - notes/notes/Backend/dotNET/10.Tag_Helper.md
+  #         - notes/notes/Backend/dotNET/11.Create_Category.md
+  #         - notes/notes/Backend/dotNET/12.Server_side_validations.md
+  #         - notes/notes/Backend/dotNET/13.Custom_Valid.md
+  #         - notes/notes/Backend/dotNET/14.Client_Side_Validation.md
+  #         - notes/notes/Backend/dotNET/15.Get_CategoryDetailsToEdit.md
+  #         - notes/notes/Backend/dotNET/16.GetandPostActionforDeleteCategory.md
+  #       - .NET Interview:
+  #         - notes/notes/Backend/dotNETinterview/01.C#.md
+  #       - Project:
+  #         - HungryPig:
+  #           - notes/notes/Backend/Project/HungryPig/01.整体介绍.md
+  #   - Computer English(processing): notes/computerEnglish.md
+  #   - Useful Website:
+  #     - Code: notes/website/code.md
+  #   - Youtuber:
+  #     - Coder: notes/youtuber/coder.md
+  # - Blog:
+  #   - blog/index.md
+  # - Reprint:
+  #   - reprint/index.md
+  #   - Code: reprint/code/index.md
+  #   - Articles: reprint/articles/index.md
+  #   - Poetry:
+  #     - reprint/poetry/index.md
+  #     - CH: reprint/poetry/ch/index.md
+  #     - EN: reprint/poetry/en/index.md
   # - LoveStory:
   #   - loveStory/index.md
-  - About: about.md
-  - Motivation:
-    - motivation/index.md
-    - Done: motivation/done.md
-    - Processing: motivation/processing.md
-    - Plan: motivation/plan.md
+  # - About: about.md
+  # - Motivation:
+  #   - motivation/index.md
+  #   - Done: motivation/done.md
+  #   - Processing: motivation/processing.md
+  #   - Plan: motivation/plan.md
