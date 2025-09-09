@@ -76,6 +76,9 @@ theme:
     # - navigation.instant # 页面无刷新切换
     - navigation.prune # 只渲染可见导航项
     # - header.autohide  # 自动隐藏头部
+    - navigation.instant  # 实现页面的即时加载
+    - navigation.instant.prefetch #即时预取
+    - navigation.instant.progress #进度指示器
     # - navigation.instant.progress # 页面切换进度条
     # - navigation.prune # 只渲染可见导航项
     - navigation.tracking # 滚动时URL锚点自动更新
