@@ -73,13 +73,11 @@ theme:
         name: 切换至日间模式
   features: 
     - announce.dismiss # 可关闭公告栏
-    # - navigation.instant # 页面无刷新切换
-    - navigation.prune # 只渲染可见导航项
+    # - navigation.prune # 只渲染可见导航项
     # - header.autohide  # 自动隐藏头部
     - navigation.instant  # 实现页面的即时加载
     - navigation.instant.prefetch #即时预取
     - navigation.instant.progress #进度指示器
-    # - navigation.instant.progress # 页面切换进度条
     # - navigation.prune # 只渲染可见导航项
     - navigation.tracking # 滚动时URL锚点自动更新
     - navigation.tabs # 一级导航显示为顶部Tab
@@ -196,7 +194,8 @@ extra:
 # 导航结构
 nav:
   - Home: index.md
-  - Plan: index.md
+  - Plan: plan.md
+  - About: about.md
   # - Notes:
   #   - notes/index.md
   #   - Notes:
@@ -357,7 +356,6 @@ nav:
   #     - EN: reprint/poetry/en/index.md
   # - LoveStory:
   #   - loveStory/index.md
-  # - About: about.md
   # - Motivation:
   #   - motivation/index.md
   #   - Done: motivation/done.md
