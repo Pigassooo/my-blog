@@ -196,7 +196,7 @@ nav:
   - Home: index.md
   - Plan: 
     - plan/plan.md
-    - plan/record.md
+    - Done: plan/record.md
   # - Notes:
   #   - notes/index.md
   #   - Notes:
