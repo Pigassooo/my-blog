@@ -706,13 +706,13 @@
     <div style="display: flex; justify-content: center; align-items: center; gap: 20px; flex-wrap: wrap; padding: 20px;">
         <div style="background-color: #ffffff; border: 1px solid #e0e0e0; border-radius: 12px; padding: 30px 40px; text-align: center; color: #555; font-size: 1.2em; box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08); width: 320px; font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;">
             <p style="margin-top: 0;">
-                <span>距离 <strong>放假 </strong> 还剩</span>
+                <span>距离 <strong>实习 </strong> 还剩</span>
             </p>
             <div id="countdown-timer-1" style="font-weight: bold; font-size: 2em; color: #1a1a1a; margin-top: 10px; letter-spacing: 2px;"></div>
         </div>
         <div style="background-color: #ffffff; border: 1px solid #e0e0e0; border-radius: 12px; padding: 30px 40px; text-align: center; color: #555; font-size: 1.2em; box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08); width: 320px; font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;">
             <p style="margin-top: 0;">
-                <span>距离 <strong>放假 </strong> 还剩</span>
+                <span>距离 <strong>日语N2 </strong> 还剩</span>
             </p>
             <div id="countdown-timer-2" style="font-weight: bold; font-size: 2em; color: #1a1a1a; margin-top: 10px; letter-spacing: 2px;"></div>
         </div>
@@ -738,9 +738,9 @@
         }
         const days = Math.floor(difference / (1000 * 60 * 60 * 24));
         const hours = Math.floor((difference % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
-        const minutes = Math.floor((difference % (1000 * 60 * 60)) / (1000 * 60));
-        const seconds = Math.floor((difference % (1000 * 60)) / 1000);
-        timerElement.innerHTML = `${days}d ${hours}h ${minutes}m ${seconds}s`;
+        // const minutes = Math.floor((difference % (1000 * 60 * 60)) / (1000 * 60));
+        // const seconds = Math.floor((difference % (1000 * 60)) / 1000);
+        timerElement.innerHTML = `${days}d ${hours}h`;
       }, 1000);
       // 立即执行一次以避免页面初次加载时空白一秒
       // Run once immediately to avoid a one-second blank state on page load
@@ -750,9 +750,7 @@
          if (difference > 0) {
            const days = Math.floor(difference / (1000 * 60 * 60 * 24));
            const hours = Math.floor((difference % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
-           const minutes = Math.floor((difference % (1000 * 60 * 60)) / (1000 * 60));
-           const seconds = Math.floor((difference % (1000 * 60)) / 1000);
-           timerElement.innerHTML = `${days}d ${hours}h ${minutes}m ${seconds}s`;
+           timerElement.innerHTML = `${days}d ${hours}h`;
          } else {
            timerElement.innerHTML = "目标日期已到达！";
          }
@@ -761,9 +759,9 @@
     // --- 初始化你的两个倒计时器 ---
     // --- Initialize your two countdown timers ---
     // 启动第一个倒计时器
-    createCountdown('countdown-timer-1', '2025-12-07 08:00:00');
+    createCountdown('countdown-timer-1', '2025-10-30 00:00:00');
     // 启动第二个倒计时器
-    createCountdown('countdown-timer-2', '2025-10-30 00:00:00');
+    createCountdown('countdown-timer-2', '2025-12-07 08:00:00');
     </script>
 </body>
 
