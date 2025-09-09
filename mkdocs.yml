@@ -194,7 +194,9 @@ extra:
 # 导航结构
 nav:
   - Home: index.md
-  - Plan: plan.md
+  - Plan: 
+    - plan/plan.md
+    - plan/record.md
   # - Notes:
   #   - notes/index.md
   #   - Notes:
