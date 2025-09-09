@@ -25,20 +25,20 @@ repo_url: 'https://github.com/Pigassooo'
 #   icon:
 #     repo: fontawesome/brands/github
 #     logo: fontawesome/solid/p
-# features:
-#   # - codehilite:  # 高亮代码块
-#   # - guess_lang: false
-#   - navigation.instant  # 实现页面的即时加载
-#   - navigation.instant.prefetch #即时预取
-#   - navigation.instant.progress #进度指示器
-#   - navigation.tabs  # 导航选项卡
-#   - navigation.tabs.sticky # 粘性导航选项卡
-#   - navigation.indexes  # 当部分没有内容时自动创建索引页面
-#   - navigation.sections  # 在侧边栏中使用章节
-#   - navigation.top  # 在页面顶部显示导航栏
-#   - toc.integrate  # 将目录(TOC)整合到文章侧边栏
-#   - toc.follow  # 目录随滚动高亮当前节
-#   - search.highlight  # 搜索结果高亮显示
+  # features:
+  #   # - codehilite:  # 高亮代码块
+  #   # - guess_lang: false
+  #   - navigation.instant  # 实现页面的即时加载
+  #   - navigation.instant.prefetch #即时预取
+  #   - navigation.instant.progress #进度指示器
+  #   - navigation.tabs  # 导航选项卡
+  #   - navigation.tabs.sticky # 粘性导航选项卡
+  #   - navigation.indexes  # 当部分没有内容时自动创建索引页面
+  #   - navigation.sections  # 在侧边栏中使用章节
+  #   - navigation.top  # 在页面顶部显示导航栏
+  #   - toc.integrate  # 将目录(TOC)整合到文章侧边栏
+  #   - toc.follow  # 目录随滚动高亮当前节
+  #   - search.highlight  # 搜索结果高亮显示
 
 theme:
   name: material
@@ -73,11 +73,10 @@ theme:
         name: 切换至日间模式
   features: 
     - announce.dismiss # 可关闭公告栏
-    # - navigation.prune # 只渲染可见导航项
+    # - navigation.instant # 页面无刷新切换
+    - navigation.prune # 只渲染可见导航项
     # - header.autohide  # 自动隐藏头部
-    - navigation.instant  # 实现页面的即时加载
-    - navigation.instant.prefetch #即时预取
-    - navigation.instant.progress #进度指示器
+    # - navigation.instant.progress # 页面切换进度条
     # - navigation.prune # 只渲染可见导航项
     - navigation.tracking # 滚动时URL锚点自动更新
     - navigation.tabs # 一级导航显示为顶部Tab
@@ -105,6 +104,7 @@ theme:
     previous: fontawesome/solid/angle-left
     # top: fontawesome/solid/angles-up
     alternate: fontawesome/solid/language
+
 
 extra_css:
   - stylesheets/extra.css
@@ -195,7 +195,6 @@ extra:
 nav:
   - Home: index.md
   - Plan: plan.md
-  - About: about.md
   # - Notes:
   #   - notes/index.md
   #   - Notes:
@@ -356,6 +355,7 @@ nav:
   #     - EN: reprint/poetry/en/index.md
   # - LoveStory:
   #   - loveStory/index.md
+  # - About: about.md
   # - Motivation:
   #   - motivation/index.md
   #   - Done: motivation/done.md
