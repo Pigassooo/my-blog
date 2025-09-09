@@ -46,23 +46,23 @@
     </div>
     <script>
     function updateCountdown() {
-      const targetDate = '2025-12-07 08:00:00';
-      const targetTime = new Date(targetDate).getTime();
-      const currentTime = new Date().getTime();
-      let difference = targetTime - currentTime;
+      const targetDate1 = '2025-12-07 08:00:00';
+      const targetTime1 = new Date(targetDate1).getTime();
+      const currentTime1 = new Date().getTime();
+      let difference1 = targetTime1 - currentTime1;
       const timerElement = document.getElementById('countdown-timer');
-      if (difference <= 0) {
+      if (difference1 <= 0) {
         timerElement.innerHTML = "目标日期已到达！";
-        clearInterval(countdownInterval); 
+        clearInterval(countdownInterval1); 
         return;
       }
-      let days = Math.floor(difference / (1000 * 60 * 60 * 24));
-      let hours = Math.floor((difference % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
-      let minutes = Math.floor((difference % (1000 * 60 * 60)) / (1000 * 60));
-      let seconds = Math.floor((difference % (1000 * 60)) / 1000);
-      timerElement.innerHTML = `${days}d ${hours}h ${minutes}m ${seconds}s`;
+      let days1 = Math.floor(difference1 / (1000 * 60 * 60 * 24));
+      let hours1 = Math.floor((difference1 % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+      let minutes1 = Math.floor((difference1 % (1000 * 60 * 60)) / (1000 * 60));
+      let seconds1 = Math.floor((difference1 % (1000 * 60)) / 1000);
+      timerElement.innerHTML = `${days1}d ${hours1}h ${minutes1}m ${seconds1}s`;
     }
-    const countdownInterval = setInterval(updateCountdown, 1000);
+    const countdownInterval1 = setInterval(updateCountdown, 1000);
     updateCountdown(); 
     </script>
 </body>
