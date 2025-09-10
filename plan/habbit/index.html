@@ -10,8 +10,10 @@
         <meta name="author" content="Orion">
       
       
-        <link rel="canonical" href="https://pigassooo.github.io/my-blog/notes/notes/Backend/dotNET/05.Add_CategoryController/">
+        <link rel="canonical" href="https://pigassooo.github.io/my-blog/plan/habbit/">
       
+      
+        <link rel="prev" href="../record/">
       
       
       
@@ -20,14 +22,14 @@
     
     
       
-        <title>Add CategoryController - Orion's Web</title>
+        <title>Habbit - Orion's Web</title>
       
     
     
-      <link rel="stylesheet" href="../../../../../assets/stylesheets/main.7e37652d.min.css">
+      <link rel="stylesheet" href="../../assets/stylesheets/main.7e37652d.min.css">
       
         
-        <link rel="stylesheet" href="../../../../../assets/stylesheets/palette.06af60db.min.css">
+        <link rel="stylesheet" href="../../assets/stylesheets/palette.06af60db.min.css">
       
       
 
@@ -46,9 +48,9 @@
       
     
     
-      <link rel="stylesheet" href="../../../../../stylesheets/extra.css">
+      <link rel="stylesheet" href="../../stylesheets/extra.css">
     
-    <script>__md_scope=new URL("../../../../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
     
       
 
@@ -74,7 +76,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#add-categorycontroller" class="md-skip">
+        <a href="#规律生活" class="md-skip">
           跳转至
         </a>
       
@@ -88,7 +90,7 @@
 
 <header class="md-header" data-md-component="header">
   <nav class="md-header__inner md-grid" aria-label="页眉">
-    <a href="../../../../.." title="Orion&#39;s Web" class="md-header__button md-logo" aria-label="Orion's Web" data-md-component="logo">
+    <a href="../.." title="Orion&#39;s Web" class="md-header__button md-logo" aria-label="Orion's Web" data-md-component="logo">
       
   <img src="https://pica.zhimg.com/80/v2-74ecd899c7c4cc0258930eaff239a21b_1440w.webp" alt="logo">
 
@@ -107,7 +109,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Add CategoryController
+              Habbit
             
           </span>
         </div>
@@ -261,7 +263,7 @@
   
   
     <li class="md-tabs__item">
-      <a href="../../../../.." class="md-tabs__link">
+      <a href="../.." class="md-tabs__link">
         
   
   
@@ -278,11 +280,13 @@
   
   
   
+    
+  
   
     
     
-      <li class="md-tabs__item">
-        <a href="../../../../../plan/plan/" class="md-tabs__link">
+      <li class="md-tabs__item md-tabs__item--active">
+        <a href="../plan/" class="md-tabs__link">
           
   
   
@@ -318,7 +322,7 @@
 
 <nav class="md-nav md-nav--primary md-nav--lifted" aria-label="导航栏" data-md-level="0">
   <label class="md-nav__title" for="__drawer">
-    <a href="../../../../.." title="Orion&#39;s Web" class="md-nav__button md-logo" aria-label="Orion's Web" data-md-component="logo">
+    <a href="../.." title="Orion&#39;s Web" class="md-nav__button md-logo" aria-label="Orion's Web" data-md-component="logo">
       
   <img src="https://pica.zhimg.com/80/v2-74ecd899c7c4cc0258930eaff239a21b_1440w.webp" alt="logo">
 
@@ -347,7 +351,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../.." class="md-nav__link">
+      <a href="../.." class="md-nav__link">
         
   
   
@@ -366,39 +370,42 @@
       
   
   
-  
-  
     
-    
-      
-        
-      
-        
-      
-        
-      
-    
-    
-    
-      
-      
-        
-      
-    
-    
-      
-        
-        
-      
-    
-    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
-      
-        
   
   
   
-    <a href="../../../../../plan/plan/" class="md-nav__link">
+    
+    
       
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+        
+        
+      
+      
+        
+      
+    
+    
+      
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="">
+            
   
   
   <span class="md-ellipsis">
@@ -407,12 +414,138 @@
   </span>
   
 
-      
-        <span class="md-nav__icon md-icon"></span>
-      
-    </a>
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_2">
+            <span class="md-nav__icon md-icon"></span>
+            Plan
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../plan/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Plans
+    
+  </span>
   
 
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../record/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Done
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    Habbit
+    
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  
+  <span class="md-ellipsis">
+    Habbit
+    
+  </span>
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="目录">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      目录
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#record" class="md-nav__link">
+    <span class="md-ellipsis">
+      record
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
       
     </li>
   
@@ -445,27 +578,9 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#步骤-1添加控制器" class="md-nav__link">
+  <a href="#record" class="md-nav__link">
     <span class="md-ellipsis">
-      步骤 1：添加控制器
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#步骤-2添加视图" class="md-nav__link">
-    <span class="md-ellipsis">
-      步骤 2：添加视图
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#步骤-3编写控制器代码" class="md-nav__link">
-    <span class="md-ellipsis">
-      步骤 3：编写控制器代码
+      record
     </span>
   </a>
   
@@ -490,22 +605,198 @@
   
 
 
-<h1 id="add-categorycontroller">Add CategoryController<a class="headerlink" href="#add-categorycontroller" title="Permanent link"></a></h1>
-<h3 id="步骤-1添加控制器">步骤 1：添加控制器<a class="headerlink" href="#步骤-1添加控制器" title="Permanent link"></a></h3>
-<ol>
-<li>在解决方案资源管理器中，右键点击你的项目名称或者 <code>Controllers</code> 文件夹。</li>
-<li>选择 <code>Add</code> -&gt; <code>Controller</code></li>
-<li>选择 <code>MVC Controller - Empty</code></li>
-<li>输入控制器名称为 <code>CategoryController</code></li>
-<li>点击 <code>Add</code>（添加）。</li>
-</ol>
-<h3 id="步骤-2添加视图">步骤 2：添加视图<a class="headerlink" href="#步骤-2添加视图" title="Permanent link"></a></h3>
-<p>1.在解决方案资源管理器中，右键点击你的项目名称或者 <code>Views</code> 文件夹。
-2. 选择 <code>Add</code> -&gt; <code>View</code>
-3. 选择 <code>MVC View Page (Razor)</code>
-4. 输入视图名称为 <code>Index</code></p>
-<h3 id="步骤-3编写控制器代码">步骤 3：编写控制器代码<a class="headerlink" href="#步骤-3编写控制器代码" title="Permanent link"></a></h3>
-<p>在新的 <code>CategoryController</code> 类中，编写你的控制器逻辑。</p>
+<h1 id="规律生活">规律生活<a class="headerlink" href="#规律生活" title="Permanent link"></a></h1>
+<table>
+<thead>
+<tr>
+<th style="text-align: center;">Time</th>
+<th style="text-align: center;">To do</th>
+<th style="text-align: center;">adds</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: center;">8</td>
+<td style="text-align: center;">起床</td>
+<td style="text-align: center;"></td>
+</tr>
+<tr>
+<td style="text-align: center;">8-8.10</td>
+<td style="text-align: center;"><font color="blue">冥想</font></td>
+<td style="text-align: center;"></td>
+</tr>
+<tr>
+<td style="text-align: center;">8.10-8.20</td>
+<td style="text-align: center;">洗漱</td>
+<td style="text-align: center;"></td>
+</tr>
+<tr>
+<td style="text-align: center;">8.20-9.50</td>
+<td style="text-align: center;"><font color="red">90min学习</font></td>
+<td style="text-align: center;">伸展</td>
+</tr>
+<tr>
+<td style="text-align: center;">9.50-10.20</td>
+<td style="text-align: center;"><font color="blue">散步</font></td>
+<td style="text-align: center;">买菜</td>
+</tr>
+<tr>
+<td style="text-align: center;">10.20-11.50</td>
+<td style="text-align: center;"><font color="red">90min学习</font></td>
+<td style="text-align: center;">伸展+简单午饭</td>
+</tr>
+<tr>
+<td style="text-align: center;">11.50-12.20</td>
+<td style="text-align: center;">午饭</td>
+<td style="text-align: center;">不看电脑不看手机</td>
+</tr>
+<tr>
+<td style="text-align: center;">12.20-13</td>
+<td style="text-align: center;"><font color="red"> 40min记忆 </font></td>
+<td style="text-align: center;"></td>
+</tr>
+<tr>
+<td style="text-align: center;">13-13.40</td>
+<td style="text-align: center;">午休</td>
+<td style="text-align: center;"></td>
+</tr>
+<tr>
+<td style="text-align: center;">13.40-15.10</td>
+<td style="text-align: center;"><font color="red">90min学习</font></td>
+<td style="text-align: center;">伸展</td>
+</tr>
+<tr>
+<td style="text-align: center;">15.10-15.30</td>
+<td style="text-align: center;">20min休息</td>
+<td style="text-align: center;">伸展</td>
+</tr>
+<tr>
+<td style="text-align: center;">15.30-17</td>
+<td style="text-align: center;"><font color="red">90min学习</font></td>
+<td style="text-align: center;">简单晚饭</td>
+</tr>
+<tr>
+<td style="text-align: center;">17-17.10</td>
+<td style="text-align: center;">短学习</td>
+<td style="text-align: center;">简单晚饭</td>
+</tr>
+<tr>
+<td style="text-align: center;">17.10-17.40</td>
+<td style="text-align: center;">晚饭</td>
+<td style="text-align: center;"><font color="blue">吃保健品</font></td>
+</tr>
+<tr>
+<td style="text-align: center;">17.40-18.20</td>
+<td style="text-align: center;"><font color="red">40min学习</font></td>
+<td style="text-align: center;"></td>
+</tr>
+<tr>
+<td style="text-align: center;">18.20-18.30</td>
+<td style="text-align: center;">吃水果</td>
+<td style="text-align: center;"><font color="blue">听radio</font></td>
+</tr>
+<tr>
+<td style="text-align: center;">18.30-19.30</td>
+<td style="text-align: center;">运动</td>
+<td style="text-align: center;">听radio 回消息</td>
+</tr>
+<tr>
+<td style="text-align: center;">19.30-20</td>
+<td style="text-align: center;">洗漱</td>
+<td style="text-align: center;"></td>
+</tr>
+<tr>
+<td style="text-align: center;">20-21.30</td>
+<td style="text-align: center;"><font color="red">90min学习</font></td>
+<td style="text-align: center;">伸展</td>
+</tr>
+<tr>
+<td style="text-align: center;">21.30-21.50</td>
+<td style="text-align: center;">20min休息</td>
+<td style="text-align: center;">伸展运动</td>
+</tr>
+<tr>
+<td style="text-align: center;">21.50-22.30</td>
+<td style="text-align: center;"><font color="red">40min学习</font></td>
+<td style="text-align: center;"></td>
+</tr>
+<tr>
+<td style="text-align: center;">22.30-23</td>
+<td style="text-align: center;"><font color="blue">回顾一天</font></td>
+<td style="text-align: center;">日记+明日待办</td>
+</tr>
+<tr>
+<td style="text-align: center;">23-23.15</td>
+<td style="text-align: center;"><font color="blue">15min看书</font></td>
+<td style="text-align: center;"></td>
+</tr>
+<tr>
+<td style="text-align: center;">23.15-23.30</td>
+<td style="text-align: center;"><font color="blue">回顾单词</font></td>
+<td style="text-align: center;"></td>
+</tr>
+<tr>
+<td style="text-align: center;">23.30</td>
+<td style="text-align: center;">入睡</td>
+<td style="text-align: center;"></td>
+</tr>
+</tbody>
+</table>
+<h2 id="record">record<a class="headerlink" href="#record" title="Permanent link"></a></h2>
+<table>
+<thead>
+<tr>
+<th>To do</th>
+<th>done</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>吃保健品</td>
+<td></td>
+</tr>
+<tr>
+<td>洗漱</td>
+<td></td>
+</tr>
+<tr>
+<td>锻炼</td>
+<td></td>
+</tr>
+<tr>
+<td>日记</td>
+<td></td>
+</tr>
+<tr>
+<td>背日语</td>
+<td></td>
+</tr>
+<tr>
+<td>背英语</td>
+<td></td>
+</tr>
+<tr>
+<td>听日语</td>
+<td></td>
+</tr>
+<tr>
+<td>听英语</td>
+<td></td>
+</tr>
+<tr>
+<td>学计算机</td>
+<td></td>
+</tr>
+<tr>
+<td>看书15min</td>
+<td></td>
+</tr>
+<tr>
+<td>一周一首英文歌</td>
+<td></td>
+</tr>
+</tbody>
+</table>
 
 
 
@@ -541,6 +832,34 @@
 
     <!-- Link to previous and/or next page -->
     
+    
+    
+    <nav class="md-footer__inner md-grid" aria-label="页脚" >
+
+        <!-- Link to previous page -->
+        
+        
+        <a href="../record/" class="md-footer__link md-footer__link--prev"
+            aria-label="上一页: Done">
+            <div class="md-footer__button md-icon">
+                
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 512"><!--! Font Awesome Free 7.0.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path fill="currentColor" d="M9.4 233.4c-12.5 12.5-12.5 32.8 0 45.3l160 160c12.5 12.5 32.8 12.5 45.3 0s12.5-32.8 0-45.3L77.3 256l137.3-137.4c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0l-160 160z"/></svg>
+            </div>
+            <div class="md-footer__title">
+                <span class="md-footer__direction">
+                    上一页
+                </span>
+                <div class="md-ellipsis">
+                    Done
+                </div>
+            </div>
+
+        </a>
+        
+
+        <!-- Link to next page -->
+        
+    </nav>
     
     
 
@@ -641,10 +960,10 @@
     
     
       
-      <script id="__config" type="application/json">{"base": "../../../../..", "features": ["announce.dismiss", "navigation.prune", "navigation.tracking", "navigation.tabs", "navigation.sections", "navigation.top", "navigation.footer", "search.suggest", "search.highlight", "search.share", "toc.follow", "navigation.expand", "navigation.indexes", "content.tabs.link", "content.tooltips", "content.code.copy", "content.code.select", "content.code.annotate"], "search": "../../../../../assets/javascripts/workers/search.973d3a69.min.js", "tags": null, "translations": {"clipboard.copied": "\u5df2\u590d\u5236", "clipboard.copy": "\u590d\u5236", "search.result.more.one": "\u5728\u8be5\u9875\u4e0a\u8fd8\u6709 1 \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.more.other": "\u5728\u8be5\u9875\u4e0a\u8fd8\u6709 # \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.none": "\u6ca1\u6709\u627e\u5230\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.one": "\u627e\u5230 1 \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.other": "# \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.placeholder": "\u952e\u5165\u4ee5\u5f00\u59cb\u641c\u7d22", "search.result.term.missing": "\u7f3a\u5c11", "select.version": "\u9009\u62e9\u5f53\u524d\u7248\u672c"}, "version": null}</script>
+      <script id="__config" type="application/json">{"base": "../..", "features": ["announce.dismiss", "navigation.prune", "navigation.tracking", "navigation.tabs", "navigation.sections", "navigation.top", "navigation.footer", "search.suggest", "search.highlight", "search.share", "toc.follow", "navigation.expand", "navigation.indexes", "content.tabs.link", "content.tooltips", "content.code.copy", "content.code.select", "content.code.annotate"], "search": "../../assets/javascripts/workers/search.973d3a69.min.js", "tags": null, "translations": {"clipboard.copied": "\u5df2\u590d\u5236", "clipboard.copy": "\u590d\u5236", "search.result.more.one": "\u5728\u8be5\u9875\u4e0a\u8fd8\u6709 1 \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.more.other": "\u5728\u8be5\u9875\u4e0a\u8fd8\u6709 # \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.none": "\u6ca1\u6709\u627e\u5230\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.one": "\u627e\u5230 1 \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.other": "# \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.placeholder": "\u952e\u5165\u4ee5\u5f00\u59cb\u641c\u7d22", "search.result.term.missing": "\u7f3a\u5c11", "select.version": "\u9009\u62e9\u5f53\u524d\u7248\u672c"}, "version": null}</script>
     
     
-      <script src="../../../../../assets/javascripts/bundle.92b07e13.min.js"></script>
+      <script src="../../assets/javascripts/bundle.92b07e13.min.js"></script>
       
     
   </body>
