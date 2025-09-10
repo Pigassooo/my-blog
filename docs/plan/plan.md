@@ -2,8 +2,9 @@
 
 ## 一天时间安排
 （按重要性优先级排列）
-1. 
-2. 
+1. 实习每周32h 平均一天4.5h 到 十月底
+2. 日语一周15h 平均一天2h 到 十二月初 （最后一个月提升到3.5h）
+3. 校内每周20h 平均一天3h 到十一月中
 
 
 ## 短期目标
@@ -131,6 +132,50 @@
 </body>
 
 
-## 养成习惯
-
 ## 大目标
+### 2025年
+1. 日语 N2
+2. 找到实习
+
+### 2026年
+1. 日语 N1
+2. 雅思 7 
+3. 找澳洲打工
+
+### 待定
+1. 摄影
+2. 拍视频记录生活
+3. 减肥到80kg
+4. 学炒股理财
+5. 旅行日志
+
+
+<body>
+    <div style="background-color: #ffffff; border: 1px solid #e0e0e0; border-radius: 12px; padding: 30px 40px; text-align: center; color: #555; font-size: 1.2em; box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08); width: 320px; font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;">
+        <p style="margin-top: 0;">
+            <span>距离2026还剩</span>
+        </p>
+        <div id="countdown-timer" style="font-weight: bold; font-size: 2em; color: #1a1a1a; margin-top: 10px; letter-spacing: 2px;"></div>
+    </div>
+    <script>
+    function updateCountdown() {
+      const targetDate = '2026-01-01 00:00:00';
+      const targetTime = new Date(targetDate).getTime();
+      const currentTime = new Date().getTime();
+      let difference = targetTime - currentTime;
+      const timerElement = document.getElementById('countdown-timer');
+      if (difference <= 0) {
+        timerElement.innerHTML = "目标日期已到达！";
+        clearInterval(countdownInterval); 
+        return;
+      }
+      let days = Math.floor(difference / (1000 * 60 * 60 * 24));
+      let hours = Math.floor((difference % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+      let minutes = Math.floor((difference % (1000 * 60 * 60)) / (1000 * 60));
+      let seconds = Math.floor((difference % (1000 * 60)) / 1000);
+      timerElement.innerHTML = `${days}d ${hours}h ${minutes}m ${seconds}s`;
+    }
+    const countdownInterval = setInterval(updateCountdown, 1000);
+    updateCountdown(); 
+    </script>
+</body>
