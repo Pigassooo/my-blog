@@ -194,6 +194,10 @@ extra:
 # 导航结构
 nav:
   - Home: index.md
+  - bagu:
+    - bagu/index.md
+    - Mysql:
+      - bagu/mysql/索引.md
   - Plan: 
     - plan/plan.md
     - Done: plan/record.md
