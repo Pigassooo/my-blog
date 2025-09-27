@@ -699,6 +699,15 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#整体数据流程" class="md-nav__link">
+    <span class="md-ellipsis">
+      整体数据流程
+    </span>
+  </a>
+  
+</li>
+      
     </ul>
   
 </nav>
@@ -852,6 +861,15 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#整体数据流程" class="md-nav__link">
+    <span class="md-ellipsis">
+      整体数据流程
+    </span>
+  </a>
+  
+</li>
+      
     </ul>
   
 </nav>
@@ -873,7 +891,7 @@
 
 <h1 id="技术术语vopodtoentityaggregatereqresresponse">技术术语：vo、po、dto、entity、aggregate、req、res、response<a class="headerlink" href="#技术术语vopodtoentityaggregatereqresresponse" title="Permanent link"></a></h1>
 <p>以下描述使用场景为，在 DDD 领域驱动架构下（六边形、整洁、COLA）</p>
-<h2 id="domain-领域层">domain 领域层；<a class="headerlink" href="#domain-领域层" title="Permanent link"></a></h2>
+<h3 id="domain-领域层">domain 领域层；<a class="headerlink" href="#domain-领域层" title="Permanent link"></a></h3>
 <ul>
 <li>entity，实体对象，如雇员用户的基本信息、订单信息、配送信息</li>
 <li>vo（value object），值对象，用于描述实体对象信息。如一个人，这个雇员用户的基本 level 枚举值对象、这个人居住地址四级信息对象。这些对象不具有唯一性，也就是不具有生命特征。就像你，之后你的衣服，你的胡子。</li>
@@ -884,22 +902,30 @@
 <p>以前的 MVC 下的 XXXVo、XxxReq、XxxRes，现在被领域细分成各个模块下的，实体、聚合、值对象了。</p>
 </li>
 </ul>
-<h2 id="infrastructure-基础设施层">infrastructure 基础设施层；<a class="headerlink" href="#infrastructure-基础设施层" title="Permanent link"></a></h2>
+<h3 id="infrastructure-基础设施层">infrastructure 基础设施层；<a class="headerlink" href="#infrastructure-基础设施层" title="Permanent link"></a></h3>
 <ul>
 <li>po 数据库持久化对象，用于映射数据库表字段的。这个对象不要做业务流程，只提供数据库数据</li>
 <li>dto 数据传输对象，这个对象也会在基础设施层出现，用于与外部的接口对接。比如 rpc 接口、http 接口，出入参的对象，都叫做数据传输对象。命名为 XxxRequestDTO、XxxResponseDTO 支付包的sdk包里就是这样命名的。</li>
 </ul>
-<h2 id="api-层">api 层：<a class="headerlink" href="#api-层" title="Permanent link"></a></h2>
+<h3 id="api-层">api 层：<a class="headerlink" href="#api-层" title="Permanent link"></a></h3>
 <ul>
 <li>dto 对象，接口的出入参，数据传输对象。命名为 XxxRequestDTO、XxxResponseDTO</li>
 <li>response&lt;?&gt; 对象，包装结果对象，提供 code、info、data，准确描述错误码以及data数据，data数据是泛型，用于包装 XxxResponseDTO 结果。当你f12浏览器，一些互联网的web服务，观察他的接口，就会看到这样的结构。</li>
 </ul>
-<h2 id="case-编排层">case 编排层：<a class="headerlink" href="#case-编排层" title="Permanent link"></a></h2>
+<h3 id="case-编排层">case 编排层：<a class="headerlink" href="#case-编排层" title="Permanent link"></a></h3>
 <ul>
 <li>这一层承接 web 的接口编排动作，串联 domain 领域流程。通常2个方案，一个是引入 api 层，定义的对象。另外一个就是多一层转换，在一层定义 api 层对应的 XxxRequestDTO -&gt; XxxRequest、XxxResponseDTO -&gt; XxxResponse</li>
 </ul>
 <h2 id="新建顺序">新建顺序<a class="headerlink" href="#新建顺序" title="Permanent link"></a></h2>
-<p>infrastructure.po -&gt; infrastructure.dao -&gt; app.mapper -&gt;  domain.service.trial + domain.model.vo -&gt; 。。</p>
+<p>infrastructure.po -&gt; infrastructure.dao -&gt; app.mapper -&gt; domain.trade.adapter + model + service -&gt; infrastructure.adapter.repository</p>
+<h2 id="整体数据流程">整体数据流程<a class="headerlink" href="#整体数据流程" title="Permanent link"></a></h2>
+<ol>
+<li>外部请求 -&gt; API层：前端传来一个JSON，被框架自动封装成 RequestDTO。</li>
+<li>API层 -&gt; 应用层/领域层：代码将 RequestDTO 翻译成 Entity 或 Aggregate 等领域对象。</li>
+<li>领域层 -&gt; 仓储层(Repository)：业务逻辑处理完毕后，将领域对象交给Repository去持久化。</li>
+<li>仓储层 -&gt; 基础设施层(DAO)：Repository将领域对象翻译成 PO 对象，交给DAO存入数据库。
+（返回数据时则反向进行翻译）</li>
+</ol>
 
 
 
